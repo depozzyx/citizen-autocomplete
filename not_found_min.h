@@ -109,7 +109,7 @@ extern void DELETE_WIDGET(ScriptAny);
 extern void ScriptAny DOES_WIDGET_GROUP_EXIST(ScriptAny);
 extern ScriptAny void GET_CONSOLE_COMMAND();
 extern ScriptAny void RESET_CONSOLE_COMMAND();
-extern voidvoid START_NEW_WIDGET_COMBO(void);
+extern void START_NEW_WIDGET_COMBO(void);
 extern void ADD_TO_WIDGET_COMBO(ScriptAny);
 extern ScriptAny FINISH_WIDGET_COMBO(ScriptAny, ScriptAny);
 extern ScriptAny ADD_TEXT_WIDGET(ScriptAny);
