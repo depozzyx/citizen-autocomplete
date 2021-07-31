@@ -1,0 +1,3 @@
+ SetInvincibilityTimerDuration
+ GetVehicleClass
+ CreateCarGeneratorWithPlate
