@@ -8,7 +8,7 @@ The file you want in `natives.lua`. Basically you need to store it somewhere in 
 
 More detailed explanations available for:
 
--   [VSCode](https://github.com/depozzyx/repocitizen-autocomplete/blob/main/setup.vscode.md)
+-   [VSCode](https://github.com/depozzyx/citizen-autocomplete/blob/main/setup.vscode.md)
 
 ## Authors
 
