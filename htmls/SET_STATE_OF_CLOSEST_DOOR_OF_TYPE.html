@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>SET STATE OF CLOSEST DOOR OF TYPE - GTAMods Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"SET_STATE_OF_CLOSEST_DOOR_OF_TYPE","wgTitle":"SET STATE OF CLOSEST DOOR OF TYPE","wgCurRevisionId":10098,"wgRevisionId":10098,"wgArticleId":3127,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Native functions (GTA IV)","Native functions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"SET_STATE_OF_CLOSEST_DOOR_OF_TYPE","wgRelevantArticleId":3127,"wgRequestId":"8f349d275d072f256c7fe2f7","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.32.0"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/mediawiki/opensearch_desc.php" title="GTAMods Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://gtamods.com/mediawiki/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="GTAMods Wiki Atom feed" href="/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-SET_STATE_OF_CLOSEST_DOOR_OF_TYPE rootpage-SET_STATE_OF_CLOSEST_DOOR_OF_TYPE skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">SET STATE OF CLOSEST DOOR OF TYPE</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From GTAMods Wiki</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+				<a class="mw-jump-link" href="#p-search">Jump to search</a>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table cellspacing="2" cellpadding="4" style="border: 1px solid #cedff2; text-align: left; line-height: 1.5em; margin: .5em 0 .5em 1em"><caption><b>SET_STATE_OF_CLOSEST_DOOR_OF_TYPE</b></caption><tbody><tr><th colspan="3" align="center">Number of parameters: 6</th></tr><tr><th>Parameter #</th><th>Type</th><th>Description</th></tr><tr><td>1.</td><td>Integer</td><td>DoorModelHash</td></tr><tr><td>2.</td><td>Float</td><td>x-coordinate</td></tr><tr><td>3.</td><td>Float</td><td>y-coordinate</td></tr><tr><td>4.</td><td>Float</td><td>z-coordinate</td></tr><tr><td>5.</td><td>Boolean</td><td>Lock (false=Unlock/true=Lock)</td></tr><tr><td>6.</td><td>Float</td><td>DoorSwing (-1.0 to 1.0)</td></tr><tr><th colspan="3" align="center">Return value:</th></tr><tr><th colspan="2">Type</th><th>Description</th></tr><tr><td colspan="2"><i>None</i></td><td></td></tr></tbody></table>
+<p>This function appears to locks/unlocks doors to interior buildings.  The "DoorSwing" parameter determines the angle the door is open (door will default to this angle).  The "Lock" parameter determines if the door can move.
+</p><p>Example:
+<br />SetStateOfClosestDoorOfType(0xe64cf26a, -28.0f, -463.0f, 16.0f, 0, 0.0f);  // can move, door closed
+<br />SetStateOfClosestDoorOfType(0xe64cf26a, -28.0f, -463.0f, 16.0f, 1, 0.0f);  // can't move, door closed
+<br />SetStateOfClosestDoorOfType(0xe64cf26a, -28.0f, -463.0f, 16.0f, 0, 1.0f);  // can move, door open
+<br />SetStateOfClosestDoorOfType(0xe64cf26a, -28.0f, -463.0f, 16.0f, 1, 1.0f);  // can't move, door open
+</p><p><br />
+<br />
+NOTE: You may need to terminate the script named "ambjimslocks.sco".  It seems to run a loop keeping a lot of doors closed.  Though the script seems to start back up again when player leaves area.  Also "ambgerry3doorlock.sco" keeps the "Gracie Kidnapping door" closed.
+</p><p><br />
+The doors below are the model names of the doors.  You can use the native function "GET_HASH_KEY" to pass the model name as a string and it will return the model hash <br /><b>Example:</b>  modelHash = GetHashKey("cj_bank_door_L")
+<br />
+<br /><b>Known Doors:</b>
+<br />BM_lawyerDoor
+<br />BM_lawyerDoor_2a
+<br />BM_lawyerDoor_2b
+<br />cj_bank_door_L  // Bank of Liberty frontdoor
+<br />cj_bank_door_R
+<br />cj_boat_door  // Cargoship door
+<br />cj_BS_door_L
+<br />cj_BS_door_R
+<br />cj_DB_MH3_door1
+<br />cj_int_door_6  // Vlad's bar door
+<br />cj_int_door_7  // Roman's taxi service office door
+<br />cj_int_door_10  // blue door
+<br />cj_int_door_12_H
+<br />cj_int_door_22
+<br />cj_int_door_24
+<br />cj_int_door_27L
+<br />cj_int_door_27R
+<br />cj_int_door_29
+<br />cj_int_door_30
+<br />cj_int_door_3L
+<br />cj_law_frontdoor_L  // Lawyer office frontdoor
+<br />cj_law_frontdoor_R  // Lawyer office frontdoor
+<br />cj_MC_door_1
+<br />cj_mision_door_1  // a door in Dwayne's apartment projects
+<br />cj_MP_fact_door_2  // cage door in Bohan factory - (Roman's kidnapping)
+<br />cj_new_china_door_L  // China shop frontdoor - (MISSION: a bull in a china shop)
+<br />cj_new_china_door_R
+<br />cj_PER_door_L  // Perseus clothes shop frontdoor
+<br />cj_PER_door_R
+<br />cj_RUS_door_1  // Russian clothes shop frontdoor - Left
+<br />cj_RUS_door_2
+<br />ec_ML_door_L  // Memory Lane bowling alley
+<br />ec_ML_door_R
+<br />faustinsfrontdoor
+</p><p>// Central park bathroom toilet doors
+<br />cj_shoot_t_door
+<br />cj_t_door_BRK
+<br />cj_t_door_ENG
+<br />cj_t_door_VAC
+</p><p>cj_church_door_L
+<br />cj_church_door_R
+<br />cj_ext_door_1  // Gracie kidnapping safehouse door
+<br />cj_ext_door_10
+<br />cj_ext_door_11  // Gunshop frontdoor
+<br />cj_ext_door_15b
+<br />cj_ext_door_16
+<br />cj_ext_door_17
+<br />cj_ext_door_18
+<br />cj_ext_door_19_L
+<br />cj_ext_door_19_R
+<br />cj_ext_door_22
+<br />cj_ext_door_6
+<br />cj_ext_door_9
+<br />cj_ext_door_CM  // Triangle club frontdoor
+<br />cj_GM_door_04
+<br />cj_GM_door_05
+<br />cj_GM_door_1
+<br />cj_GM_door_2
+<br />cj_G_door_big
+<br />cj_G_door_big2
+<br />cj_JA_door1  // Bohan safehouse door
+<br />cj_LD_MET_door_L
+<br />cj_LD_MET_door_R
+<br />cj_shop_door_1  // Modo clothes shop
+<br />cabaret_door_R
+<br />cabaret_door_L
+</p><p>magkiosk_door  // refridgerator door for sodas at the news stands
+<br />CJ_VAULT_DOOR
+<br />CJ_VAULT_DOOR_DAM
+<br />CJ_VAULT_GATE
+<br />GB_safe02_door
+</p><p>// cluck'n bell
+<br />KM_CBDoor
+<br />KM_CBDoorTM  // mensroom
+<br />KM_CBDoorTW  // womensroom
+<br />KM_CBFrontDrL
+<br />KM_CBFrontDrR
+</p><p>// Majestic hotel doors
+<br />ab_RitzIntDoorA
+<br />ab_RitzIntDoorB
+<br />ab_ritzMaindoor
+<br />ab_ritz_aptdoor
+<br />ab_ritzglassdoor
+</p><p>KM_PortacabinDoor
+<br />KM_PrisSecDoor
+<br />KM_PrisVisDoor
+<br />proj_doorRM1    // Northwood projects door to apartment top of building
+<br />proj_doorRM1d   // interior door in above apt.
+<br />proj_doorRM2
+<br />proj_doorRM4
+<br />jamfrontdoor
+<br />nhospmaindoors    // Hospital sliding door
+<br />nhospmaindoors01  // Hospital sliding door
+</p><p>// diner doors
+<br />ndinerdoor1
+<br />ndinerdoor2
+</p><p>XJ_TenDoor  // Bohan crackhouse room (MISSION: Shadow)
+<br />Deal_doorA  // door to apartment (MISSION: SearchAndDelete)
+<br />Deal_doorB  // door to bathroom
+<br />KM_KorBlacDoor  // chinese resturant frontdoor (left/right)
+<br />KM_KorTDoor  // chinese resturant interior door
+</p><p>playboyfrontdoor
+<br />Blk3_LobbyDoor  // CIA lobby frontdoor
+<br />corpdoor  // CIA lobby door to office
+<br />LD_show_door_L  // Turismo showroom
+<br />LD_show_door_R  // Turismo showroom
+</p><p>// hospital doors
+<br />hospdoorcorri1
+<br />hospdoorcorri3
+<br />hospdoorcorri4
+<br />hospdoorcorri5
+</p><p>ab_projDoor2  // projects bottom door
+<br />bs3missiongardoor  // Musuem garage door
+<br />bs3respraydoor
+</p><p>// elevator doors
+<br />CJ_LIFT_L_DOOR
+<br />CJ_LIFT_L_DOOR_2
+<br />CJ_LIFT_L_DOOR_OUT
+<br />CJ_LIFT_L_DOOR_OUT_2
+<br />CJ_LIFT_R_DOOR
+<br />CJ_LIFT_R_DOOR_2
+<br />CJ_LIFT_R_DOOR_OUT
+<br />CJ_LIFT_R_DOOR_OUT_2
+</p><p><br />
+<br /><b>The Lost And Damned</b>
+<br />cj_angel_door_L  // Angels of Death clubhouse left door
+<br />cj_angel_door_R  // Angels of Death clubhouse right door
+<br />cj_e1_door_1
+<br />cj_e1_door_lost  // other door in Lost clubhouse
+<br />cj_lost_door  // Lost clubhouse frontdoor and sidedoor
+<br />e1_pris_door_L  // prison main gate
+<br />e1_pris_door_R  // prison main gate
+<br />e1_pris_door_L_DAM
+<br />e1_pris_door_R_DAM
+</p><p><br />
+<br /><b>The Ballad of Gay Tony</b>
+<br />cj_int_door_1
+<br />cj_int_door_2
+<br />cj_int_door_3R
+<br />cj_int_door_9
+<br />e2_bowl_door_L
+<br />e2_bowl_door_R
+<br />e2_fightcagegate  // gate to fightclub cage (two of them)
+<br />P_E2_fightcagedoor  // door to npc spawn
+<br />P_E2_fightclubdoor  // fightclub frontdoor
+<br />e2_maisontdoor1
+<br />e2_maisontdoor2
+<br />et_FactoryGate_L  // Alderney helipad fence gate (probably GTAIV)
+<br />et_FactoryGate_R  // Alderney helipad fence gate (probably GTAIV)
+<br />P_E2_BM_DOOR  // Bahama Mamas frontdoor
+<br />P_E2_HercDoorExt  // Hercules frontdoor
+<br />P_E2_HercDoorInt
+<br />P_INT_DOOR_AH
+<br />P_Intdoor10
+<br />P_JET_DOOR_1  // door for Bulgarin's plane
+<br />cj_int_door_1
+<br />cj_int_door_2
+</p><p>P_RANGE_GATE
+<br />P_RANGE_GATE2
+<br />RANGE_GATE2_R_DYN
+RANGE_GATE2_L_DYN
+<br />P_E2_goldrangedoor  // golf course door
+<br />CJ_NEW_BOWL_DOOR_R
+<br />CJ_NEW_BOWL_DOOR_L
+</p><p>E2_Maison_secdoor  // security room
+<br />E2_Maisondoor16    // mensroom
+<br />E2_Maisondoor17    // womensroom
+<br />E2_Maisondoor18    // frontdoor
+</p><p>E2_XJoff_door02
+</p><p>// MeTV building interior doors
+<br />E2_Sky_door_L01
+<br />E2_Sky_door_L02
+<br />E2_Sky_door_L03
+<br />E2_Sky_door_R01
+<br />E2_Sky_door_R02
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20210728112114
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.015 seconds
+Real time usage: 0.016 seconds
+Preprocessor visited node count: 134/1000000
+Preprocessor generated node count: 1609/1000000
+Post‐expand include size: 1519/2097152 bytes
+Template argument size: 171/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.233      1 Template:Native
+100.00%    6.233      1 -total
+-->
+
+<!-- Saved in parser cache with key gtamodswiki:pcache:idhash:3127-0!canonical and timestamp 20210728112114 and revision id 10098
+ -->
+</div></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://gtamods.com/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;oldid=10098">https://gtamods.com/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;oldid=10098</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/wiki/Category:Native_functions_(GTA_IV)" title="Category:Native functions (GTA IV)">Native functions (GTA IV)</a></li><li><a href="/wiki/Category:Native_functions" title="Category:Native functions">Native functions</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://gtaforums.com/register/" title="You are encouraged to create an account and log in; however, it is not mandatory">Register</a></li><li id="pt-anon_oauth_login"><a href="/mediawiki/index.php?title=Special:OAuth2Client/redirect&amp;returnto=SET+STATE+OF+CLOSEST+DOOR+OF+TYPE">GTAForums login</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/SET_STATE_OF_CLOSEST_DOOR_OF_TYPE" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="/mediawiki/index.php?title=Talk:SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/SET_STATE_OF_CLOSEST_DOOR_OF_TYPE">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/mediawiki/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search GTAMods Wiki" title="Search GTAMods Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Tutorials-and-guides"><a href="/wiki/Category:Tutorials">Tutorials and guides</a></li><li id="n-Documentation"><a href="/wiki/Category:Documentation">Documentation</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Games" aria-labelledby="p-Games-label">
+			<h3 id="p-Games-label">Games</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Grand-Theft-Auto-V"><a href="/wiki/Category:GTA_5">Grand Theft Auto V</a></li><li id="n-Grand-Theft-Auto-IV"><a href="/wiki/Category:GTA_4">Grand Theft Auto IV</a></li><li id="n-GTA-Vice-City-Stories"><a href="/wiki/Category:GTA_VCS">GTA Vice City Stories</a></li><li id="n-GTA-Liberty-City-Stories"><a href="/wiki/Category:GTA_LCS">GTA Liberty City Stories</a></li><li id="n-GTA-San-Andreas"><a href="/wiki/Category:GTA_SA">GTA San Andreas</a></li><li id="n-GTA-Vice-City"><a href="/wiki/Category:GTA_VC">GTA Vice City</a></li><li id="n-Grand-Theft-Auto-III"><a href="/wiki/Category:GTA_3">Grand Theft Auto III</a></li><li id="n-Grand-Theft-Auto-2"><a href="/wiki/Category:GTA_2">Grand Theft Auto 2</a></li><li id="n-Grand-Theft-Auto"><a href="/wiki/Category:GTA_1">Grand Theft Auto</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/SET_STATE_OF_CLOSEST_DOOR_OF_TYPE" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/SET_STATE_OF_CLOSEST_DOOR_OF_TYPE" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;oldid=10098" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/mediawiki/index.php?title=SET_STATE_OF_CLOSEST_DOOR_OF_TYPE&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Network" aria-labelledby="p-Network-label">
+			<h3 id="p-Network-label">Network</h3>
+			<div class="body">
+								<ul>
+					<li id="n-GTA-Network"><a href="http://www.gtanet.com/" rel="nofollow">GTA Network</a></li><li id="n-GTA-Forums"><a href="http://gtaforums.com/" rel="nofollow">GTA Forums</a></li><li id="n-GTA-V"><a href="http://grandtheftauto.net/gta5" rel="nofollow">GTA V</a></li><li id="n-GTA-IV"><a href="http://www.gta4.net/" rel="nofollow">GTA IV</a></li><li id="n-GTA-San-Andreas"><a href="http://www.gtasanandreas.net/overview/index.php" rel="nofollow">GTA San Andreas</a></li><li id="n-GTA-Vice-City"><a href="http://www.gtavice.com/" rel="nofollow">GTA Vice City</a></li><li id="n-GTA-III"><a href="http://www.gta3.com/what-is-gta3/" rel="nofollow">GTA III</a></li><li id="n-GTA-Garage"><a href="http://www.gtagarage.com/" rel="nofollow">GTA Garage</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 7 September 2011, at 12:42.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/wiki/GTAMods_Wiki:Privacy_policy" title="GTAMods Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/GTAMods_Wiki:About" title="GTAMods Wiki:About">About GTAMods Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/GTAMods_Wiki:General_disclaimer" title="GTAMods Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://creativecommons.org/licenses/by/4.0/"><img src="/mediawiki/resources/assets/licenses/cc-by.png" alt="Creative Commons Attribution" width="88" height="31"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/mediawiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mediawiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mediawiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.015","walltime":"0.016","ppvisitednodes":{"value":134,"limit":1000000},"ppgeneratednodes":{"value":1609,"limit":1000000},"postexpandincludesize":{"value":1519,"limit":2097152},"templateargumentsize":{"value":171,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    6.233      1 Template:Native","100.00%    6.233      1 -total"]},"cachereport":{"timestamp":"20210728112114","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":52});});</script>
+	</body>
+</html>

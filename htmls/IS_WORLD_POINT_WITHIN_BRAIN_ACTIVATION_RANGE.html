@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>IS WORLD POINT WITHIN BRAIN ACTIVATION RANGE - GTAMods Wiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE","wgTitle":"IS WORLD POINT WITHIN BRAIN ACTIVATION RANGE","wgCurRevisionId":12295,"wgRevisionId":12295,"wgArticleId":3835,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages with syntax highlighting errors","Native functions (GTA IV)","Native functions"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE","wgRelevantArticleId":3835,"wgRequestId":"56b9268b86ea06ede47bf11e","wgCSPNonce":false,"wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@0tffind",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.searchSuggest","skins.vector.js"];mw.loader.load(RLPAGEMODULES);});</script>
+<link rel="stylesheet" href="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=ext.pygments%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cskins.vector.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.32.0"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/mediawiki/opensearch_desc.php" title="GTAMods Wiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://gtamods.com/mediawiki/api.php?action=rsd"/>
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+<link rel="alternate" type="application/atom+xml" title="GTAMods Wiki Atom feed" href="/mediawiki/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/mediawiki/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE rootpage-IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">IS WORLD POINT WITHIN BRAIN ACTIVATION RANGE</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From GTAMods Wiki</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+				<a class="mw-jump-link" href="#p-search">Jump to search</a>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table cellspacing="2" cellpadding="4" style="border: 1px solid #cedff2; text-align: left; line-height: 1.5em; margin: .5em 0 .5em 1em"><caption><b>IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE</b></caption><tbody><tr><th colspan="3" align="center">Number of parameters: 0</th></tr><tr><th colspan="3" align="center">Return value:</th></tr><tr><th colspan="2">Type</th><th>Description</th></tr><tr><td colspan="2">boolean</td><td>true, if within range; otherwise, false.</td></tr></tbody></table>
+<p>Returns whether the calling script's world point is within its desired range from the player.
+World point refers to a position defined in ambient*.ipl.
+</p><p>The world points specify a position and the name of a script.
+</p><p>The startup script calls <a href="/mediawiki/index.php?title=REGISTER_WORLD_POINT_SCRIPT_BRAIN&amp;action=edit&amp;redlink=1" class="new" title="REGISTER WORLD POINT SCRIPT BRAIN (page does not exist)">REGISTER_WORLD_POINT_SCRIPT_BRAIN</a> to register the world points to their scripts, which will allow the scripts to automatically start when the player gets close to the point.
+</p>
+<h2><span class="mw-headline" id="Example">Example</span></h2>
+<p>One example is the ambSaveBed script, which handles letting the player walk up to a bed and hit a key to save the game.
+Multiple world points are defined in ambient.ipl desiring this script as the points' "brain":
+</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr"><pre>world, 890.9609375, -494.855957, 18.40229988, 13, -0, -0, 0.7071068287, -0.7071067691, ambSaveBed, 0, 
+world, 102.5900879, 845.9500122, 48.84000015, 13, -0, -0, 0.7071067691, -0.7071068287, AmbSaveBed, 0, 
+world, -971.0100098, 891.1799316, 18.78000069, 13, -0, -0, -1, 7.549790126e-008, AmbSaveBed, 0, 
+world, -430.3599854, 1460.829956, 38.77999878, 13, -0, -0, -0.7071067691, -0.7071068287, AmbSaveBed, 0, 
+world, 599.4763184, 1416.846558, 18.07299995, 13, -0, -0, -0, -1, ambsavebed, 0,</pre></div>
+<h2><span class="mw-headline" id="Original_using">Original using</span></h2>
+<p>When the game starts, the startup script calls <a href="/mediawiki/index.php?title=REGISTER_WORLD_POINT_SCRIPT_BRAIN&amp;action=edit&amp;redlink=1" class="new" title="REGISTER WORLD POINT SCRIPT BRAIN (page does not exist)">REGISTER_WORLD_POINT_SCRIPT_BRAIN</a>("AmbSaveBed", 50.0f);
+This makes the game start monitoring all the world points associated with the ambSaveBed script, and whenever the player is within 50.0 meters of one of those points, the game runs an instance of the ambSaveBed script and associates that instance to the world point. It will not execute a new instance for this world point until the existing one terminates. Scripts are not automatically terminated when the player leaves the range again.
+</p><p>The executed script can now call IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE which will tell it whether the player is still within range (50.0 meters), and terminate itself if not.
+</p><p>When a script with a registered world point calls IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE, the function retrieves the script's registered world point and checks whether the player is currently within the range specified in the call to <a href="/mediawiki/index.php?title=REGISTER_WORLD_POINT_SCRIPT_BRAIN&amp;action=edit&amp;redlink=1" class="new" title="REGISTER WORLD POINT SCRIPT BRAIN (page does not exist)">REGISTER_WORLD_POINT_SCRIPT_BRAIN</a>.
+</p>
+<!-- 
+NewPP limit report
+Cached time: 20210728103113
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.011 seconds
+Real time usage: 0.012 seconds
+Preprocessor visited node count: 118/1000000
+Preprocessor generated node count: 1543/1000000
+Post‐expand include size: 751/2097152 bytes
+Template argument size: 52/2097152 bytes
+Highest expansion depth: 4/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 604/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    4.664      1 Template:Native
+100.00%    4.664      1 -total
+-->
+
+<!-- Saved in parser cache with key gtamodswiki:pcache:idhash:3835-0!canonical and timestamp 20210728103113 and revision id 12295
+ -->
+</div></div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://gtamods.com/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;oldid=12295">https://gtamods.com/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;oldid=12295</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/mediawiki/index.php?title=Category:Pages_with_syntax_highlighting_errors&amp;action=edit&amp;redlink=1" class="new" title="Category:Pages with syntax highlighting errors (page does not exist)">Pages with syntax highlighting errors</a></li><li><a href="/wiki/Category:Native_functions_(GTA_IV)" title="Category:Native functions (GTA IV)">Native functions (GTA IV)</a></li><li><a href="/wiki/Category:Native_functions" title="Category:Native functions">Native functions</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="https://gtaforums.com/register/" title="You are encouraged to create an account and log in; however, it is not mandatory">Register</a></li><li id="pt-anon_oauth_login"><a href="/mediawiki/index.php?title=Special:OAuth2Client/redirect&amp;returnto=IS+WORLD+POINT+WITHIN+BRAIN+ACTIVATION+RANGE">GTAForums login</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk" class="new"><span><a href="/mediawiki/index.php?title=Talk:IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/mediawiki/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search GTAMods Wiki" title="Search GTAMods Wiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/Main_Page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Tutorials-and-guides"><a href="/wiki/Category:Tutorials">Tutorials and guides</a></li><li id="n-Documentation"><a href="/wiki/Category:Documentation">Documentation</a></li><li id="n-recentchanges"><a href="/wiki/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-randompage"><a href="/wiki/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li><li id="n-help"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents" title="The place to find out">Help</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Games" aria-labelledby="p-Games-label">
+			<h3 id="p-Games-label">Games</h3>
+			<div class="body">
+								<ul>
+					<li id="n-Grand-Theft-Auto-V"><a href="/wiki/Category:GTA_5">Grand Theft Auto V</a></li><li id="n-Grand-Theft-Auto-IV"><a href="/wiki/Category:GTA_4">Grand Theft Auto IV</a></li><li id="n-GTA-Vice-City-Stories"><a href="/wiki/Category:GTA_VCS">GTA Vice City Stories</a></li><li id="n-GTA-Liberty-City-Stories"><a href="/wiki/Category:GTA_LCS">GTA Liberty City Stories</a></li><li id="n-GTA-San-Andreas"><a href="/wiki/Category:GTA_SA">GTA San Andreas</a></li><li id="n-GTA-Vice-City"><a href="/wiki/Category:GTA_VC">GTA Vice City</a></li><li id="n-Grand-Theft-Auto-III"><a href="/wiki/Category:GTA_3">Grand Theft Auto III</a></li><li id="n-Grand-Theft-Auto-2"><a href="/wiki/Category:GTA_2">Grand Theft Auto 2</a></li><li id="n-Grand-Theft-Auto"><a href="/wiki/Category:GTA_1">Grand Theft Auto</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/Special:WhatLinksHere/IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/wiki/Special:RecentChangesLinked/IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;oldid=12295" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/mediawiki/index.php?title=IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Network" aria-labelledby="p-Network-label">
+			<h3 id="p-Network-label">Network</h3>
+			<div class="body">
+								<ul>
+					<li id="n-GTA-Network"><a href="http://www.gtanet.com/" rel="nofollow">GTA Network</a></li><li id="n-GTA-Forums"><a href="http://gtaforums.com/" rel="nofollow">GTA Forums</a></li><li id="n-GTA-V"><a href="http://grandtheftauto.net/gta5" rel="nofollow">GTA V</a></li><li id="n-GTA-IV"><a href="http://www.gta4.net/" rel="nofollow">GTA IV</a></li><li id="n-GTA-San-Andreas"><a href="http://www.gtasanandreas.net/overview/index.php" rel="nofollow">GTA San Andreas</a></li><li id="n-GTA-Vice-City"><a href="http://www.gtavice.com/" rel="nofollow">GTA Vice City</a></li><li id="n-GTA-III"><a href="http://www.gta3.com/what-is-gta3/" rel="nofollow">GTA III</a></li><li id="n-GTA-Garage"><a href="http://www.gtagarage.com/" rel="nofollow">GTA Garage</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 3 January 2015, at 00:51.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/wiki/GTAMods_Wiki:Privacy_policy" title="GTAMods Wiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/wiki/GTAMods_Wiki:About" title="GTAMods Wiki:About">About GTAMods Wiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/GTAMods_Wiki:General_disclaimer" title="GTAMods Wiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://creativecommons.org/licenses/by/4.0/"><img src="/mediawiki/resources/assets/licenses/cc-by.png" alt="Creative Commons Attribution" width="88" height="31"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/mediawiki/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/mediawiki/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /mediawiki/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.011","walltime":"0.012","ppvisitednodes":{"value":118,"limit":1000000},"ppgeneratednodes":{"value":1543,"limit":1000000},"postexpandincludesize":{"value":751,"limit":2097152},"templateargumentsize":{"value":52,"limit":2097152},"expansiondepth":{"value":4,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":604,"limit":5000000},"timingprofile":["100.00%    4.664      1 Template:Native","100.00%    4.664      1 -total"]},"cachereport":{"timestamp":"20210728103113","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":68});});</script>
+	</body>
+</html>
