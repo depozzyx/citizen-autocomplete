@@ -1,7 +1,9 @@
 # OUT_FILE = "man.lua"
 # C_NATIVES_FILE = "natives.h"
-OUT_FILE = "not_found_man.lua"
-C_NATIVES_FILE = "not_found_min.h"
+OUT_PATH = "natives.lua"
+C_NATIVES_PATH = "resources/final_all_natives.h"
+CITIZEN_LUA_NATIVES_PATH = "resources/citizen_natives.lua.ignore"
+
 CUSTOM_INT_TYPES = [
     "Weapon",
     "Player",

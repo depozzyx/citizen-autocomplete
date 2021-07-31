@@ -1,4 +1,7 @@
-with open("not_found.h", "r") as f:
+DEPRECATED_AND_NETWORK_PATH = "resources/scocl_deprecated_and_network_natives.h"
+OUT_PATH = "not_found_min.h"
+
+with open(DEPRECATED_AND_NETWORK_PATH, "r") as f:
     lines = f.readlines()
 
 out = ""
@@ -9,5 +12,5 @@ for line in lines:
     out += "extern " + line.replace("\n", "").strip() + "\n"
 
 
-with open("not_found_min.h", "w") as f:
+with open(OUT_PATH, "w") as f:
     f.write(out)

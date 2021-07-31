@@ -1,147 +1,25 @@
+import os
 import traceback
-from os import listdir
-from typing import Dict, List, Set
+
 import requests
 from bs4 import BeautifulSoup
-
-from config import CUSTOM_INT_TYPES, C_NATIVES_FILE, C_TYPES_TO_LUA_TYPES, OUT_FILE
 from markdownify import markdownify
 
-
-class TypeConverter:
-    custom_int_types = CUSTOM_INT_TYPES
-    c_types_to_lua_types: Dict[str, str] = C_TYPES_TO_LUA_TYPES
-
-    @staticmethod
-    def is_custom_int_type(c_type: str):
-        return c_type in CUSTOM_INT_TYPES
-
-    @staticmethod
-    def convert_type_c_to_lua(c_type: str):
-        if TypeConverter.is_custom_int_type(c_type):
-            return f"number ({c_type})"
-        else:
-            return TypeConverter.c_types_to_lua_types.get(c_type) or f"any ({c_type})"
-
-    @staticmethod
-    def uppercase_to_pascal_case(string: str):
-        string_list = string.lower().split("_")
-        return "".join(map(lambda elem: elem.capitalize(), string_list)).replace("", "")
-
-
-class RawNatives:
-    c_list: List[str] = []
-    lua_text = ""
-
-    def get_from_files(self):
-        with open(C_NATIVES_FILE, "r") as f:
-            self.c_list = f.readlines()
-
-        with open("natives.lua.ignore", "r") as f:
-            self.lua_text = f.read()
-
-
-class RawNativeParser:
-    native_raw_c: str
-    native_c: str
-    native_lua: str
-
-    function_type_c: str
-    function_type_c_real: str
-    function_type_lua: str
-    function_arguments_c: List[str]
-
-    def __init__(self, native_raw_c: str):
-        self.native_raw_c = native_raw_c
-
-    def parse(self):
-        if self.native_raw_c.startswith("// deprecated"):
-            return "skip"
-            # self.native_c = self.native_raw_c.replace("// deprecated", "").strip()
-            # self.function_arguments_c = []
-            # self.function_type_c = "ScriptAny"
-
-        else:
-            splitted_before_args = self.native_raw_c[
-                : self.native_raw_c.find("(")
-            ].split(" ")
-
-            raw_native_c = splitted_before_args[-1]
-            if raw_native_c.startswith("*"):  # if char*
-                splitted_before_args[-2] += " *"
-                self.native_c = raw_native_c[1:]
-            else:
-                self.native_c = raw_native_c
-
-            # self.function_type_c = splitted_before_args[1] if splitted[1] not in CUSTOM_INT_TYPES else "int"
-            self.function_type_c = splitted_before_args[1]
-
-            string_in_parenthesis = self.native_raw_c[
-                self.native_raw_c.find("(") + 1 : self.native_raw_c.find(")")
-            ]
-            self.function_arguments_c = list(
-                map(
-                    lambda pair: pair.strip(),
-                    string_in_parenthesis.split(","),
-                )
-            )
-
-        self.native_lua = TypeConverter.uppercase_to_pascal_case(self.native_c)
-
-        self.function_type_c_real = (
-            "int"
-            if TypeConverter.is_custom_int_type(self.function_type_c)
-            else self.function_type_c
-        )
-        self.function_type_lua = TypeConverter.convert_type_c_to_lua(
-            self.function_type_c_real
-        )
-
-        return self
-
-
-class Stats:
-    all_function_types: Set[str] = set()
-    lua_c_natives_matched = 0
-    failed_html_pages = 0
-
-    def __init__(self, raw_natives: RawNatives):
-        self.raw_natives = raw_natives
-
-    def process_function_data(self, function_data: RawNativeParser):
-        self.all_function_types.add(function_data.function_type_c_real)
-
-        if function_data.native_lua in self.raw_natives.lua_text:
-            self.lua_c_natives_matched += 1
-        else:
-            self._log(f"Unmatched native `{function_data.native_lua}`")
-
-        if function_data.function_type_lua.startswith("any ("):
-            self._log("Prikol", function_data.native_raw_c)
-
-    def log_results(self):
-        self._log(
-            "Matched lua to c natives",
-            self.lua_c_natives_matched,
-            "/",
-            len(self.raw_natives.lua_text.split("\n")),
-        )
-        self._log(f"All c function types found `{self.all_function_types}`")
-        self._log(f"Failed to load {self.failed_html_pages} html pages ")
-
-    def _log(self, *args, **kwargs):
-        return print("Stats: ", *args, **kwargs)
+from .raw_natives_parser import RawNativeParser
+from .type_converter import TypeConverter
 
 
 class TextGenerator:
     def __init__(self):
         self.out_text = ""
-        self.htmls = listdir("htmls/")
+        self.htmls = os.listdir("htmls/")
 
-    def _comment(self, string: str = ""):
+    def _comment(self, string: str = "", times=1):
         self.out_text += f"\n---{string.strip()}"
+        return self._comment(string, times - 1) if times != 1 else None
 
     def generate(self, function_data: RawNativeParser, get_html_from_cache=True) -> str:
+        # TODO: Split into methods or classes and rewrite normally
         self.out_text = ""
 
         website_url = f"https://gtamods.com/wiki/{function_data.native_c}"
@@ -189,13 +67,11 @@ class TextGenerator:
         self._comment()
         for description_paragraph in description:
             self._comment(description_paragraph)
-        self._comment()
-        self._comment()
+        self._comment(times=2)
         self._comment(
             f"[View gtamods.com]({website_url}) | [View gtamodding.ru]({russian_website_url})"
         )
-        self._comment()
-        self._comment()
+        self._comment(times=2)
 
         return_args_comments = []
         if function_data.function_type_lua != "nil":
@@ -239,11 +115,11 @@ class TextGenerator:
 
                     if "pointer" in arg_type.lower():
                         is_return_arg = True
-                        if (
-                            len(return_args_comments) > 0
-                            and return_args_comments[0] == "@return any"
-                        ):
-                            return_args_comments.pop(0)
+                        # if (
+                        #     return_args_comments
+                        #     and return_args_comments[0] == "@return any"
+                        # ):
+                        #     return_args_comments.pop(0)
 
                     arg_description = website_args[i][1]
                 else:
@@ -281,31 +157,4 @@ class TextGenerator:
         return self.out_text
 
 
-class Project:
-    raw_natives = RawNatives()
-    stats = Stats(raw_natives)
-    text_generator = TextGenerator()
-
-    def __init__(self):
-        pass
-
-    def run(self, only_stats=False):
-        self.raw_natives.get_from_files()
-        for native_raw_c in self.raw_natives.c_list:
-            function_data = RawNativeParser(native_raw_c).parse()
-            if function_data == "skip":
-                continue
-
-            self.stats.process_function_data(function_data)
-
-            if not only_stats:
-                text = self.text_generator.generate(function_data)
-
-                with open(OUT_FILE, "a", encoding="utf-8") as f:
-                    f.write(text)
-
-        self.stats.log_results()
-
-
-if __name__ == "__main__":
-    Project().run()
+__author__ = "depozzyx"

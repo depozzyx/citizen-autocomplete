@@ -16255,7 +16255,7 @@ function AwardPlayerMissionRespect(respect) end
 ---[View gtamods.com](https://gtamods.com/wiki/REGISTER_MISSION_PASSED) | [View gtamodding.ru](http://gtamodding.ru/wiki/REGISTER_MISSION_PASSED)
 ---
 ---
----@param  string
+---@param _ string
 ---@return nil
 function RegisterMissionPassed() end
 
@@ -16266,7 +16266,7 @@ function RegisterMissionPassed() end
 ---[View gtamods.com](https://gtamods.com/wiki/PLAYSTATS_MISSION_PASSED) | [View gtamodding.ru](http://gtamodding.ru/wiki/PLAYSTATS_MISSION_PASSED)
 ---
 ---
----@param  string
+---@@param _ string
 ---@return nil
 function PlaystatsMissionPassed() end
 
