@@ -1,3 +1,4 @@
+
 ---
 ---No description (
 ---
@@ -1248,7 +1249,7 @@ function SetPoliceIgnorePlayer(playerIndex, value) end
 ---
 ---
 ---@param playerIndex number (Player) Player index
----@param value any (uint*, boolean true/false
+---@param value any (uint*, boolean) true/false
 ---@return nil
 function StoreScore(playerIndex, value) end
 
@@ -1260,7 +1261,7 @@ function StoreScore(playerIndex, value) end
 ---
 ---
 ---@param playerIndex number (Player) Player index
----@param value any (uint*, boolean true/false
+---@param value any (uint*, boolean) true/false
 ---@return nil
 function StoreWantedLevel(playerIndex, value) end
 
@@ -1595,18 +1596,6 @@ function DeleteChar() end
 ---@param unknown boolean
 ---@return nil
 function DetachPed(ped, unknown) end
-
----
----No description (
----
----
----[View gtamods.com](https://gtamods.com/wiki/DETACH_PED_FROM_WITHIN_CAR) | [View gtamodding.ru](http://gtamodding.ru/wiki/DETACH_PED_FROM_WITHIN_CAR)
----
----
----@param ped number (Ped)
----@param unknown boolean
----@return nil
-function DetachPedFromWithinCar(ped, unknown) end
 
 ---
 ---No description (
@@ -2048,19 +2037,6 @@ function GetCurrentCharWeapon(ped) end
 function GetDamageToPedBodyPart(ped, part) end
 
 ---
----This function will get the x,y,z coordinates of the character in P1, and store them to variables.
----
----
----[View gtamods.com](https://gtamods.com/wiki/GET_DEAD_CHAR_COORDINATES) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_DEAD_CHAR_COORDINATES)
----
----
----@param ped number (Ped) char handle
----@return number (float) pX variable to store X pos
----@return number (float) pY variable to store Y pos
----@return number (float) pZ variable to store Z pos
-function GetDeadCharCoordinates(ped) end
-
----
 ---No description (
 ---
 ---
@@ -2188,7 +2164,7 @@ function GetPedClimbState(ped) end
 ---@param x number (float) unknown(Offset X?)
 ---@param y number (float) unknown(Offset Y?)
 ---@param z number (float) unknown(Offset Z?)
----@return any (Vector3, pointer pPosition variable to store bone position
+---@return any (Vector3, pointer) pPosition variable to store bone position
 function GetPedBonePosition(ped, bone, x, y, z) end
 
 ---
@@ -2199,7 +2175,7 @@ function GetPedBonePosition(ped, bone, x, y, z) end
 ---
 ---
 ---@param ped number (Ped) Ped handle
----@param pIndex any (uint*, number (integer Variable to store characters group index.
+---@param pIndex any (uint*, integer) Variable to store characters group index.
 ---@return nil
 function GetPedGroupIndex(ped, pIndex) end
 
@@ -3281,8 +3257,9 @@ function SetCharAsEnemy(ped, value) end
 ---
 ---
 ---@param ped number (Ped) ped handle
+---@param parameter_2 boolean true if mission char, false if not
 ---@return nil
-function SetCharAsMissionChar(ped) end
+function SetCharAsMissionChar(ped, parameter_2) end
 
 ---
 ---This function can prevent a character from being ejected from a motorbike through collisions. Unlike most functions, setting it to 0 means the character can be knocked off the bike and 1 means the player will not be knocked off. This function seems to affected by SET\_CHAR\_PROOFS. After this function is turned on, the function will stay on if the character is collision-proof. Turning this function off will not work until the collision-proof is turned off.
@@ -5458,7 +5435,7 @@ function GetCarCoordinates(vehicle) end
 ---@param x number (float) x
 ---@param y number (float) y
 ---@param z number (float) z
----@return any (Vector3, vector3 pDeformation variable to store deformation
+---@return any (Vector3, vector3) pDeformation variable to store deformation
 function GetCarDeformationAtPos(vehicle, x, y, z) end
 
 ---
@@ -5569,7 +5546,7 @@ function GetCarSpeed(vehicle) end
 ---
 ---@param vehicle number (Vehicle) vehicle handle
 ---@param unknownFalse boolean unknown (false suggested)
----@return any (Vector3, vector3 pVector variable to store speed vector
+---@return any (Vector3, vector3) pVector variable to store speed vector
 function GetCarSpeedVector(vehicle, unknownFalse) end
 
 ---
@@ -7581,25 +7558,6 @@ function RequestInteriorModels(model, interiorName) end
 function AddCharDecisionMakerEventResponse(dm, eventid, responseid, param1, param2, param3, param4, unknown0_1, unknown1_1) end
 
 ---
----Clone of ADD\_CHAR\_DECISION\_MAKER\_EVENT\_RESPONSE
----
----
----[View gtamods.com](https://gtamods.com/wiki/ADD_COMBAT_DECISION_MAKER_EVENT_RESPONSE) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_COMBAT_DECISION_MAKER_EVENT_RESPONSE)
----
----
----@param dm number (DecisionMaker)
----@param eventid number (positive integer)
----@param responseid number (positive integer)
----@param param1 number (float)
----@param param2 number (float)
----@param param3 number (float)
----@param param4 number (float)
----@param unknown0_1 number (positive integer)
----@param unknown1_1 number (positive integer)
----@return nil
-function AddCombatDecisionMakerEventResponse(dm, eventid, responseid, param1, param2, param3, param4, unknown0_1, unknown1_1) end
-
----
 ---This section is incomplete. You can help by fixing and expanding it.
 ---
 ---
@@ -7617,30 +7575,6 @@ function AddCombatDecisionMakerEventResponse(dm, eventid, responseid, param1, pa
 ---@param unknown1_1 number (positive integer)
 ---@return nil
 function AddGroupDecisionMakerEventResponse(dm, eventid, responseid, param1, param2, param3, param4, unknown0_1, unknown1_1) end
-
----
----No description (
----
----
----[View gtamods.com](https://gtamods.com/wiki/CLEAR_CHAR_DECISION_MAKER_EVENT_RESPONSE) | [View gtamodding.ru](http://gtamodding.ru/wiki/CLEAR_CHAR_DECISION_MAKER_EVENT_RESPONSE)
----
----
----@param dm number (DecisionMaker)
----@param eventid number (positive integer)
----@return nil
-function ClearCharDecisionMakerEventResponse(dm, eventid) end
-
----
----No description (
----
----
----[View gtamods.com](https://gtamods.com/wiki/CLEAR_COMBAT_DECISION_MAKER_EVENT_RESPONSE) | [View gtamodding.ru](http://gtamodding.ru/wiki/CLEAR_COMBAT_DECISION_MAKER_EVENT_RESPONSE)
----
----
----@param dm number (DecisionMaker)
----@param eventid number (positive integer)
----@return nil
-function ClearCombatDecisionMakerEventResponse(dm, eventid) end
 
 ---
 ---No description (
@@ -7752,17 +7686,6 @@ function LoadCharDecisionMaker(type) end
 ---@param type number (positive integer)
 ---@return number (DecisionMaker) pDM
 function LoadCombatDecisionMaker(type) end
-
----
----This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
----
----
----[View gtamods.com](https://gtamods.com/wiki/LOAD_GROUP_DECISION_MAKER) | [View gtamodding.ru](http://gtamodding.ru/wiki/LOAD_GROUP_DECISION_MAKER)
----
----
----@param type number (positive integer)
----@return number (DecisionMaker) pDM
-function LoadGroupDecisionMaker(type) end
 
 ---
 ---No description (
@@ -7989,18 +7912,6 @@ function SetGroupCharDecisionMaker(group, dm) end
 ---@param dm number (DecisionMaker)
 ---@return nil
 function SetGroupCombatDecisionMaker(group, dm) end
-
----
----This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
----
----
----[View gtamods.com](https://gtamods.com/wiki/SET_GROUP_DECISION_MAKER) | [View gtamodding.ru](http://gtamodding.ru/wiki/SET_GROUP_DECISION_MAKER)
----
----
----@param group number (Group)
----@param dm number (DecisionMaker)
----@return nil
-function SetGroupDecisionMaker(group, dm) end
 
 ---
 ---No description (
@@ -8249,7 +8160,7 @@ function GetBlipColour(blip) end
 ---
 ---
 ---@param blip number (Blip) Blip handle
----@return any (Vector3, pointer pVector Variable to store vector containing blip's coords.
+---@return any (Vector3, pointer) pVector Variable to store vector containing blip's coords.
 function GetBlipCoords(blip) end
 
 ---
@@ -8317,17 +8228,6 @@ function GetBlipInfoIdPedIndex(blip) end
 ---@param blip number (Blip) blip handle
 ---@return number (integer) pickup index
 function GetBlipInfoIdPickupIndex(blip) end
-
----
----No description (
----
----
----[View gtamods.com](https://gtamods.com/wiki/GET_BLIP_NAME) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_BLIP_NAME)
----
----
----@param blip number (Blip) blip handle
----@return string blip name
-function GetBlipName(blip) end
 
 ---
 ---No description (
@@ -10424,8 +10324,10 @@ function PlayAudioEvent(name) end
 ---
 ---@param sound number (positive integer) Unknown, Suggested: -1
 ---@param soundName string Sound FileName, e.g "NAV_UP_DOWN"
+---@param parameter_3 any (String, String) Soundset, e.g "HUD_FRONTEND_DEFAULT_SOUNDSET"
+---@param parameter_4 any (Boolean, Boolean) Unknown, Suggested: 0
 ---@return nil
-function PlaySoundFrontend(sound, soundName) end
+function PlaySoundFrontend(sound, soundName, parameter_3, parameter_4) end
 
 ---
 ---No description (
@@ -11557,16 +11459,6 @@ function HideHelpTextThisFrame() end
 function HideHudAndRadarThisFrame() end
 
 ---
----This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
----
----
----[View gtamods.com](https://gtamods.com/wiki/IS_AUSSIE_VERSION) | [View gtamodding.ru](http://gtamodding.ru/wiki/IS_AUSSIE_VERSION)
----
----
----@return boolean always 0
-function IsAussieVersion() end
-
----
 ---No description (
 ---
 ---
@@ -11615,16 +11507,6 @@ function IsFrontendFading() end
 ---
 ---@return boolean
 function IsGameInControlOfMusic() end
-
----
----This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
----
----
----[View gtamods.com](https://gtamods.com/wiki/IS_GERMAN_VERSION) | [View gtamodding.ru](http://gtamodding.ru/wiki/IS_GERMAN_VERSION)
----
----
----@return boolean always 0
-function IsGermanVersion() end
 
 ---
 ---The results of this function are either unknown or untested.
@@ -13899,10 +13781,9 @@ function SetMobilePhoneRadioState(state) end
 ---@param parameter_1 number (integer) Unknown
 ---@param parameter_2 number (integer) Unknown
 ---@param parameter_3 number (integer) Unknown
----@param parameter_4 any (pointer) Unknown
----@param parameter_5 any (pointer) Unknown
----@return nil
-function AddLineToConversation(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5) end
+---@return any (pointer) parameter_4 Unknown
+---@return any (pointer) parameter_5 Unknown
+function AddLineToConversation(parameter_1, parameter_2, parameter_3) end
 
 ---
 ---No description (
@@ -16255,7 +16136,7 @@ function AwardPlayerMissionRespect(respect) end
 ---[View gtamods.com](https://gtamods.com/wiki/REGISTER_MISSION_PASSED) | [View gtamodding.ru](http://gtamodding.ru/wiki/REGISTER_MISSION_PASSED)
 ---
 ---
----@param _ string
+---@param  string
 ---@return nil
 function RegisterMissionPassed() end
 
@@ -16266,7 +16147,7 @@ function RegisterMissionPassed() end
 ---[View gtamods.com](https://gtamods.com/wiki/PLAYSTATS_MISSION_PASSED) | [View gtamodding.ru](http://gtamodding.ru/wiki/PLAYSTATS_MISSION_PASSED)
 ---
 ---
----@@param _ string
+---@param  string
 ---@return nil
 function PlaystatsMissionPassed() end
 
@@ -18335,7 +18216,7 @@ function SetCarCoordinatesNoOffset(car, x, y, z) end
 ---
 ---
 ---@param car number (Car) vehicle handle
----@return any (Vector3, vector3 vec variable to store forward vector
+---@return any (Vector3, vector3) vec variable to store forward vector
 function GetCarForwardVector(car) end
 
 ---
@@ -19460,8 +19341,9 @@ function SetMissionTrainCoordinates(train, x, y, z) end
 ---
 ---
 ---@param car number (Car) Vehicle Handle
+---@param parameter_2 any (Boolean, Boolean) True
 ---@return nil
-function SetCarAsMissionCar(car) end
+function SetCarAsMissionCar(car, parameter_2) end
 
 ---
 ---No description (
@@ -20585,14 +20467,13 @@ function TaskGuardAngledDefensiveArea(ped, parameter_2, parameter_3, parameter_4
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
----@param parameter_2 any (char pointer) The animation's name
----@param parameter_3 any (char pointer) The animation's set/group name
 ---@param parameter_4 number (float) Playback speed (always 1.00001 like in original .sco)
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
 ---@param parameter_7 number (integer) unknown (always -1)
----@return nil
-function TaskPlayAnimFacial(ped, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7) end
+---@return any (char pointer) parameter_2 The animation's name
+---@return any (char pointer) parameter_3 The animation's set/group name
+function TaskPlayAnimFacial(ped, parameter_4, parameter_5, parameter_6, parameter_7) end
 
 ---
 ---No description (
@@ -20907,16 +20788,15 @@ function SetSequenceToRepeat(seq, repeat) end
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
----@param parameter_2 any (char pointer) The animation's name
----@param parameter_3 any (char pointer) The animation's set/group name
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
 ---@param parameter_7 boolean flag 3
 ---@param parameter_8 boolean flag 4
 ---@param parameter_9 number (integer) unknown
----@return nil
-function TaskPlayAnimSecondaryUpperBody(ped, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
+---@return any (char pointer) parameter_2 The animation's name
+---@return any (char pointer) parameter_3 The animation's set/group name
+function TaskPlayAnimSecondaryUpperBody(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
 
 ---
 ---No description (
@@ -20959,16 +20839,15 @@ function FlushCoverBlockingAreas() end
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
----@param parameter_2 any (char pointer) The animation's name
----@param parameter_3 any (char pointer) The animation's set/group name
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
 ---@param parameter_7 boolean flag 3
 ---@param parameter_8 boolean flag 4
 ---@param parameter_9 number (integer) unknown
----@return nil
-function TaskPlayAnimUpperBody(ped, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
+---@return any (char pointer) parameter_2 The animation's name
+---@return any (char pointer) parameter_3 The animation's set/group name
+function TaskPlayAnimUpperBody(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
 
 ---
 ---No description (
@@ -21346,9 +21225,8 @@ function TaskSitDownOnObject(ped, parameter_2, parameter_3, parameter_4, paramet
 ---@param parameter_5 number (float) Unknown
 ---@param parameter_6 boolean Unknown
 ---@param parameter_7 boolean Unknown
----@param parameter_8 any (pointer) Cover Id
----@return nil
-function AddCoverPoint(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8) end
+---@return any (pointer) parameter_8 Cover Id
+function AddCoverPoint(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7) end
 
 ---
 ---No description (
@@ -21977,8 +21855,6 @@ function AddCoverBlockingArea(parameter_1, parameter_2, parameter_3, parameter_4
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
----@param parameter_2 any (char pointer) The animation's name
----@param parameter_3 any (char pointer) The animation's set/group name
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
@@ -21988,8 +21864,9 @@ function AddCoverBlockingArea(parameter_1, parameter_2, parameter_3, parameter_4
 ---@param parameter_10 boolean flag 6
 ---@param parameter_11 boolean flag 7
 ---@param parameter_12 number (integer) Duration of playback in milliseconds
----@return nil
-function TaskPlayAnimWithAdvancedFlags(ped, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12) end
+---@return any (char pointer) parameter_2 The animation's name
+---@return any (char pointer) parameter_3 The animation's set/group name
+function TaskPlayAnimWithAdvancedFlags(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12) end
 
 ---
 ---This section is incomplete. You can help by fixing and expanding it.
@@ -23641,8 +23518,9 @@ function LocateCharOnFootObject2d(ped, obj, x, y, flag) end
 ---
 ---
 ---@param ped number (Ped) Char handle.
+---@param parameter_2 number (integer) Variable to store the characters gravity.
 ---@return number (integer)
-function GetCharGravity(ped) end
+function GetCharGravity(ped, parameter_2) end
 
 ---
 ---No description (
@@ -24063,8 +23941,9 @@ function LocateCharAnyMeans2d(ped, x0, y0, x1, y1, flag) end
 ---
 ---@param ped number (Ped) Ped handle
 ---@param model number (positive integer) Object hash
+---@param parameter_3 boolean Unknown
 ---@return nil
-function GivePedAmbientObject(ped, model) end
+function GivePedAmbientObject(ped, model, parameter_3) end
 
 ---
 ---No description (
@@ -28132,7 +28011,7 @@ function StartGpsRaceTrack(trackid) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_POINT_TO_GPS_RACE_TRACK) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_POINT_TO_GPS_RACE_TRACK)
 ---
 ---
----@return any (Vector3, vector point The point to add to the GPS race track
+---@return any (Vector3, vector) point The point to add to the GPS race track
 function AddPointToGpsRaceTrack() end
 
 ---
@@ -30886,8 +30765,11 @@ function TaskCharArrestChar(ped0, ped1) end
 ---@param x number (float) Position X
 ---@param y number (float) Position Y
 ---@param z number (float) Position Z
+---@param parameter_5 number (integer) Vehicle Pointer (out)
+---@param parameter_6 number (integer) Ped 1 Pointer (out)
+---@param parameter_7 number (integer) Ped 2 Pointer (out)
 ---@return boolean
-function CreateEmergencyServicesCarThenWalk(model, x, y, z) end
+function CreateEmergencyServicesCarThenWalk(model, x, y, z, parameter_5, parameter_6, parameter_7) end
 
 ---
 ---The results of this function are either unknown or untested.
@@ -31375,9 +31257,6 @@ function Round(parameter_1) end
 ---@param label string
 ---@return nil
 function ClearTextLabel(label) end
-
-
------- Here goes deprecated and network functions ------
 
 ---
 ---This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
@@ -36932,57 +36811,3 @@ function AddAreaToNetworkRestartNodeGroupMapping(parameter_1) end
 ---@param parameter_1 boolean Allows network population group cycling
 ---@return any
 function AllowNetworkPopulationGroupCycling(parameter_1) end
-
-
------- Here goes the legendary 3, that werent found in natives.h ------
-
-function SetInvincibilityTimerDuration(...) end
-function GetVehicleClass(...) end
-function CreateCarGeneratorWithPlate(...) end
-
-
------- Here goes https://citizeniv.net/docs/functions.html# ------
-
-function AddEventHandler() end
-function TriggerEvent() end
-
-
------- Here goes https://citizeniv.net/docs/functions.html#client ------
-
-function CreateThread() end
-function Trace() end
-function Wait() end
-function TriggerServerEvent() end
-function RegisterNetEvent() end
-function RegisterNUICallback() end
-function RemoveEventHandler() end
-function GetPlayers() end
-function SendNUIMessage() end
-function vec() end
---- Theese are fancy vector types, but (as I figured out) there is no as fancy way to declare types in lua 
---- vector2
---- vector3
---- vector4
-
-
------- Here goes https://citizeniv.net/docs/functions.html#server ------
-
-function TriggerClientEvent() end
-function DropPlayer() end
-function GetHostId() end
-function GetInvokingResource() end
-function GetPlayerEP() end
-function GetPlayerLastMsg() end
-function GetPlayerName() end
-function GetPlayerPing() end
-function GetPlayers() end
-function PerformHttpRequest() end
-function RconLog() end
-function RconPrint() end
-function RegisterServerEvent() end
-function SetGameType() end
-function SetMapName() end
-function SetPlayerName() end
-function SetTimeout() end
-function StartResource() end
-function StopResource() end

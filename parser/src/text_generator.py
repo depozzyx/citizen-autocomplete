@@ -5,7 +5,7 @@ import requests
 from bs4 import BeautifulSoup
 from markdownify import markdownify
 
-from .raw_natives_parser import RawNativeParser
+from .raw_native_parser import RawNativeParser
 from .type_converter import TypeConverter
 
 

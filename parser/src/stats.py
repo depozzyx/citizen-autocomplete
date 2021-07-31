@@ -1,7 +1,7 @@
-from typing import Set
+from typing import Literal, Set
 
 from .raw_natives import RawNatives
-from .raw_natives_parser import RawNativeParser
+from .raw_native_parser import RawNativeParser
 
 
 class Stats:
@@ -11,13 +11,17 @@ class Stats:
     def __init__(self, raw_natives: RawNatives):
         self.raw_natives = raw_natives
 
-    def process_function_data(self, function_data: RawNativeParser) -> None:
+    def process_function_data(
+        self, function_data: RawNativeParser
+    ) -> Literal["native_matched", "native_unmatched"]:
         self.all_function_types.add(function_data.function_type_c_real)
 
         if function_data.native_lua in self.raw_natives.lua_text:
             self.lua_c_natives_matched += 1
+            return "native_matched"
         else:
             self._log(f"Unmatched native `{function_data.native_lua}`")
+            return "native_unmatched"
 
         # Idk for what I used this two lines
         # if function_data.function_type_lua.startswith("any ("):
