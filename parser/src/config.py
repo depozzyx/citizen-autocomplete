@@ -1,6 +1,4 @@
-# OUT_FILE = "man.lua"
-# C_NATIVES_FILE = "natives.h"
-OUT_PATH = "natives.lua"
+OUT_PATH = "raw_natives.lua"
 C_NATIVES_PATH = "resources/final_all_natives.h"
 CITIZEN_LUA_NATIVES_PATH = "resources/citizen_natives.lua.ignore"
 
