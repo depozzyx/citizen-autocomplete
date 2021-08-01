@@ -1,8 +1,3 @@
------- Here goes the legendary 3, that werent found in natives.h ------
-function SetInvincibilityTimerDuration(...) end
-function GetVehicleClass(...) end
-function CreateCarGeneratorWithPlate(...) end
-
 ------ Here goes https://citizeniv.net/docs/functions.html# ------
 
 function AddEventHandler() end
