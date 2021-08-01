@@ -213,8 +213,9 @@ function SetCharDiesInstantlyInWater(ped, allow) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_ROOT_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_ROOT_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `rootcam - number (Cam)`)
 ---@return number (Cam) rootcam
-function GetRootCam() end
+function GetRootCam(_p1) end
 
 ---
 ---No description (
@@ -226,9 +227,10 @@ function GetRootCam() end
 ---@param x number (float) x
 ---@param y number (float) y
 ---@param z number (float) z
+---@param _p4 nil Always nil (Pointer to return `pheight - number (float)`)
 ---@return boolean
 ---@return number (float) pheight variable to store water height
-function GetWaterHeight(x, y, z) end
+function GetWaterHeight(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -665,8 +667,9 @@ function ClearWantedLevel(playerIndex) end
 ---@param x number (float) X Position
 ---@param y number (float) Y Position
 ---@param z number (float) Z Position
+---@param _p5 nil Always nil (Pointer to return `pPlayerIndex - number (Player)`)
 ---@return number (Player) pPlayerIndex Variable to store the Player Id in
-function CreatePlayer(playerId, x, y, z) end
+function CreatePlayer(playerId, x, y, z, _p5) end
 
 ---
 ---Sets if the player can lock on. Untested
@@ -700,8 +703,9 @@ function DisablePlayerSprint(playerIndex, disabled) end
 ---
 ---
 ---@param playerIndex number (Player) Player index
+---@param _p2 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Variable to store player char.
-function GetPlayerChar(playerIndex) end
+function GetPlayerChar(playerIndex, _p2) end
 
 ---
 ---This function returns the pointer for the group the player is in.
@@ -711,8 +715,9 @@ function GetPlayerChar(playerIndex) end
 ---
 ---
 ---@param playerIndex number (Player) player index
+---@param _p2 nil Always nil (Pointer to return `pGroup - number (Group)`)
 ---@return number (Group) pGroup variable to store number group pointer
-function GetPlayerGroup(playerIndex) end
+function GetPlayerGroup(playerIndex, _p2) end
 
 ---
 ---Returns the Current Player's ID. The Player ID is meaningless for other script functions and should be converted to a Player Index before its used by calling CONVERT\_INT\_TO\_PLAYERINDEX.
@@ -743,8 +748,9 @@ function GetPlayersLastCarNoSave(pVehicle) end
 ---
 ---
 ---@param playerIndex number (Player)
+---@param _p2 nil Always nil (Pointer to return `pMaxArmour - number (positive integer)`)
 ---@return number (positive integer) pMaxArmour
-function GetPlayerMaxArmour(playerIndex) end
+function GetPlayerMaxArmour(playerIndex, _p2) end
 
 ---
 ---No description (
@@ -1494,9 +1500,10 @@ function ClearRoomForChar(ped) end
 ---@param x number (float) X pos
 ---@param y number (float) Y pos
 ---@param z number (float) Z pos
+---@param _p6 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@param unknownTrue boolean unknown (always 1?)
 ---@return number (Ped) pPed variable to store ped handle
-function CreateChar(type, model, x, y, z, unknownTrue) end
+function CreateChar(type, model, x, y, z, _p6, unknownTrue) end
 
 ---
 ---No description (
@@ -1508,8 +1515,9 @@ function CreateChar(type, model, x, y, z, unknownTrue) end
 ---@param x number (float) X-Coordinate.
 ---@param y number (float) Y-Coordinate.
 ---@param z number (float) Z-Coordinate.
+---@param _p4 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Variable to store ped.
-function CreateRandomChar(x, y, z) end
+function CreateRandomChar(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -1519,8 +1527,9 @@ function CreateRandomChar(x, y, z) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped
-function CreateRandomCharAsDriver(vehicle) end
+function CreateRandomCharAsDriver(vehicle, _p2) end
 
 ---
 ---No description (
@@ -1532,8 +1541,9 @@ function CreateRandomCharAsDriver(vehicle) end
 ---@param x number (float) X-Coordinate.
 ---@param y number (float) Y-Coordinate.
 ---@param z number (float) Z-Coordinate.
+---@param _p4 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Variable to store female ped.
-function CreateRandomFemaleChar(x, y, z) end
+function CreateRandomFemaleChar(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -1545,8 +1555,9 @@ function CreateRandomFemaleChar(x, y, z) end
 ---@param x number (float) X-Coordinate.
 ---@param y number (float) Y-Coordinate.
 ---@param z number (float) Z-Coordinate.
+---@param _p4 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Variable to store male ped.
-function CreateRandomMaleChar(x, y, z) end
+function CreateRandomMaleChar(x, y, z, _p4) end
 
 ---
 ---Subtracts hit\_points from the health of a ped.
@@ -1582,8 +1593,9 @@ function DamagePedBodyPart(ped, part, hitPoints) end
 ---[View gtamods.com](https://gtamods.com/wiki/DELETE_CHAR) | [View gtamodding.ru](http://gtamodding.ru/wiki/DELETE_CHAR)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Ped handle.
-function DeleteChar() end
+function DeleteChar(_p1) end
 
 ---
 ---No description (
@@ -1725,8 +1737,9 @@ function FreezeCharPositionAndDontLoadCollision(ped, frozen) end
 ---
 ---@param ped number (Ped) Char handle.
 ---@param weapon number (positive integer) Weapon handle.
+---@param _p3 nil Always nil (Pointer to return `pAmmo - number (positive integer)`)
 ---@return number (positive integer) pAmmo Variable to store the weapons ammo.
-function GetAmmoInCharWeapon(ped, weapon) end
+function GetAmmoInCharWeapon(ped, weapon, _p3) end
 
 ---
 ---No description (
@@ -1737,9 +1750,10 @@ function GetAmmoInCharWeapon(ped, weapon) end
 ---
 ---@param ped number (Ped) Char handle.
 ---@param weapon number (positive integer) Weapon handle.
+---@param _p3 nil Always nil (Pointer to return `pAmmo - number (positive integer)`)
 ---@return boolean
 ---@return number (positive integer) pAmmo Variable to store the clips ammo ammount.
-function GetAmmoInClip(ped, weapon) end
+function GetAmmoInClip(ped, weapon, _p3) end
 
 ---
 ---No description (
@@ -1760,10 +1774,13 @@ function GetAnimGroupFromChar(ped) end
 ---
 ---
 ---@param ped number (Ped) char handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store X pos
 ---@return number (float) pY variable to store Y pos
 ---@return number (float) pZ variable to store Z pos
-function GetCharCoordinates(ped) end
+function GetCharCoordinates(ped, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -1773,8 +1790,9 @@ function GetCharCoordinates(ped) end
 ---
 ---
 ---@param ped number (Ped) Char handle.
+---@param _p2 nil Always nil (Pointer to return `pHealth - number (positive integer)`)
 ---@return number (positive integer) pHealth Variable to store the characters health.
-function GetCharHealth(ped) end
+function GetCharHealth(ped, _p2) end
 
 ---
 ---No description (
@@ -1786,8 +1804,9 @@ function GetCharHealth(ped) end
 ---@param ped number (Ped) ped handle
 ---@param animGroup string variable to store animation group
 ---@param animName string variable to store animation name
+---@param _p4 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store time
-function GetCharAnimCurrentTime(ped, animGroup, animName) end
+function GetCharAnimCurrentTime(ped, animGroup, animName, _p4) end
 
 ---
 ---No description (
@@ -1799,8 +1818,9 @@ function GetCharAnimCurrentTime(ped, animGroup, animName) end
 ---@param ped number (Ped) ped handle
 ---@param animGroup string variable to store animation group
 ---@param animName string variable to store animation name
+---@param _p4 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store total time
-function GetCharAnimTotalTime(ped, animGroup, animName) end
+function GetCharAnimTotalTime(ped, animGroup, animName, _p4) end
 
 ---
 ---No description (
@@ -1810,8 +1830,9 @@ function GetCharAnimTotalTime(ped, animGroup, animName) end
 ---
 ---
 ---@param ped number (Ped) Char handle.
+---@param _p2 nil Always nil (Pointer to return `pArmour - number (positive integer)`)
 ---@return number (positive integer) pArmour Variable to store the characters armour.
-function GetCharArmour(ped) end
+function GetCharArmour(ped, _p2) end
 
 ---
 ---Component handle:
@@ -1834,10 +1855,13 @@ function GetCharDrawableVariation(ped, component) end
 ---
 ---@param ped number (Ped)
 ---@param unknown boolean
+---@param _p3 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetCharExtractedDisplacement(ped, unknown) end
+function GetCharExtractedDisplacement(ped, unknown, _p3, _p4, _p5) end
 
 ---
 ---Gets the character's heading in degrees.
@@ -1847,8 +1871,9 @@ function GetCharExtractedDisplacement(ped, unknown) end
 ---
 ---
 ---@param ped number (Ped) char handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store char heading
-function GetCharHeading(ped) end
+function GetCharHeading(ped, _p2) end
 
 ---
 ---This function will calculate the Z distance between the specified char and the ground, and return that distance.
@@ -1858,8 +1883,9 @@ function GetCharHeading(ped) end
 ---
 ---
 ---@param ped number (Ped) ped handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue
-function GetCharHeightAboveGround(ped) end
+function GetCharHeightAboveGround(ped, _p2) end
 
 ---
 ---No description (
@@ -1869,9 +1895,10 @@ function GetCharHeightAboveGround(ped) end
 ---
 ---
 ---@param ped number (Ped) Char handle
+---@param _p2 nil Always nil (Pointer to return `pBone - number (positive integer)`)
 ---@return any
 ---@return number (positive integer) pBone Variable to store the last damaged Bone ID.
-function GetCharLastDamageBone(ped) end
+function GetCharLastDamageBone(ped, _p2) end
 
 ---
 ---No description (
@@ -1903,8 +1930,9 @@ function GetCharMeleeActionFlag1(ped) end
 ---
 ---
 ---@param ped number (Ped) Char handle
+---@param _p2 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel Variable to store the characters model.
-function GetCharModel(ped) end
+function GetCharModel(ped, _p2) end
 
 ---
 ---No description (
@@ -1926,8 +1954,9 @@ function GetCharMoney(ped) end
 ---
 ---@param ped number (Ped) ped handle
 ---@param unknown boolean hats or glasses
+---@param _p3 nil Always nil (Pointer to return `pIndex - number (positive integer)`)
 ---@return number (positive integer) pIndex variable to store prop index
-function GetCharPropIndex(ped, unknown) end
+function GetCharPropIndex(ped, unknown, _p3) end
 
 ---
 ---No description (
@@ -1959,8 +1988,9 @@ function GetCharReadyToBeStunned(ped) end
 ---
 ---
 ---@param ped number (Ped) Char handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue Variable to store the characters speed.
-function GetCharSpeed(ped) end
+function GetCharSpeed(ped, _p2) end
 
 ---
 ---Component handle:
@@ -1982,10 +2012,13 @@ function GetCharTextureVariation(ped, component) end
 ---
 ---
 ---@param ped number (Ped) char handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store X Velocity
 ---@return number (float) pY variable to store Y Velocity
 ---@return number (float) pZ variable to store Z Velocity
-function GetCharVelocity(ped) end
+function GetCharVelocity(ped, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -1996,10 +2029,13 @@ function GetCharVelocity(ped) end
 ---
 ---@param ped number (Ped) ped handle
 ---@param slot number (positive integer) slot
+---@param _p3 nil Always nil (Pointer to return `pWeapon - number (positive integer)`)
+---@param _p4 nil Always nil (Pointer to return `pAmmo0 - number (positive integer)`)
+---@param _p5 nil Always nil (Pointer to return `pAmmo1 - number (positive integer)`)
 ---@return number (positive integer) pWeapon variable to store weapon
 ---@return number (positive integer) pAmmo0 variable to store ammo (1) (unknown if clip or not)
 ---@return number (positive integer) pAmmo1 variable to store ammo (2) (unknown if clip or not)
-function GetCharWeaponInSlot(ped, slot) end
+function GetCharWeaponInSlot(ped, slot, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -2020,9 +2056,10 @@ function GetCharWillCowerInsteadOfFleeing(ped) end
 ---
 ---
 ---@param ped number (Ped) Char handle
+---@param _p2 nil Always nil (Pointer to return `pWeapon - number (positive integer)`)
 ---@return boolean
 ---@return number (positive integer) pWeapon Variable to store the characters current weapon.
-function GetCurrentCharWeapon(ped) end
+function GetCurrentCharWeapon(ped, _p2) end
 
 ---
 ---No description (
@@ -2044,10 +2081,13 @@ function GetDamageToPedBodyPart(ped, part) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetDeadCharPickupCoords(ped) end
+function GetDeadCharPickupCoords(ped, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -2057,8 +2097,9 @@ function GetDeadCharPickupCoords(ped) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `pKey - number (positive integer)`)
 ---@return number (positive integer) pKey
-function GetKeyForCharInRoom(ped) end
+function GetKeyForCharInRoom(ped, _p2) end
 
 ---
 ---No description (
@@ -2069,9 +2110,10 @@ function GetKeyForCharInRoom(ped) end
 ---
 ---@param ped number (Ped) Char handle
 ---@param weapon number (positive integer) Weapon handle.
+---@param _p3 nil Always nil (Pointer to return `pMaxAmmo - number (positive integer)`)
 ---@return boolean
 ---@return number (positive integer) pMaxAmmo Variable to store maximum ammo.
-function GetMaxAmmo(ped, weapon) end
+function GetMaxAmmo(ped, weapon, _p3) end
 
 ---
 ---No description (
@@ -2082,8 +2124,9 @@ function GetMaxAmmo(ped, weapon) end
 ---
 ---@param ped number (Ped) Char handle
 ---@param weapon number (positive integer) Weapon handle.
+---@param _p3 nil Always nil (Pointer to return `pMaxAmmo - number (positive integer)`)
 ---@return number (positive integer) pMaxAmmo Variable to store max ammo in the current clip.
-function GetMaxAmmoInClip(ped, weapon) end
+function GetMaxAmmoInClip(ped, weapon, _p3) end
 
 ---
 ---Get the number of available drawable variations on component (parameter 2).
@@ -2136,10 +2179,13 @@ function GetObjectPedIsHolding(ped) end
 ---@param x number (float) offset X value
 ---@param y number (float) offset Y value
 ---@param z number (float) offset Z value
+---@param _p5 nil Always nil (Pointer to return `pOffX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pOffY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pOffZ - number (float)`)
 ---@return number (float) pOffX variable to store X pos
 ---@return number (float) pOffY variable to store Y pos
 ---@return number (float) pOffZ variable to store Z pos
-function GetOffsetFromCharInWorldCoords(ped, x, y, z) end
+function GetOffsetFromCharInWorldCoords(ped, x, y, z, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -2164,8 +2210,9 @@ function GetPedClimbState(ped) end
 ---@param x number (float) unknown(Offset X?)
 ---@param y number (float) unknown(Offset Y?)
 ---@param z number (float) unknown(Offset Z?)
+---@param _p6 nil Always nil (Pointer to return `pPosition - any (Vector3, pointer)`)
 ---@return any (Vector3, pointer) pPosition variable to store bone position
-function GetPedBonePosition(ped, bone, x, y, z) end
+function GetPedBonePosition(ped, bone, x, y, z, _p6) end
 
 ---
 ---No description (
@@ -2187,8 +2234,9 @@ function GetPedGroupIndex(ped, pIndex) end
 ---
 ---
 ---@param ped number (Ped) Ped handle
+---@param _p2 nil Always nil (Pointer to return `pType - number (positive integer)`)
 ---@return number (positive integer) pType Variable to store ped type.
-function GetPedType(ped) end
+function GetPedType(ped, _p2) end
 
 ---
 ---Gives a helmet to the specified ped.
@@ -3097,8 +3145,9 @@ function IsScriptedSpeechPlaying(ped) end
 ---[View gtamods.com](https://gtamods.com/wiki/MARK_CHAR_AS_NO_LONGER_NEEDED) | [View gtamodding.ru](http://gtamodding.ru/wiki/MARK_CHAR_AS_NO_LONGER_NEEDED)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed Char Handle
-function MarkCharAsNoLongerNeeded() end
+function MarkCharAsNoLongerNeeded(_p1) end
 
 ---
 ---ePedMoveState:
@@ -4670,8 +4719,9 @@ function TaskWarpCharIntoCarAsPassenger(ped, vehicle, seatIndex) end
 ---[View gtamods.com](https://gtamods.com/wiki/OPEN_SEQUENCE_TASK) | [View gtamodding.ru](http://gtamodding.ru/wiki/OPEN_SEQUENCE_TASK)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pTaskSequence - number (TaskSequence)`)
 ---@return number (TaskSequence) pTaskSequence
-function OpenSequenceTask() end
+function OpenSequenceTask(_p1) end
 
 ---
 ---No description (
@@ -4751,9 +4801,10 @@ function EndCharSearchCriteria() end
 ---@param radius number (float) Radius
 ---@param unknown1 number (positive integer) Unknown (usually 0)
 ---@param unknown2 number (positive integer) Unknown (usually 70)
+---@param _p7 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return boolean
 ---@return number (Ped) pPed Ped handle
-function GetClosestChar(x, y, z, radius, unknown1, unknown2) end
+function GetClosestChar(x, y, z, radius, unknown1, unknown2, _p7) end
 
 ---
 ---This function will select a random char in the specified radius and return their pointer in Parameter 7.
@@ -4769,8 +4820,9 @@ function GetClosestChar(x, y, z, radius, unknown1, unknown2) end
 ---@param sx number (float) X Radius
 ---@param sy number (float) Y Radius
 ---@param sz number (float) Z Radius
+---@param _p7 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed return selected ped
-function GetRandomCharInAreaOffsetNoSave(x, y, z, sx, sy, sz) end
+function GetRandomCharInAreaOffsetNoSave(x, y, z, sx, sy, sz, _p7) end
 
 ---
 ---No description (
@@ -4802,9 +4854,10 @@ function SearchCriteriaRejectPedsWithFlagTrue(flagId) end
 ---
 ---
 ---@param unknownFalse boolean unknown (false suggested)
+---@param _p2 nil Always nil (Pointer to return `pGroup - number (Group)`)
 ---@param unknownTrue boolean unknown (true suggested)
 ---@return number (Group) pGroup variable to store group
-function CreateGroup(unknownFalse, unknownTrue) end
+function CreateGroup(unknownFalse, _p2, unknownTrue) end
 
 ---
 ---No description (
@@ -4825,8 +4878,9 @@ function DoesGroupExist(group) end
 ---
 ---
 ---@param group number (Group)
+---@param _p2 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed
-function GetGroupLeader(group) end
+function GetGroupLeader(group, _p2) end
 
 ---
 ---No description (
@@ -4837,8 +4891,9 @@ function GetGroupLeader(group) end
 ---
 ---@param group number (Group)
 ---@param index number (positive integer)
+---@param _p3 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed
-function GetGroupMember(group, index) end
+function GetGroupMember(group, index, _p3) end
 
 ---
 ---This function returns the number of player-controlled and non-player-controlled chars in the specified group. Use GET\_PLAYER\_GROUP to retrieve the pointer for the current player's group.
@@ -4848,9 +4903,11 @@ function GetGroupMember(group, index) end
 ---
 ---
 ---@param group number (Group) group pointer
+---@param _p2 nil Always nil (Pointer to return `pStartIndex - number (positive integer)`)
+---@param _p3 nil Always nil (Pointer to return `pCount - number (positive integer)`)
 ---@return number (positive integer) pStartIndex variable to store number of player-controlled chars in group(?)
 ---@return number (positive integer) pCount variable to store number of non-player-controlled chars in group
-function GetGroupSize(group) end
+function GetGroupSize(group, _p2, _p3) end
 
 ---
 ---I find this only works if you run the command on your char and your current group.
@@ -5123,9 +5180,10 @@ function BurstCarTyre(vehicle, tyre) end
 ---@param x number (float) X pos
 ---@param y number (float) Y pos
 ---@param z number (float) Z pos
+---@param _p5 nil Always nil (Pointer to return `pVehicle - number (Vehicle)`)
 ---@param unknownTrue boolean unknown (always 1?)
 ---@return number (Vehicle) pVehicle variable to store car handle
-function CreateCar(nameHash, x, y, z, unknownTrue) end
+function CreateCar(nameHash, x, y, z, _p5, unknownTrue) end
 
 ---
 ---No description (
@@ -5138,8 +5196,9 @@ function CreateCar(nameHash, x, y, z, unknownTrue) end
 ---@param charType number (positive integer) character type
 ---@param model number (positive integer) character model
 ---@param passengerIndex number (positive integer) passenger seat index
+---@param _p5 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped
-function CreateCharAsPassenger(vehicle, charType, model, passengerIndex) end
+function CreateCharAsPassenger(vehicle, charType, model, passengerIndex, _p5) end
 
 ---
 ---This function creates a new character inside the specified vehicle.
@@ -5151,8 +5210,9 @@ function CreateCharAsPassenger(vehicle, charType, model, passengerIndex) end
 ---@param vehicle number (Vehicle) Vehicle handle
 ---@param charType number (positive integer) pedtype
 ---@param model number (positive integer) ped model hash
+---@param _p4 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped handle
-function CreateCharInsideCar(vehicle, charType, model) end
+function CreateCharInsideCar(vehicle, charType, model, _p4) end
 
 ---
 ---This function change the colors of the specified vehicle.
@@ -5248,8 +5308,9 @@ function CreateEmergencyServicesCar(model, x, y, z) end
 ---
 ---@param vehicle number (Vehicle) vehicle handle
 ---@param seat number (positive integer) seat
+---@param _p3 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped
-function CreateRandomCharAsPassenger(vehicle, seat) end
+function CreateRandomCharAsPassenger(vehicle, seat, _p3) end
 
 ---
 ---No description (
@@ -5258,8 +5319,9 @@ function CreateRandomCharAsPassenger(vehicle, seat) end
 ---[View gtamods.com](https://gtamods.com/wiki/DELETE_CAR) | [View gtamodding.ru](http://gtamodding.ru/wiki/DELETE_CAR)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pVehicle - number (Vehicle)`)
 ---@return number (Vehicle) pVehicle car handle
-function DeleteCar() end
+function DeleteCar(_p1) end
 
 ---
 ---No description (
@@ -5396,8 +5458,9 @@ function FreezeCarPositionAndDontLoadCollision(vehicle, frozen) end
 ---
 ---
 ---@param ped number (Ped) char handle
+---@param _p2 nil Always nil (Pointer to return `pVehicle - number (Vehicle)`)
 ---@return number (Vehicle) pVehicle variable to store car handle
-function GetCarCharIsUsing(ped) end
+function GetCarCharIsUsing(ped, _p2) end
 
 ---
 ---This function will get the 1st and the 2nd color ID of the specified vehicle, and store them to variables.
@@ -5407,9 +5470,11 @@ function GetCarCharIsUsing(ped) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pColour1 - number (ColourIndex)`)
+---@param _p3 nil Always nil (Pointer to return `pColour2 - number (ColourIndex)`)
 ---@return number (ColourIndex) pColour1 variable to store 1st color ID
 ---@return number (ColourIndex) pColour2 variable to store 2nd color ID
-function GetCarColours(vehicle) end
+function GetCarColours(vehicle, _p2, _p3) end
 
 ---
 ---This function will get the x,y,z coordinates of a car, and store them to variables.
@@ -5419,10 +5484,13 @@ function GetCarColours(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) car handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store X pos
 ---@return number (float) pY variable to store Y pos
 ---@return number (float) pZ variable to store Z pos
-function GetCarCoordinates(vehicle) end
+function GetCarCoordinates(vehicle, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -5435,8 +5503,9 @@ function GetCarCoordinates(vehicle) end
 ---@param x number (float) x
 ---@param y number (float) y
 ---@param z number (float) z
+---@param _p5 nil Always nil (Pointer to return `pDeformation - any (Vector3, vector3)`)
 ---@return any (Vector3, vector3) pDeformation variable to store deformation
-function GetCarDeformationAtPos(vehicle, x, y, z) end
+function GetCarDeformationAtPos(vehicle, x, y, z, _p5) end
 
 ---
 ---No description (
@@ -5446,8 +5515,9 @@ function GetCarDeformationAtPos(vehicle, x, y, z) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (positive integer)`)
 ---@return number (positive integer) pValue lock status
-function GetCarDoorLockStatus(vehicle) end
+function GetCarDoorLockStatus(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5457,8 +5527,9 @@ function GetCarDoorLockStatus(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store x
-function GetCarForwardX(vehicle) end
+function GetCarForwardX(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5468,8 +5539,9 @@ function GetCarForwardX(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store y
-function GetCarForwardY(vehicle) end
+function GetCarForwardY(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5479,8 +5551,9 @@ function GetCarForwardY(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) car handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store heading
-function GetCarHeading(vehicle) end
+function GetCarHeading(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5490,8 +5563,9 @@ function GetCarHeading(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (positive integer)`)
 ---@return number (positive integer) pValue variable to store health
-function GetCarHealth(vehicle) end
+function GetCarHealth(vehicle, _p2) end
 
 ---
 ---Gets model from a vehicle.
@@ -5501,8 +5575,9 @@ function GetCarHealth(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (positive integer)`)
 ---@return number (positive integer) pValue variable to store model
-function GetCarModel(vehicle) end
+function GetCarModel(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5512,8 +5587,9 @@ function GetCarModel(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store pitch
-function GetCarPitch(vehicle) end
+function GetCarPitch(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5523,8 +5599,9 @@ function GetCarPitch(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store roll
-function GetCarRoll(vehicle) end
+function GetCarRoll(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5534,8 +5611,9 @@ function GetCarRoll(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store speed
-function GetCarSpeed(vehicle) end
+function GetCarSpeed(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5545,9 +5623,10 @@ function GetCarSpeed(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pVector - any (Vector3, vector3)`)
 ---@param unknownFalse boolean unknown (false suggested)
 ---@return any (Vector3, vector3) pVector variable to store speed vector
-function GetCarSpeedVector(vehicle, unknownFalse) end
+function GetCarSpeedVector(vehicle, _p2, unknownFalse) end
 
 ---
 ---No description (
@@ -5557,8 +5636,9 @@ function GetCarSpeedVector(vehicle, unknownFalse) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue variable to store upright value
-function GetCarUprightValue(vehicle) end
+function GetCarUprightValue(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5569,8 +5649,9 @@ function GetCarUprightValue(vehicle) end
 ---
 ---@param vehicle number (Vehicle) vehicle handle
 ---@param seatIndex number (positive integer) seat index
+---@param _p3 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped id
-function GetCharInCarPassengerSeat(vehicle, seatIndex) end
+function GetCharInCarPassengerSeat(vehicle, seatIndex, _p3) end
 
 ---
 ---This function returns the closest car in the specified radius, at the specified coordinates.
@@ -5600,11 +5681,14 @@ function GetClosestCar(x, y, z, radius, unknown0_0, unknown1_70) end
 ---@param x number (float) X coordinate
 ---@param y number (float) Y coordinate
 ---@param z number (float) Z coordinate
+---@param _p4 nil Always nil (Pointer to return `pResX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pResY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pResZ - number (float)`)
 ---@return boolean success?
 ---@return number (float) pResX X coordinate of closest node
 ---@return number (float) pResY Y coordinate of closest node
 ---@return number (float) pResZ Z coordinate of closest node
-function GetClosestCarNode(x, y, z) end
+function GetClosestCarNode(x, y, z, _p4, _p5, _p6) end
 
 ---
 ---Gets the car node closest to the specified position, and stores the position and heading of the node in the variables pointed to by P4, P5, P6 and P7.
@@ -5616,12 +5700,16 @@ function GetClosestCarNode(x, y, z) end
 ---@param x number (float) X coordinate
 ---@param y number (float) Y coordinate
 ---@param z number (float) Z coordinate
+---@param _p4 nil Always nil (Pointer to return `pResX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pResY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pResZ - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pHeading - number (float)`)
 ---@return boolean success?
 ---@return number (float) pResX X coordinate of closest node
 ---@return number (float) pResY Y coordinate of closest node
 ---@return number (float) pResZ Z coordinate of closest node
 ---@return number (float) pHeading Heading of closest node
-function GetClosestCarNodeWithHeading(x, y, z) end
+function GetClosestCarNodeWithHeading(x, y, z, _p4, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -5633,11 +5721,14 @@ function GetClosestCarNodeWithHeading(x, y, z) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pResX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pResY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pResZ - number (float)`)
 ---@return boolean
 ---@return number (float) pResX
 ---@return number (float) pResY
 ---@return number (float) pResZ
-function GetClosestMajorCarNode(x, y, z) end
+function GetClosestMajorCarNode(x, y, z, _p4, _p5, _p6) end
 
 ---
 ---No description (
@@ -5650,12 +5741,16 @@ function GetClosestMajorCarNode(x, y, z) end
 ---@param y number (float)
 ---@param z number (float)
 ---@param nodeNum number (positive integer)
+---@param _p5 nil Always nil (Pointer to return `pResX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pResY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pResZ - number (float)`)
+---@param _p8 nil Always nil (Pointer to return `pHeading - number (float)`)
 ---@return boolean
 ---@return number (float) pResX
 ---@return number (float) pResY
 ---@return number (float) pResZ
 ---@return number (float) pHeading
-function GetNthClosestCarNodeWithHeading(x, y, z, nodeNum) end
+function GetNthClosestCarNodeWithHeading(x, y, z, nodeNum, _p5, _p6, _p7, _p8) end
 
 ---
 ---No description (
@@ -5669,13 +5764,18 @@ function GetNthClosestCarNodeWithHeading(x, y, z, nodeNum) end
 ---@param z number (float)
 ---@param nodeNum number (positive integer)
 ---@param areaId number (positive integer)
+---@param _p6 nil Always nil (Pointer to return `pResX - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pResY - number (float)`)
+---@param _p8 nil Always nil (Pointer to return `pResZ - number (float)`)
+---@param _p9 nil Always nil (Pointer to return `pHeading - number (float)`)
+---@param _p10 nil Always nil (Pointer to return `pUnknownMaybeAreaId - number (positive integer)`)
 ---@return boolean
 ---@return number (float) pResX
 ---@return number (float) pResY
 ---@return number (float) pResZ
 ---@return number (float) pHeading
 ---@return number (positive integer) pUnknownMaybeAreaId
-function GetNthClosestCarNodeWithHeadingOnIsland(x, y, z, nodeNum, areaId) end
+function GetNthClosestCarNodeWithHeadingOnIsland(x, y, z, nodeNum, areaId, _p6, _p7, _p8, _p9, _p10) end
 
 ---
 ---No description (
@@ -5685,10 +5785,13 @@ function GetNthClosestCarNodeWithHeadingOnIsland(x, y, z, nodeNum, areaId) end
 ---
 ---
 ---@param vehicle number (Vehicle) dead vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store x
 ---@return number (float) pY variable to store y
 ---@return number (float) pZ variable to store z
-function GetDeadCarCoordinates(vehicle) end
+function GetDeadCarCoordinates(vehicle, _p2, _p3, _p4) end
 
 ---
 ---This native gets angle of vehicle`s door and store it in parameter 3. For example: GET\_DOOR\_ANGLE\_RATIO( myCar, 5, &FloatAngle ) - will get your trunk door angle.
@@ -5699,8 +5802,9 @@ function GetDeadCarCoordinates(vehicle) end
 ---
 ---@param vehicle number (Vehicle) Vehicle handler
 ---@param door number (positive integer) Door`s ID
+---@param _p3 nil Always nil (Pointer to return `pAngleRatio - number (float)`)
 ---@return number (float) pAngleRatio handler of door angle
-function GetDoorAngleRatio(vehicle, door) end
+function GetDoorAngleRatio(vehicle, door, _p3) end
 
 ---
 ---No description (
@@ -5710,8 +5814,9 @@ function GetDoorAngleRatio(vehicle, door) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return number (Ped) pPed variable to store ped id
-function GetDriverOfCar(vehicle) end
+function GetDriverOfCar(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5732,9 +5837,11 @@ function GetEngineHealth(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pColour1 - number (ColourIndex)`)
+---@param _p3 nil Always nil (Pointer to return `pColour2 - number (ColourIndex)`)
 ---@return number (ColourIndex) pColour1 variable to store 1st specular color ID
 ---@return number (ColourIndex) pColour2 variable to store 2nd specular color ID
-function GetExtraCarColours(vehicle) end
+function GetExtraCarColours(vehicle, _p2, _p3) end
 
 ---
 ---No description (
@@ -5760,8 +5867,9 @@ function GetHeightOfVehicle(vehicle, x, y, z, unknownTrue1, unknownTrue2) end
 ---
 ---
 ---@param vehicle number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `pKey - number (positive integer)`)
 ---@return number (positive integer) pKey
-function GetKeyForCarInRoom(vehicle) end
+function GetKeyForCarInRoom(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5771,8 +5879,9 @@ function GetKeyForCarInRoom(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `pMax - number (positive integer)`)
 ---@return number (positive integer) pMax
-function GetMaximumNumberOfPassengers(vehicle) end
+function GetMaximumNumberOfPassengers(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5785,8 +5894,9 @@ function GetMaximumNumberOfPassengers(vehicle) end
 ---@param y number (float)
 ---@param z number (float)
 ---@param radius number (float)
+---@param _p5 nil Always nil (Pointer to return `pVehicle - number (Vehicle)`)
 ---@return number (Vehicle) pVehicle
-function GetNearestCableCar(x, y, z, radius) end
+function GetNearestCableCar(x, y, z, radius, _p5) end
 
 ---
 ---No description (
@@ -5796,8 +5906,9 @@ function GetNearestCableCar(x, y, z, radius) end
 ---
 ---
 ---@param vehicle number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `pNumColours - number (positive integer)`)
 ---@return number (positive integer) pNumColours
-function GetNumCarColours(vehicle) end
+function GetNumCarColours(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5807,8 +5918,9 @@ function GetNumCarColours(vehicle) end
 ---
 ---
 ---@param vehicle number (Vehicle) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `pNumPassengers - number (positive integer)`)
 ---@return number (positive integer) pNumPassengers variable to store passengers
-function GetNumberOfPassengers(vehicle) end
+function GetNumberOfPassengers(vehicle, _p2) end
 
 ---
 ---No description (
@@ -5821,10 +5933,13 @@ function GetNumberOfPassengers(vehicle) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `pOffX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pOffY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pOffZ - number (float)`)
 ---@return number (float) pOffX
 ---@return number (float) pOffY
 ---@return number (float) pOffZ
-function GetOffsetFromCarGivenWorldCoords(vehicle, x, y, z) end
+function GetOffsetFromCarGivenWorldCoords(vehicle, x, y, z, _p5, _p6, _p7) end
 
 ---
 ---This function will get the x,y,z coordinates of the car in P1, with the offsets in P2 P3 and P4, and store them to variables.
@@ -5837,10 +5952,13 @@ function GetOffsetFromCarGivenWorldCoords(vehicle, x, y, z) end
 ---@param x number (float) offset X value
 ---@param y number (float) offset Y value
 ---@param z number (float) offset Z value
+---@param _p5 nil Always nil (Pointer to return `pOffX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pOffY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pOffZ - number (float)`)
 ---@return number (float) pOffX variable to store X pos
 ---@return number (float) pOffY variable to store Y pos
 ---@return number (float) pOffZ variable to store Z pos
-function GetOffsetFromCarInWorldCoords(vehicle, x, y, z) end
+function GetOffsetFromCarInWorldCoords(vehicle, x, y, z, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -5861,10 +5979,11 @@ function GetPetrolTankHealth(vehicle) end
 ---
 ---
 ---@param MustIncludeSpecialModels boolean
+---@param _p2 nil Always nil (Pointer to return `pHash - number (positive integer)`)
 ---@param parameter_3 any (unknown)
 ---@param parameter_4 any (unknown)
 ---@return number (positive integer) pHash
-function GetRandomCarModelInMemory(MustIncludeSpecialModels, parameter_3, parameter_4) end
+function GetRandomCarModelInMemory(MustIncludeSpecialModels, _p2, parameter_3, parameter_4) end
 
 ---
 ---No description (
@@ -6293,8 +6412,9 @@ function MarkCarAsConvoyCar(vehicle, convoyCar) end
 ---[View gtamods.com](https://gtamods.com/wiki/MARK_CAR_AS_NO_LONGER_NEEDED) | [View gtamodding.ru](http://gtamodding.ru/wiki/MARK_CAR_AS_NO_LONGER_NEEDED)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pVehicle - number (Vehicle)`)
 ---@return number (Vehicle) pVehicle Vehicle Handle
-function MarkCarAsNoLongerNeeded() end
+function MarkCarAsNoLongerNeeded(_p1) end
 
 ---
 ---This function open a door of the specified vehicle. To close a door call SHUT\_CAR\_DOOR.
@@ -6576,8 +6696,9 @@ function WashVehicleTextures(vehicle, intensity) end
 ---@param y number (float) Y position
 ---@param z number (float) Z position
 ---@param unknown2 boolean Train direction (1 or 0)
+---@param _p6 nil Always nil (Pointer to return `pTrain - number (Train)`)
 ---@return number (Train) pTrain Variable to store train handle
-function CreateMissionTrain(unknown1, x, y, z, unknown2) end
+function CreateMissionTrain(unknown1, x, y, z, unknown2, _p6) end
 
 ---
 ---No description (
@@ -6586,8 +6707,9 @@ function CreateMissionTrain(unknown1, x, y, z, unknown2) end
 ---[View gtamods.com](https://gtamods.com/wiki/DELETE_MISSION_TRAIN) | [View gtamodding.ru](http://gtamodding.ru/wiki/DELETE_MISSION_TRAIN)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pTrain - number (Train)`)
 ---@return number (Train) pTrain
-function DeleteMissionTrain() end
+function DeleteMissionTrain(_p1) end
 
 ---
 ---No description (
@@ -6751,9 +6873,10 @@ function ClearRoomForObject(obj) end
 ---@param x number (float) X pos
 ---@param y number (float) Y pos
 ---@param z number (float) Z pos
+---@param _p5 nil Always nil (Pointer to return `pObj - number (Object)`)
 ---@param unknownTrue boolean unknown (always 1?)
 ---@return number (Object) pObj variable to store object handle
-function CreateObject(model, x, y, z, unknownTrue) end
+function CreateObject(model, x, y, z, _p5, unknownTrue) end
 
 ---
 ---No description (
@@ -6766,9 +6889,10 @@ function CreateObject(model, x, y, z, unknownTrue) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `pObj - number (Object)`)
 ---@param unknownTrue boolean
 ---@return number (Object) pObj
-function CreateObjectNoOffset(model, x, y, z, unknownTrue) end
+function CreateObjectNoOffset(model, x, y, z, _p5, unknownTrue) end
 
 ---
 ---No description (
@@ -6777,8 +6901,9 @@ function CreateObjectNoOffset(model, x, y, z, unknownTrue) end
 ---[View gtamods.com](https://gtamods.com/wiki/DELETE_OBJECT) | [View gtamodding.ru](http://gtamodding.ru/wiki/DELETE_OBJECT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pObj - number (Object)`)
 ---@return number (Object) pObj object handle
-function DeleteObject() end
+function DeleteObject(_p1) end
 
 ---
 ---This function detaches the object from its host.
@@ -6871,10 +6996,13 @@ function GetCarObjectIsAttachedTo(obj) end
 ---
 ---
 ---@param obj number (Object) object handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store X pos
 ---@return number (float) pY variable to store Y pos
 ---@return number (float) pZ variable to store Z pos
-function GetObjectCoordinates(obj) end
+function GetObjectCoordinates(obj, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -6896,8 +7024,9 @@ function GetObjectFragmentDamageHealth(obj, unknown) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pHeading - number (float)`)
 ---@return number (float) pHeading
-function GetObjectHeading(obj) end
+function GetObjectHeading(obj, _p2) end
 
 ---
 ---No description (
@@ -6907,8 +7036,9 @@ function GetObjectHeading(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pHealth - number (float)`)
 ---@return number (float) pHealth
-function GetObjectHealth(obj) end
+function GetObjectHealth(obj, _p2) end
 
 ---
 ---No description (
@@ -6918,8 +7048,9 @@ function GetObjectHealth(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetObjectModel(obj) end
+function GetObjectModel(obj, _p2) end
 
 ---
 ---No description (
@@ -6929,10 +7060,13 @@ function GetObjectModel(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetObjectRotationVelocity(obj) end
+function GetObjectRotationVelocity(obj, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -6942,8 +7076,9 @@ function GetObjectRotationVelocity(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pSpeed - number (float)`)
 ---@return number (float) pSpeed
-function GetObjectSpeed(obj) end
+function GetObjectSpeed(obj, _p2) end
 
 ---
 ---No description (
@@ -6953,10 +7088,13 @@ function GetObjectSpeed(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetObjectVelocity(obj) end
+function GetObjectVelocity(obj, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -6969,10 +7107,13 @@ function GetObjectVelocity(obj) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `pOffX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pOffY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pOffZ - number (float)`)
 ---@return number (float) pOffX
 ---@return number (float) pOffY
 ---@return number (float) pOffZ
-function GetOffsetFromObjectInWorldCoords(obj, x, y, z) end
+function GetOffsetFromObjectInWorldCoords(obj, x, y, z, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -7172,8 +7313,9 @@ function MakeObjectTargettable(obj, targettable) end
 ---[View gtamods.com](https://gtamods.com/wiki/MARK_OBJECT_AS_NO_LONGER_NEEDED) | [View gtamodding.ru](http://gtamodding.ru/wiki/MARK_OBJECT_AS_NO_LONGER_NEEDED)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pObj - number (Object)`)
 ---@return number (Object) pObj
-function MarkObjectAsNoLongerNeeded() end
+function MarkObjectAsNoLongerNeeded(_p1) end
 
 ---
 ---No description (
@@ -7266,8 +7408,9 @@ function RequestModel(model) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_BASIC_COP_MODEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_BASIC_COP_MODEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetCurrentBasicCopModel() end
+function GetCurrentBasicCopModel(_p1) end
 
 ---
 ---No description (
@@ -7276,8 +7419,9 @@ function GetCurrentBasicCopModel() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_BASIC_POLICE_CAR_MODEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_BASIC_POLICE_CAR_MODEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetCurrentBasicPoliceCarModel() end
+function GetCurrentBasicPoliceCarModel(_p1) end
 
 ---
 ---No description (
@@ -7286,8 +7430,9 @@ function GetCurrentBasicPoliceCarModel() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_COP_MODEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_COP_MODEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetCurrentCopModel() end
+function GetCurrentCopModel(_p1) end
 
 ---
 ---No description (
@@ -7296,8 +7441,9 @@ function GetCurrentCopModel() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_POLICE_CAR_MODEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_POLICE_CAR_MODEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetCurrentPoliceCarModel() end
+function GetCurrentPoliceCarModel(_p1) end
 
 ---
 ---No description (
@@ -7306,8 +7452,9 @@ function GetCurrentPoliceCarModel() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_TAXI_CAR_MODEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_TAXI_CAR_MODEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pModel - number (positive integer)`)
 ---@return number (positive integer) pModel
-function GetCurrentTaxiCarModel() end
+function GetCurrentTaxiCarModel(_p1) end
 
 ---
 ---No description (
@@ -7328,9 +7475,11 @@ function GetDisplayNameFromVehicleModel(model) end
 ---
 ---
 ---@param model number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pMinVector - any (Vector3)`)
+---@param _p3 nil Always nil (Pointer to return `pMaxVector - any (Vector3)`)
 ---@return any (Vector3) pMinVector
 ---@return any (Vector3) pMaxVector
-function GetModelDimensions(model) end
+function GetModelDimensions(model, _p2, _p3) end
 
 ---
 ---This debug function was cut off final build, so it always returns string "Debug command not in final build" as result.
@@ -7462,8 +7611,9 @@ function ActivateInterior(interior, unknownTrue) end
 ---
 ---
 ---@param vehicle number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `pInterior - number (Interior)`)
 ---@return number (Interior) pInterior
-function GetInteriorFromCar(vehicle) end
+function GetInteriorFromCar(vehicle, _p2) end
 
 ---
 ---No description (
@@ -7473,8 +7623,9 @@ function GetInteriorFromCar(vehicle) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `pInterior - number (Interior)`)
 ---@return number (Interior) pInterior
-function GetInteriorFromChar(ped) end
+function GetInteriorFromChar(ped, _p2) end
 
 ---
 ---No description (
@@ -7486,8 +7637,9 @@ function GetInteriorFromChar(ped) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pInterior - number (Interior)`)
 ---@return number (Interior) pInterior
-function GetInteriorAtCoords(x, y, z) end
+function GetInteriorAtCoords(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -7497,8 +7649,9 @@ function GetInteriorAtCoords(x, y, z) end
 ---
 ---
 ---@param interior number (Interior)
+---@param _p2 nil Always nil (Pointer to return `pHeading - number (float)`)
 ---@return number (float) pHeading
-function GetInteriorHeading(interior) end
+function GetInteriorHeading(interior, _p2) end
 
 ---
 ---No description (
@@ -7511,8 +7664,9 @@ function GetInteriorHeading(interior) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `pOffset - number (float)`)
 ---@return number (float) pOffset
-function GetOffsetFromInteriorInWorldCoords(interior, x, y, z) end
+function GetOffsetFromInteriorInWorldCoords(interior, x, y, z, _p5) end
 
 ---
 ---No description (
@@ -7522,8 +7676,9 @@ function GetOffsetFromInteriorInWorldCoords(interior, x, y, z) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `pRoomKey - number (positive integer)`)
 ---@return number (positive integer) pRoomKey
-function GetRoomKeyFromObject(obj) end
+function GetRoomKeyFromObject(obj, _p2) end
 
 ---
 ---No description (
@@ -7596,8 +7751,9 @@ function ClearGroupDecisionMakerEventResponse(dm, eventid) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopyCharDecisionMaker(type) end
+function CopyCharDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7607,8 +7763,9 @@ function CopyCharDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopyCombatDecisionMaker(type) end
+function CopyCombatDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7618,8 +7775,9 @@ function CopyCombatDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopyGroupCharDecisionMaker(type) end
+function CopyGroupCharDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7629,8 +7787,9 @@ function CopyGroupCharDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopyGroupCombatDecisionMaker(type) end
+function CopyGroupCombatDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7640,8 +7799,9 @@ function CopyGroupCombatDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopySharedCharDecisionMaker(type) end
+function CopySharedCharDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7651,8 +7811,9 @@ function CopySharedCharDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function CopySharedCombatDecisionMaker(type) end
+function CopySharedCombatDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7673,8 +7834,9 @@ function DoesDecisionMakerExist(dm) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function LoadCharDecisionMaker(type) end
+function LoadCharDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7684,8 +7846,9 @@ function LoadCharDecisionMaker(type) end
 ---
 ---
 ---@param type number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pDM - number (DecisionMaker)`)
 ---@return number (DecisionMaker) pDM
-function LoadCombatDecisionMaker(type) end
+function LoadCombatDecisionMaker(type, _p2) end
 
 ---
 ---No description (
@@ -7921,8 +8084,9 @@ function SetGroupCombatDecisionMaker(group, dm) end
 ---
 ---
 ---@param vehicle number (Vehicle) Vehicle Id
+---@param _p2 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store the Blip Handle
-function AddBlipForCar(vehicle) end
+function AddBlipForCar(vehicle, _p2) end
 
 ---
 ---No description (
@@ -7932,8 +8096,9 @@ function AddBlipForCar(vehicle) end
 ---
 ---
 ---@param ped number (Ped) Actor Id
+---@param _p2 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store Blip Handle in
-function AddBlipForChar(ped) end
+function AddBlipForChar(ped, _p2) end
 
 ---
 ---No description (
@@ -7945,8 +8110,9 @@ function AddBlipForChar(ped) end
 ---@param x number (float) X value for Blip
 ---@param y number (float) Y value for Blip
 ---@param z number (float) Z value for Blip
+---@param _p4 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store Blip Handle in
-function AddBlipForContact(x, y, z) end
+function AddBlipForContact(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -7958,8 +8124,9 @@ function AddBlipForContact(x, y, z) end
 ---@param x number (float) X coordinate
 ---@param y number (float) Y coordinate
 ---@param z number (float) Z coordinate
+---@param _p4 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store Blip Handle in
-function AddBlipForCoord(x, y, z) end
+function AddBlipForCoord(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -7969,8 +8136,9 @@ function AddBlipForCoord(x, y, z) end
 ---
 ---
 ---@param obj number (Object) Object Id
+---@param _p2 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store Blip Handle in
-function AddBlipForObject(obj) end
+function AddBlipForObject(obj, _p2) end
 
 ---
 ---No description (
@@ -7980,8 +8148,9 @@ function AddBlipForObject(obj) end
 ---
 ---
 ---@param pickup number (Pickup) Pickup Id
+---@param _p2 nil Always nil (Pointer to return `pBlip - number (Blip)`)
 ---@return number (Blip) pBlip Variable to store Blip Handle in
-function AddBlipForPickup(pickup) end
+function AddBlipForPickup(pickup, _p2) end
 
 ---
 ---Adds a simple blip on the map corresponding to the pickups position.
@@ -8149,8 +8318,9 @@ function FlashBlipAlt(blip, on) end
 ---
 ---
 ---@param blip number (Blip) Blip handle
+---@param _p2 nil Always nil (Pointer to return `pColour - number (ColourIndex)`)
 ---@return number (ColourIndex) pColour Variable to store blip's color in.
-function GetBlipColour(blip) end
+function GetBlipColour(blip, _p2) end
 
 ---
 ---No description (
@@ -8160,8 +8330,9 @@ function GetBlipColour(blip) end
 ---
 ---
 ---@param blip number (Blip) Blip handle
+---@param _p2 nil Always nil (Pointer to return `pVector - any (Vector3, pointer)`)
 ---@return any (Vector3, pointer) pVector Variable to store vector containing blip's coords.
-function GetBlipCoords(blip) end
+function GetBlipCoords(blip, _p2) end
 
 ---
 ---No description (
@@ -8344,8 +8515,9 @@ function AddPickupToInteriorRoomByName(pickup, roomName) end
 ---@param z number (float) z
 ---@param amount number (positive integer) amount
 ---@param unknownTrue boolean unknown (true suggested)
+---@param _p6 nil Always nil (Pointer to return `pPickup - number (Pickup)`)
 ---@return number (Pickup) pPickup variable to store pickup
-function CreateMoneyPickup(x, y, z, amount, unknownTrue) end
+function CreateMoneyPickup(x, y, z, amount, unknownTrue, _p6) end
 
 ---
 ---No description (
@@ -8359,9 +8531,10 @@ function CreateMoneyPickup(x, y, z, amount, unknownTrue) end
 ---@param x number (float) x
 ---@param y number (float) y
 ---@param z number (float) z
+---@param _p6 nil Always nil (Pointer to return `pPickup - number (Pickup)`)
 ---@param unknownFalse boolean unknown (false suggested)
 ---@return number (Pickup) pPickup variable to store pickup
-function CreatePickup(model, pickupType, x, y, z, unknownFalse) end
+function CreatePickup(model, pickupType, x, y, z, _p6, unknownFalse) end
 
 ---
 ---No description (
@@ -8379,8 +8552,9 @@ function CreatePickup(model, pickupType, x, y, z, unknownFalse) end
 ---@param rX number (float) Rotate X Position
 ---@param rY number (float) Rotate Y Position
 ---@param rZ number (float) Rotate Z Position
+---@param _p10 nil Always nil (Pointer to return `pPickup - number (Pickup)`)
 ---@return number (Pickup) pPickup Variable to store pickup Handle in
-function CreatePickupRotate(model, pickupType, unknown, x, y, z, rX, rY, rZ) end
+function CreatePickupRotate(model, pickupType, unknown, x, y, z, rX, rY, rZ, _p10) end
 
 ---
 ---No description (
@@ -8395,8 +8569,9 @@ function CreatePickupRotate(model, pickupType, unknown, x, y, z, rX, rY, rZ) end
 ---@param x number (float) x
 ---@param y number (float) y
 ---@param z number (float) z
+---@param _p7 nil Always nil (Pointer to return `pPickup - number (Pickup)`)
 ---@return number (Pickup) pPickup variable to store pickup
-function CreatePickupWithAmmo(model, pickupType, unknown, x, y, z) end
+function CreatePickupWithAmmo(model, pickupType, unknown, x, y, z, _p7) end
 
 ---
 ---No description (
@@ -8417,10 +8592,13 @@ function DoesPickupExist(pickup) end
 ---
 ---
 ---@param pickup number (Pickup)
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetPickupCoordinates(pickup) end
+function GetPickupCoordinates(pickup, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -8500,8 +8678,9 @@ function CamIsSphereVisible(camera, pX, pY, pZ, radius) end
 ---
 ---
 ---@param camtype_usually14 number (positive integer) camera type
+---@param _p2 nil Always nil (Pointer to return `camera - number (Camera)`)
 ---@return number (Camera) camera variable to store camera handle
-function CreateCam(camtype_usually14) end
+function CreateCam(camtype_usually14, _p2) end
 
 ---
 ---No description (
@@ -8545,8 +8724,9 @@ function SetCamActive(camera, value) end
 ---
 ---
 ---@param camera number (Camera) A handle for the camera
+---@param _p2 nil Always nil (Pointer to return `fov - number (float)`)
 ---@return number (float) fov
-function GetCamFov(camera) end
+function GetCamFov(camera, _p2) end
 
 ---
 ---No description (
@@ -8556,10 +8736,13 @@ function GetCamFov(camera) end
 ---
 ---
 ---@param camera number (Camera) camera handle
+---@param _p2 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return number (float) pX variable to store x
 ---@return number (float) pY variable to store y
 ---@return number (float) pZ variable to store z
-function GetCamPos(camera) end
+function GetCamPos(camera, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -8569,10 +8752,13 @@ function GetCamPos(camera) end
 ---
 ---
 ---@param camera number (Camera) camera handle
+---@param _p2 nil Always nil (Pointer to return `angleX - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `angleY - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `angleZ - number (float)`)
 ---@return number (float) angleX variable to store x angle
 ---@return number (float) angleY variable to store y angle
 ---@return number (float) angleZ variable to store z angle
-function GetCamRot(camera) end
+function GetCamRot(camera, _p2, _p3, _p4) end
 
 ---
 ---This function gets the main game camera which is rotated around player's character with mouse.
@@ -8581,8 +8767,9 @@ function GetCamRot(camera) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_GAME_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_GAME_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `camera - number (Camera)`)
 ---@return number (Camera) camera
-function GetGameCam() end
+function GetGameCam(_p1) end
 
 ---
 ---No description (
@@ -8591,8 +8778,9 @@ function GetGameCam() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_GAME_CAM_CHILD) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_GAME_CAM_CHILD)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `camera - number (Camera)`)
 ---@return number (Camera) camera
-function GetGameCamChild() end
+function GetGameCamChild(_p1) end
 
 ---
 ---No description (
@@ -8927,9 +9115,10 @@ function GetClosestCar(x, y, z, radius, unknownFalse, unknown70) end
 ---@param radius number (float) Radius
 ---@param unknown1 boolean Unknown (usually 0)
 ---@param unknown2 boolean Unknown (usually 70)
+---@param _p7 nil Always nil (Pointer to return `pPed - number (Ped)`)
 ---@return boolean
 ---@return number (Ped) pPed Ped handle
-function GetClosestChar(x, y, z, radius, unknown1, unknown2) end
+function GetClosestChar(x, y, z, radius, unknown1, unknown2, _p7) end
 
 ---
 ---No description (
@@ -8938,8 +9127,9 @@ function GetClosestChar(x, y, z, radius, unknown1, unknown2) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_WEATHER) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_WEATHER)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pWeather - number (positive integer)`)
 ---@return number (positive integer) pWeather variable to store current weather
-function GetCurrentWeather() end
+function GetCurrentWeather(_p1) end
 
 ---
 ---This function will get the ground z coordinate of the coordinates in x,y,z and store it to a variable.
@@ -8951,9 +9141,10 @@ function GetCurrentWeather() end
 ---@param x number (float) X pos
 ---@param y number (float) Y pos
 ---@param z number (float) Z pos
+---@param _p4 nil Always nil (Pointer to return `pGroundZ - number (float)`)
 ---@return any
 ---@return number (float) pGroundZ variable to store ground z coordinate
-function GetGroundZFor3dCoord(x, y, z) end
+function GetGroundZFor3dCoord(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -8979,10 +9170,13 @@ function GetNumberOfFiresInRange(x, y, z, radius) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pSafeX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pSafeY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pSafeZ - number (float)`)
 ---@return number (float) pSafeX
 ---@return number (float) pSafeY
 ---@return number (float) pSafeZ
-function GetSafePickupCoords(x, y, z) end
+function GetSafePickupCoords(x, y, z, _p4, _p5, _p6) end
 
 ---
 ---No description (
@@ -8995,11 +9189,14 @@ function GetSafePickupCoords(x, y, z) end
 ---@param y number (float)
 ---@param z number (float)
 ---@param unknownTrue boolean
+---@param _p5 nil Always nil (Pointer to return `pSafeX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pSafeY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pSafeZ - number (float)`)
 ---@return boolean
 ---@return number (float) pSafeX
 ---@return number (float) pSafeY
 ---@return number (float) pSafeZ
-function GetSafePositionForChar(x, y, z, unknownTrue) end
+function GetSafePositionForChar(x, y, z, unknownTrue, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -9393,8 +9590,9 @@ function GetFirstNCharactersOfString(gxtName, chars) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MOBILE_PHONE_RENDER_ID) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MOBILE_PHONE_RENDER_ID)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pRenderId - number (positive integer)`)
 ---@return number (positive integer) pRenderId
-function GetMobilePhoneRenderId() end
+function GetMobilePhoneRenderId(_p1) end
 
 ---
 ---No description (
@@ -9415,8 +9613,9 @@ function GetNthIntegerInString(gxtName, index) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_SCRIPT_RENDERTARGET_RENDER_ID) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_SCRIPT_RENDERTARGET_RENDER_ID)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pRenderId - number (positive integer)`)
 ---@return number (positive integer) pRenderId
-function GetScriptRendertargetRenderId() end
+function GetScriptRendertargetRenderId(_p1) end
 
 ---
 ---No description (
@@ -9705,10 +9904,11 @@ function PrintStringInStringNow(gxtName, gxtText, timeMS, enable) end
 ---
 ---
 ---@param gxtName string Unknown (always "STRING")
+---@param _p2 nil Always nil (Pointer to return `text - nil`)
 ---@param timeMS number (positive integer) Time in Milliseconds
 ---@param enable boolean Unknown (always 1)
 ---@return nil text Message to Display
-function PrintStringWithLiteralStringNow(gxtName, timeMS, enable) end
+function PrintStringWithLiteralStringNow(gxtName, _p2, timeMS, enable) end
 
 ---
 ---No description (
@@ -10239,10 +10439,12 @@ function SetIntStat(stat, value) end
 ---
 ---
 ---@param padIndex number (positive integer) pointer to variable to store function result
+---@param _p2 nil Always nil (Pointer to return `pPitch - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `pRoll - number (float)`)
 ---@return boolean always 0
 ---@return number (float) pPitch
 ---@return number (float) pRoll
-function GetPadPitchRoll(padIndex) end
+function GetPadPitchRoll(padIndex, _p2, _p3) end
 
 ---
 ---No description (
@@ -10252,11 +10454,15 @@ function GetPadPitchRoll(padIndex) end
 ---
 ---
 ---@param padIndex number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `pLeftX - number (positive integer)`)
+---@param _p3 nil Always nil (Pointer to return `pLeftY - number (positive integer)`)
+---@param _p4 nil Always nil (Pointer to return `pRightX - number (positive integer)`)
+---@param _p5 nil Always nil (Pointer to return `pRightY - number (positive integer)`)
 ---@return number (positive integer) pLeftX
 ---@return number (positive integer) pLeftY
 ---@return number (positive integer) pRightX
 ---@return number (positive integer) pRightY
-function GetPositionOfAnalogueSticks(padIndex) end
+function GetPositionOfAnalogueSticks(padIndex, _p2, _p3, _p4, _p5) end
 
 ---
 ---Gets if a specified button is pressed or not. Not really sure what the difference is from IS\_BUTTON\_PRESSED.
@@ -10395,9 +10601,11 @@ function ForwardToTimeOfDay(hour, minute) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_DATE) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_DATE)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `day - number (positive integer)`)
+---@param _p2 nil Always nil (Pointer to return `month - number (positive integer)`)
 ---@return number (positive integer) day variable to store day
 ---@return number (positive integer) month variable to store month
-function GetCurrentDate() end
+function GetCurrentDate(_p1, _p2) end
 
 ---
 ---No description (
@@ -10448,9 +10656,11 @@ function GetMinutesToTimeOfDay(hour, minute) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_TIME_OF_DAY) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_TIME_OF_DAY)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `hour - number (positive integer)`)
+---@param _p2 nil Always nil (Pointer to return `minute - number (positive integer)`)
 ---@return number (positive integer) hour
 ---@return number (positive integer) minute
-function GetTimeOfDay() end
+function GetTimeOfDay(_p1, _p2) end
 
 ---
 ---No description (
@@ -11034,9 +11244,11 @@ function FakeDeatharrest() end
 ---@param pX number (float) x
 ---@param pY number (float) y
 ---@param pZ number (float) z
+---@param _p4 nil Always nil (Pointer to return `strHash0 - number (positive integer)`)
+---@param _p5 nil Always nil (Pointer to return `strHash1 - number (positive integer)`)
 ---@return number (positive integer) strHash0 variable to store place 1
 ---@return number (positive integer) strHash1 variable to store place 2
-function FindStreetNameAtPosition(pX, pY, pZ) end
+function FindStreetNameAtPosition(pX, pY, pZ, _p4, _p5) end
 
 ---
 ---Create Invisible Bullet Position1 to Position2.
@@ -11098,10 +11310,13 @@ function ForceLoadingScreen(force) end
 ---@param r number (positive integer)
 ---@param g number (positive integer)
 ---@param b number (positive integer)
+---@param _p4 nil Always nil (Pointer to return `pR - number (positive integer)`)
+---@param _p5 nil Always nil (Pointer to return `pG - number (positive integer)`)
+---@param _p6 nil Always nil (Pointer to return `pB - number (positive integer)`)
 ---@return number (positive integer) pR
 ---@return number (positive integer) pG
 ---@return number (positive integer) pB
-function GetCorrectedColour(r, g, b) end
+function GetCorrectedColour(r, g, b, _p4, _p5, _p6) end
 
 ---
 ---No description (
@@ -11172,8 +11387,9 @@ function GetFloatStat(stat) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_FRAME_TIME) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_FRAME_TIME)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `time - number (float)`)
 ---@return number (float) time
-function GetFrameTime() end
+function GetFrameTime(_p1) end
 
 ---
 ---Gets time game has been played in milliseconds (time in menu screen does not count).
@@ -11182,8 +11398,9 @@ function GetFrameTime() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_GAME_TIMER) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_GAME_TIMER)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pTimer - number (positive integer)`)
 ---@return number (positive integer) pTimer variable to store game time
-function GetGameTimer() end
+function GetGameTimer(_p1) end
 
 ---
 ---This function can be used to get the hash keys that are required for spawning peds, vehicles, objects, etc.
@@ -11206,11 +11423,15 @@ function GetHashKey(value) end
 ---
 ---
 ---@param type number (positive integer) Color index?
+---@param _p2 nil Always nil (Pointer to return `pR - number (positive integer)`)
+---@param _p3 nil Always nil (Pointer to return `pG - number (positive integer)`)
+---@param _p4 nil Always nil (Pointer to return `pB - number (positive integer)`)
+---@param _p5 nil Always nil (Pointer to return `pA - number (positive integer)`)
 ---@return number (positive integer) pR Variable to store Red value.
 ---@return number (positive integer) pG Variable to store Green value.
 ---@return number (positive integer) pB Variable to store Blue value
 ---@return number (positive integer) pA Unknown
-function GetHudColour(type) end
+function GetHudColour(type, _p2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -11293,8 +11514,9 @@ function GetMissionFlag() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MAX_WANTED_LEVEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MAX_WANTED_LEVEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `pMaxWantedLevel - number (positive integer)`)
 ---@return number (positive integer) pMaxWantedLevel
-function GetMaxWantedLevel() end
+function GetMaxWantedLevel(_p1) end
 
 ---
 ---No description (
@@ -12133,8 +12355,9 @@ function Floor(value) end
 ---
 ---@param min number (float) Minimum float.
 ---@param max number (float) Maximum float.
+---@param _p3 nil Always nil (Pointer to return `pValue - number (float)`)
 ---@return number (float) pValue Variable to store the random float in.
-function GenerateRandomFloatInRange(min, max) end
+function GenerateRandomFloatInRange(min, max, _p3) end
 
 ---
 ---This function returns a random integer between the given integers.
@@ -12145,8 +12368,9 @@ function GenerateRandomFloatInRange(min, max) end
 ---
 ---@param min number (positive integer) Minimum integer.
 ---@param max number (positive integer) Maximum integer.
+---@param _p3 nil Always nil (Pointer to return `pValue - number (positive integer)`)
 ---@return number (positive integer) pValue Variable to store the random integer in.
-function GenerateRandomIntInRange(min, max) end
+function GenerateRandomIntInRange(min, max, _p3) end
 
 ---
 ---No description (
@@ -12159,8 +12383,9 @@ function GenerateRandomIntInRange(min, max) end
 ---@param y1 number (float)
 ---@param x2 number (float)
 ---@param y2 number (float)
+---@param _p5 nil Always nil (Pointer to return `pResult - number (float)`)
 ---@return number (float) pResult
-function GetAngleBetween2dVectors(x1, y1, x2, y2) end
+function GetAngleBetween2dVectors(x1, y1, x2, y2, _p5) end
 
 ---
 ---No description (
@@ -12173,8 +12398,9 @@ function GetAngleBetween2dVectors(x1, y1, x2, y2) end
 ---@param y1 number (float)
 ---@param x2 number (float)
 ---@param y2 number (float)
+---@param _p5 nil Always nil (Pointer to return `pDist - number (float)`)
 ---@return number (float) pDist
-function GetDistanceBetweenCoords2d(x1, y1, x2, y2) end
+function GetDistanceBetweenCoords2d(x1, y1, x2, y2, _p5) end
 
 ---
 ---Check distance between x1,y1,z1 and x2,y2,z2 and returns float result in 7 parameter.
@@ -12189,8 +12415,9 @@ function GetDistanceBetweenCoords2d(x1, y1, x2, y2) end
 ---@param x2 number (float) x2
 ---@param y2 number (float) y2
 ---@param z2 number (float) z2
+---@param _p7 nil Always nil (Pointer to return `pDist - number (float)`)
 ---@return number (float) pDist handle
-function GetDistanceBetweenCoords3d(x1, y1, z1, x2, y2, z2) end
+function GetDistanceBetweenCoords3d(x1, y1, z1, x2, y2, z2, _p7) end
 
 ---
 ---No description (
@@ -12213,8 +12440,9 @@ function GetFirstNCharactersOfLiteralString(literalString, chars) end
 ---
 ---@param x number (float)
 ---@param y number (float)
+---@param _p3 nil Always nil (Pointer to return `pHeading - number (float)`)
 ---@return number (float) pHeading
-function GetHeadingFromVector2d(x, y) end
+function GetHeadingFromVector2d(x, y, _p3) end
 
 ---
 ---No description (
@@ -12730,9 +12958,11 @@ function SetGlobalRenderFlags(parameter_1, parameter_2, parameter_3, parameter_4
 ---[View gtamods.com](https://gtamods.com/wiki/GET_SCREEN_RESOLUTION) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_SCREEN_RESOLUTION)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p2 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetScreenResolution() end
+function GetScreenResolution(_p1, _p2) end
 
 ---
 ---No description (
@@ -12741,9 +12971,11 @@ function GetScreenResolution() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_PHYSICAL_SCREEN_RESOLUTION) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_PHYSICAL_SCREEN_RESOLUTION)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p2 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetPhysicalScreenResolution() end
+function GetPhysicalScreenResolution(_p1, _p2) end
 
 ---
 ---No description (
@@ -12753,9 +12985,11 @@ function GetPhysicalScreenResolution() end
 ---
 ---
 ---@param texture number (positive integer)
+---@param _p2 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetTextureResolution(texture) end
+function GetTextureResolution(texture, _p2, _p3) end
 
 ---
 ---No description (
@@ -13714,8 +13948,9 @@ function SetBriansMood(mood) end
 ---
 ---@param id number (integer) Unknown
 ---@param parameter_2 number (integer) Unknown
+---@param _p3 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)  Unknown
-function AddNewConversationSpeaker(id, parameter_2) end
+function AddNewConversationSpeaker(id, parameter_2, _p3) end
 
 ---
 ---No description (
@@ -13781,9 +14016,11 @@ function SetMobilePhoneRadioState(state) end
 ---@param parameter_1 number (integer) Unknown
 ---@param parameter_2 number (integer) Unknown
 ---@param parameter_3 number (integer) Unknown
+---@param _p4 nil Always nil (Pointer to return `parameter_4 - any (pointer)`)
+---@param _p5 nil Always nil (Pointer to return `parameter_5 - any (pointer)`)
 ---@return any (pointer) parameter_4 Unknown
 ---@return any (pointer) parameter_5 Unknown
-function AddLineToConversation(parameter_1, parameter_2, parameter_3) end
+function AddLineToConversation(parameter_1, parameter_2, parameter_3, _p4, _p5) end
 
 ---
 ---No description (
@@ -14145,10 +14382,13 @@ function ReportTaggedRadioTrack(TrackTextId) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_STREAM_BEAT_INFO) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_STREAM_BEAT_INFO)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)
 ---@return number (integer)
 ---@return number (integer)
-function GetStreamBeatInfo() end
+function GetStreamBeatInfo(_p1, _p2, _p3) end
 
 ---
 ---No description (
@@ -14605,9 +14845,10 @@ function GetAudioRoomId() end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `height - number (float)`)
 ---@return boolean
 ---@return number (float) height
-function GetWaterHeightNoWaves(x, y, z) end
+function GetWaterHeightNoWaves(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -14838,8 +15079,9 @@ function ClearCutscene() end
 ---
 ---
 ---@param unkped number (integer)
+---@param _p2 nil Always nil (Pointer to return `pos - any (Vector3)`)
 ---@return any (Vector3) pos
-function GetCutscenePedPosition(unkped) end
+function GetCutscenePedPosition(unkped, _p2) end
 
 ---
 ---No description (
@@ -15093,9 +15335,11 @@ function SpecifyScriptPopulationZoneGroups(parameter_1, parameter_2, parameter_3
 ---[View gtamods.com](https://gtamods.com/wiki/FIND_PRIMARY_POPULATION_ZONE_GROUP) | [View gtamodding.ru](http://gtamodding.ru/wiki/FIND_PRIMARY_POPULATION_ZONE_GROUP)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `groupparam0 - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return `groupparam1 - number (integer)`)
 ---@return number (integer) groupparam0
 ---@return number (integer) groupparam1
-function FindPrimaryPopulationZoneGroup() end
+function FindPrimaryPopulationZoneGroup(_p1, _p2) end
 
 ---
 ---No description (
@@ -15121,10 +15365,13 @@ function GetNumberOfFiresInArea(x0, y0, z0, x1, y1, z1) end
 ---
 ---
 ---@param fire number (integer)
+---@param _p2 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `y - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `z - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
 ---@return number (float) z
-function GetScriptFireCoords(fire) end
+function GetScriptFireCoords(fire, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -15188,8 +15435,9 @@ function IsExplosionInSphere(expnum, x, y, z, radius) end
 ---
 ---
 ---@param weapon number (integer)
+---@param _p2 nil Always nil (Pointer to return `slot - number (integer)`)
 ---@return number (integer) slot
-function GetWeapontypeSlot(weapon) end
+function GetWeapontypeSlot(weapon, _p2) end
 
 ---
 ---No description (
@@ -15211,8 +15459,9 @@ function SelectWeaponsForVehicle(veh, weapon) end
 ---
 ---
 ---@param weapontype number (integer)
+---@param _p2 nil Always nil (Pointer to return `model - number (positive integer)`)
 ---@return number (positive integer) model
-function GetWeapontypeModel(weapontype) end
+function GetWeapontypeModel(weapontype, _p2) end
 
 ---
 ---No description (
@@ -15486,11 +15735,14 @@ function DestroyPedGenerationConstraintArea() end
 ---@param y number (float)
 ---@param z number (float)
 ---@param n number (integer)
+---@param _p5 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetNthClosestCarNode(x, y, z, n) end
+function GetNthClosestCarNode(x, y, z, n, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -15502,11 +15754,14 @@ function GetNthClosestCarNode(x, y, z, n) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pZ - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
-function GetNextClosestCarNode(x, y, z) end
+function GetNextClosestCarNode(x, y, z, _p4, _p5, _p6) end
 
 ---
 ---No description (
@@ -15518,12 +15773,16 @@ function GetNextClosestCarNode(x, y, z) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetNextClosestCarNodeWithHeading(x, y, z) end
+function GetNextClosestCarNodeWithHeading(x, y, z, _p4, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -15535,12 +15794,16 @@ function GetNextClosestCarNodeWithHeading(x, y, z) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetNextClosestCarNodeWithHeadingOnIsland(x, y, z) end
+function GetNextClosestCarNodeWithHeadingOnIsland(x, y, z, _p4, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -15553,12 +15816,16 @@ function GetNextClosestCarNodeWithHeadingOnIsland(x, y, z) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p8 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetClosestCarNodeFavourDirection(parameter_1, x, y, z) end
+function GetClosestCarNodeFavourDirection(parameter_1, x, y, z, _p5, _p6, _p7, _p8) end
 
 ---
 ---No description (
@@ -15572,12 +15839,16 @@ function GetClosestCarNodeFavourDirection(parameter_1, x, y, z) end
 ---@param y number (float)
 ---@param z number (float)
 ---@param n number (integer)
+---@param _p6 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p8 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p9 nil Always nil (Pointer to return `direction - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) direction
-function GetNthClosestCarNodeFavourDirection(parameter_1, x, y, z, n) end
+function GetNthClosestCarNodeFavourDirection(parameter_1, x, y, z, n, _p6, _p7, _p8, _p9) end
 
 ---
 ---No description (
@@ -15589,12 +15860,16 @@ function GetNthClosestCarNodeFavourDirection(parameter_1, x, y, z, n) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p7 nil Always nil (Pointer to return `direction - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) direction
-function GetNextClosestCarNodeFavourDirection(x, y, z) end
+function GetNextClosestCarNodeFavourDirection(x, y, z, _p4, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -15608,13 +15883,18 @@ function GetNextClosestCarNodeFavourDirection(x, y, z) end
 ---@param z number (float)
 ---@param parameter_4 number (float)
 ---@param parameter_5 number (integer)
+---@param _p6 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p7 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p8 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p9 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p10 nil Always nil (Pointer to return ` - number (float)`)
 ---@return boolean
 ---@return any (Vector3)
 ---@return any (Vector3)
 ---@return number (float)
 ---@return number (float)
 ---@return number (float)
-function GetClosestRoad(x, y, z, parameter_4, parameter_5) end
+function GetClosestRoad(x, y, z, parameter_4, parameter_5, _p6, _p7, _p8, _p9, _p10) end
 
 ---
 ---No description (
@@ -15725,12 +16005,16 @@ function CalculateTravelDistanceBetweenNodes(x0, y0, z0, x1, y1, z1) end
 ---@param flag0 boolean
 ---@param flag1 boolean
 ---@param flag2 boolean
+---@param _p8 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p9 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p10 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p11 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetRandomCarNode(x, y, z, radius, flag0, flag1, flag2) end
+function GetRandomCarNode(x, y, z, radius, flag0, flag1, flag2, _p8, _p9, _p10, _p11) end
 
 ---
 ---No description (
@@ -15746,12 +16030,16 @@ function GetRandomCarNode(x, y, z, radius, flag0, flag1, flag2) end
 ---@param flag0 boolean
 ---@param flag1 boolean
 ---@param flag2 boolean
+---@param _p8 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p9 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p10 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p11 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetRandomCarNodeIncludeSwitchedOffNodes(x, y, z, radius, flag0, flag1, flag2) end
+function GetRandomCarNodeIncludeSwitchedOffNodes(x, y, z, radius, flag0, flag1, flag2, _p8, _p9, _p10, _p11) end
 
 ---
 ---No description (
@@ -15768,12 +16056,16 @@ function GetRandomCarNodeIncludeSwitchedOffNodes(x, y, z, radius, flag0, flag1, 
 ---@param flag1 boolean
 ---@param flag2 boolean
 ---@param flag3 boolean
+---@param _p9 nil Always nil (Pointer to return `pX - number (float)`)
+---@param _p10 nil Always nil (Pointer to return `pY - number (float)`)
+---@param _p11 nil Always nil (Pointer to return `pZ - number (float)`)
+---@param _p12 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) pX
 ---@return number (float) pY
 ---@return number (float) pZ
 ---@return number (float) heading
-function GetRandomWaterNode(x, y, z, radius, flag0, flag1, flag2, flag3) end
+function GetRandomWaterNode(x, y, z, radius, flag0, flag1, flag2, flag3, _p9, _p10, _p11, _p12) end
 
 ---
 ---No description (
@@ -15788,9 +16080,10 @@ function GetRandomWaterNode(x, y, z, radius, flag0, flag1, flag2, flag3) end
 ---@param flag0 boolean
 ---@param flag1 boolean
 ---@param node any (Vector3*)
+---@param _p7 nil Always nil (Pointer to return `heading - number (float)`)
 ---@return boolean
 ---@return number (float) heading
-function GetNthClosestWaterNodeWithHeading(x, y, z, flag0, flag1, node) end
+function GetNthClosestWaterNodeWithHeading(x, y, z, flag0, flag1, node, _p7) end
 
 ---
 ---Adds a navmesh to a required region.
@@ -15827,9 +16120,11 @@ function RemoveNavmeshRequiredRegion(parameter_1, parameter_2) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `direction - number (integer)`)
+---@param _p5 nil Always nil (Pointer to return ` - any (Vector3)`)
 ---@return number (integer) direction
 ---@return any (Vector3)
-function GenerateDirections(x, y, z) end
+function GenerateDirections(x, y, z, _p4, _p5) end
 
 ---
 ---No description (
@@ -16531,8 +16826,9 @@ function DestroyThread(ScriptHandle) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `turnmass - number (float)`)
 ---@return number (float) turnmass
-function GetObjectTurnMass(obj) end
+function GetObjectTurnMass(obj, _p2) end
 
 ---
 ---No description (
@@ -16542,8 +16838,9 @@ function GetObjectTurnMass(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `mass - number (float)`)
 ---@return number (float) mass
-function GetObjectMass(obj) end
+function GetObjectMass(obj, _p2) end
 
 ---
 ---No description (
@@ -16584,8 +16881,9 @@ function LocateObject3d(obj, x, y, z, xr, yr, zr, flag) end
 ---
 ---
 ---@param attribute number (integer)
+---@param _p2 nil Always nil (Pointer to return `obj - number (Object)`)
 ---@return number (Object) obj
-function GrabNearbyObjectWithSpecialAttribute(attribute) end
+function GrabNearbyObjectWithSpecialAttribute(attribute, _p2) end
 
 ---
 ---No description (
@@ -16923,11 +17221,14 @@ function SetDoNotSpawnParkedCarsOnTop(pickup, set) end
 ---
 ---@param obj number (Object)
 ---@param parameter_2 number (integer)
+---@param _p3 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `y - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `z - number (float)`)
 ---@return number (float)
 ---@return number (float) x
 ---@return number (float) y
 ---@return number (float) z
-function GetLevelDesignCoordsForObject(obj, parameter_2) end
+function GetLevelDesignCoordsForObject(obj, parameter_2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -16964,13 +17265,18 @@ function SetObjectAnimPlayingFlag(obj, animname0, animname1, flag) end
 ---
 ---
 ---@param parameter_1 number (integer)
+---@param _p2 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p4 nil Always nil (Pointer to return ` - any`)
+---@param _p5 nil Always nil (Pointer to return ` - any`)
+---@param _p6 nil Always nil (Pointer to return ` - any`)
 ---@return boolean
 ---@return any (Vector3)
 ---@return number (float)
 ---@return any
 ---@return any
 ---@return any
-function LookAtNearbyEntityWithSpecialAttribute(parameter_1) end
+function LookAtNearbyEntityWithSpecialAttribute(parameter_1, _p2, _p3, _p4, _p5, _p6) end
 
 ---
 ---Anchors or lets loose an object.
@@ -17167,8 +17473,9 @@ function PlayerIsNearFirstPigeon(x, y, z) end
 ---
 ---
 ---@param pickup number (integer)
+---@param _p2 nil Always nil (Pointer to return `hash - number (positive integer)`)
 ---@return number (positive integer) hash
-function GetRoomKeyFromPickup(pickup) end
+function GetRoomKeyFromPickup(pickup, _p2) end
 
 ---
 ---Attaches an Object to a Vehicle Physically.
@@ -17358,9 +17665,11 @@ function SetPlayerCanDropWeaponsInCar(set) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return ` - number (positive integer)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (positive integer)
 ---@return number (float)
-function GetDoorState(obj) end
+function GetDoorState(obj, _p2, _p3) end
 
 ---
 ---No description (
@@ -17409,8 +17718,9 @@ function AddPickupToInteriorRoomByKey(pickup, room_hash) end
 ---@param obj number (Object)
 ---@param animname0 string
 ---@param animname1 string
+---@param _p4 nil Always nil (Pointer to return `time - number (float)`)
 ---@return number (float) time
-function GetObjectAnimCurrentTime(obj, animname0, animname1) end
+function GetObjectAnimCurrentTime(obj, animname0, animname1, _p4) end
 
 ---
 ---No description (
@@ -17586,11 +17896,15 @@ function RemoveProjtexFromObject(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p4 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p5 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (float)
 ---@return number (float)
 ---@return number (float)
 ---@return number (float)
-function GetObjectQuaternion(obj) end
+function GetObjectQuaternion(obj, _p2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -17603,8 +17917,9 @@ function GetObjectQuaternion(obj) end
 ---@param y number (float) y
 ---@param z number (float) z
 ---@param radius number (float) radius
+---@param _p5 nil Always nil (Pointer to return `obj - number (Object)`)
 ---@return number (Object) obj variable to store handle
-function GetClosestStealableObject(x, y, z, radius) end
+function GetClosestStealableObject(x, y, z, radius, _p5) end
 
 ---
 ---No description (
@@ -17643,8 +17958,9 @@ function CreateTemporaryRadarBlipsForPickupsInArea(x, y, z, radius, bliptype) en
 ---@param obj number (Object)
 ---@param animname0 string
 ---@param animname1 string
+---@param _p4 nil Always nil (Pointer to return `time - number (float)`)
 ---@return number (float) time
-function GetObjectAnimTotalTime(obj, animname0, animname1) end
+function GetObjectAnimTotalTime(obj, animname0, animname1, _p4) end
 
 ---
 ---No description (
@@ -17657,9 +17973,11 @@ function GetObjectAnimTotalTime(obj, animname0, animname1) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `state - number (integer)`)
+---@param _p6 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (integer) state
 ---@return number (float)
-function GetStateOfClosestDoorOfType(model, x, y, z) end
+function GetStateOfClosestDoorOfType(model, x, y, z, _p5, _p6) end
 
 ---
 ---No description (
@@ -17782,8 +18100,9 @@ function SetConvertibleRoof(car, set) end
 ---@param car number (Car) vehicle handle
 ---@param animname0 string variable to store animation set
 ---@param animname1 string variable to store animation name
+---@param _p4 nil Always nil (Pointer to return `time - number (float)`)
 ---@return number (float) time variable to store time
-function GetCarAnimTotalTime(car, animname0, animname1) end
+function GetCarAnimTotalTime(car, animname0, animname1, _p4) end
 
 ---
 ---No description (
@@ -17818,8 +18137,9 @@ function SetCarInCutscene(car, set) end
 ---@param parameter_12 number (integer) unknown (1 suggested)
 ---@param alarm boolean alarm
 ---@param doorlock boolean doors locked
+---@param _p15 nil Always nil (Pointer to return `handle - number (integer)`)
 ---@return number (integer) handle variable to store car generator handle
-function CreateCarGenerator(x, y, z, angle, parameter_5, parameter_6, model, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12, alarm, doorlock) end
+function CreateCarGenerator(x, y, z, angle, parameter_5, parameter_6, model, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12, alarm, doorlock, _p15) end
 
 ---
 ---No description (
@@ -18104,8 +18424,9 @@ function HasCarBeenDroppedOff(car) end
 ---@param car number (Car) vehicle handle
 ---@param animname0 string variable to store animation set
 ---@param animname1 string variable to store animation name
+---@param _p4 nil Always nil (Pointer to return `time - number (float)`)
 ---@return number (float) time variable to store time
-function GetCarAnimCurrentTime(car, animname0, animname1) end
+function GetCarAnimCurrentTime(car, animname0, animname1, _p4) end
 
 ---
 ---No description (
@@ -18127,8 +18448,9 @@ function DisableCarGenerators(flag0, flag1) end
 ---
 ---
 ---@param car number (Car) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `mass - number (float)`)
 ---@return number (float) mass variable to store mass
-function GetCarMass(car) end
+function GetCarMass(car, _p2) end
 
 ---
 ---No description (
@@ -18216,8 +18538,9 @@ function SetCarCoordinatesNoOffset(car, x, y, z) end
 ---
 ---
 ---@param car number (Car) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `vec - any (Vector3, vector3)`)
 ---@return any (Vector3, vector3) vec variable to store forward vector
-function GetCarForwardVector(car) end
+function GetCarForwardVector(car, _p2) end
 
 ---
 ---No description (
@@ -18227,8 +18550,9 @@ function GetCarForwardVector(car) end
 ---
 ---
 ---@param car0 number (Car) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `car1 - number (Car)`)
 ---@return number (Car) car1 variable to store blocking vehicle
-function GetCarBlockingCar(car0) end
+function GetCarBlockingCar(car0, _p2) end
 
 ---
 ---No description (
@@ -18260,8 +18584,9 @@ function DeleteAllTrains() end
 ---
 ---
 ---@param car number (Car) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `value - number (integer)`)
 ---@return number (integer) value variable to store model value
-function GetCarModelValue(car) end
+function GetCarModelValue(car, _p2) end
 
 ---
 ---No description (
@@ -18287,8 +18612,9 @@ function SetAllCarsCanBeDamaged(set) end
 ---@param radius number (float) Radius
 ---@param model number (positive integer) Model hash (actually 0, but you can pick hash of car model)
 ---@param flag boolean Unknown (usually 1)
+---@param _p7 nil Always nil (Pointer to return `car - number (Car)`)
 ---@return number (Car) car id of the car
-function GetRandomCarInSphereNoSave(x, y, z, radius, model, flag) end
+function GetRandomCarInSphereNoSave(x, y, z, radius, model, flag, _p7) end
 
 ---
 ---This function returns a boolean indicating whether the specified vehicle can be targetted and followed by a heat seeking missile.
@@ -18503,9 +18829,10 @@ function SetRocketLauncherFreebieInHeli(set) end
 ---@param radius number (float)
 ---@param flag0 boolean
 ---@param flag1 boolean
+---@param _p7 nil Always nil (Pointer to return `handle - number (integer)`)
 ---@param flag2 boolean
 ---@return number (integer) handle
-function GetRandomCarFrontBumperInSphereNoSave(x, y, z, radius, flag0, flag1, flag2) end
+function GetRandomCarFrontBumperInSphereNoSave(x, y, z, radius, flag0, flag1, _p7, flag2) end
 
 ---
 ---No description (
@@ -18527,8 +18854,9 @@ function VehicleDoesProvideCover(veh, cover) end
 ---
 ---
 ---@param car number (Car) vehicle handle
+---@param _p2 nil Always nil (Pointer to return `livery - number (integer)`)
 ---@return number (integer) livery variable to store livery
-function GetCarLivery(car) end
+function GetCarLivery(car, _p2) end
 
 ---
 ---No description (
@@ -18555,8 +18883,9 @@ function SetRoomForCarByName(car, roomname) end
 ---@param parameter_4 number (float)
 ---@param parameter_5 number (float)
 ---@param type number (positive integer)
+---@param _p7 nil Always nil (Pointer to return `car - number (Car)`)
 ---@return number (Car) car
-function GetRandomCarOfTypeInAngledAreaNoSave(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, type) end
+function GetRandomCarOfTypeInAngledAreaNoSave(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, type, _p7) end
 
 ---
 ---No description (
@@ -18566,11 +18895,15 @@ function GetRandomCarOfTypeInAngledAreaNoSave(parameter_1, parameter_2, paramete
 ---
 ---
 ---@param veh number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p4 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p5 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (float)
 ---@return number (float)
 ---@return number (float)
 ---@return number (float)
-function GetVehicleQuaternion(veh) end
+function GetVehicleQuaternion(veh, _p2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -18709,8 +19042,9 @@ function IsCarHealthGreater(car, health) end
 ---@param radius number (float) Radius
 ---@param model number (positive integer) Model hash (actually 0, but you can pick hash of car model)
 ---@param unk number (integer) Unknown (usually 2310)
+---@param _p7 nil Always nil (Pointer to return `car - number (Car)`)
 ---@return number (Car) car
-function GetRandomCarInSphere(x, y, z, radius, model, unk) end
+function GetRandomCarInSphere(x, y, z, radius, model, unk, _p7) end
 
 ---
 ---No description (
@@ -18720,8 +19054,9 @@ function GetRandomCarInSphere(x, y, z, radius, model, unk) end
 ---
 ---
 ---@param plane number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `pos - number (float)`)
 ---@return number (float) pos
-function GetPlaneUndercarriagePosition(plane) end
+function GetPlaneUndercarriagePosition(plane, _p2) end
 
 ---
 ---No description (
@@ -18789,8 +19124,9 @@ function IsVehStuck(veh, time, flag0, flag1, flag2) end
 ---
 ---
 ---@param train number (Vehicle)
+---@param _p2 nil Always nil (Pointer to return `caboose - number (Vehicle)`)
 ---@return number (Vehicle) caboose
-function GetTrainCaboose(train) end
+function GetTrainCaboose(train, _p2) end
 
 ---
 ---No description (
@@ -18874,8 +19210,9 @@ function SetCanBurstCarTyres(car, set) end
 ---
 ---@param train number (Vehicle)
 ---@param num number (integer)
+---@param _p3 nil Always nil (Pointer to return `carriage - number (Vehicle)`)
 ---@return number (Vehicle) carriage
-function GetTrainCarriage(train, num) end
+function GetTrainCarriage(train, num, _p3) end
 
 ---
 ---No description (
@@ -19455,8 +19792,9 @@ function IsCarStreetRacer(car) end
 ---
 ---
 ---@param car number (Car)
+---@param _p2 nil Always nil (Pointer to return `num - number (integer)`)
 ---@return number (integer) num
-function GetNumCarLiveries(car) end
+function GetNumCarLiveries(car, _p2) end
 
 ---
 ---No description (
@@ -19530,8 +19868,9 @@ function CheckStuckTimer(car, timernum, timeout) end
 ---@param x1 number (float)
 ---@param y1 number (float)
 ---@param model number (positive integer)
+---@param _p6 nil Always nil (Pointer to return `car - number (Car)`)
 ---@return number (Car) car
-function GetRandomCarOfTypeInAreaNoSave(x0, y0, x1, y1, model) end
+function GetRandomCarOfTypeInAreaNoSave(x0, y0, x1, y1, model, _p6) end
 
 ---
 ---No description (
@@ -19634,8 +19973,9 @@ function IsCarLowRider(car) end
 ---
 ---@param CarRec number (integer)
 ---@param time number (float)
+---@param _p3 nil Always nil (Pointer to return `pos - number (float)`)
 ---@return number (float) pos
-function GetPositionOfCarRecordingAtTime(CarRec, time) end
+function GetPositionOfCarRecordingAtTime(CarRec, time, _p3) end
 
 ---
 ---No description (
@@ -19727,8 +20067,9 @@ function StartPlaybackRecordedCarWithOffset(car, CarRec, x, y, z) end
 ---@param radius number (float)
 ---@param parameter_5 number (integer)
 ---@param parameter_6 number (integer)
+---@param _p7 nil Always nil (Pointer to return `veh - number (Vehicle)`)
 ---@return number (Vehicle) veh
-function GetRandomCarBackBumperInSphere(x, y, z, radius, parameter_5, parameter_6) end
+function GetRandomCarBackBumperInSphere(x, y, z, radius, parameter_5, parameter_6, _p7) end
 
 ---
 ---No description (
@@ -19973,9 +20314,11 @@ function SetLoadCollisionForCarFlag(car, set) end
 ---
 ---@param car0 number (Car)
 ---@param car1 number (Car)
+---@param _p3 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p4 nil Always nil (Pointer to return ` - any (Vector3)`)
 ---@return any (Vector3)
 ---@return any (Vector3)
-function GetOffsetsForAttachCarToCar(car0, car1) end
+function GetOffsetsForAttachCarToCar(car0, car1, _p3, _p4) end
 
 ---
 ---No description (
@@ -20056,12 +20399,15 @@ function SetTrainCruiseSpeed(train, speed) end
 ---
 ---@param veh number (Vehicle)
 ---@param component_id number (integer)
+---@param _p3 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p4 nil Always nil (Pointer to return ` - any (Vector3)`)
+---@param _p5 nil Always nil (Pointer to return ` - number (integer)`)
 ---@param flag boolean
 ---@return boolean
 ---@return any (Vector3)
 ---@return any (Vector3)
 ---@return number (integer)
-function GetVehicleComponentInfo(veh, component_id, flag) end
+function GetVehicleComponentInfo(veh, component_id, _p3, _p4, _p5, flag) end
 
 ---
 ---No description (
@@ -20360,8 +20706,9 @@ function TaskGuardAssignedDefensiveArea(ped, parameter_2, parameter_3, parameter
 ---
 ---@param ped number (Ped) Entity
 ---@param task number (integer) Likely: The task in question, appears hashed
+---@param _p3 nil Always nil (Pointer to return `status - number (integer)`)
 ---@return number (integer) status
-function GetScriptTaskStatus(ped, task) end
+function GetScriptTaskStatus(ped, task, _p3) end
 
 ---
 ---No description (
@@ -20418,8 +20765,9 @@ function TaskGoToCoordWhileShooting(ped, parameter_2, parameter_3, parameter_4, 
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p5 nil Always nil (Pointer to return `level - number (integer)`)
 ---@return number (integer) level
-function GetSoundLevelAtCoords(ped, x, y, z) end
+function GetSoundLevelAtCoords(ped, x, y, z, _p5) end
 
 ---
 ---No description (
@@ -20467,13 +20815,15 @@ function TaskGuardAngledDefensiveArea(ped, parameter_2, parameter_3, parameter_4
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
+---@param _p2 nil Always nil (Pointer to return `parameter_2 - any (char pointer)`)
+---@param _p3 nil Always nil (Pointer to return `parameter_3 - any (char pointer)`)
 ---@param parameter_4 number (float) Playback speed (always 1.00001 like in original .sco)
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
 ---@param parameter_7 number (integer) unknown (always -1)
 ---@return any (char pointer) parameter_2 The animation's name
 ---@return any (char pointer) parameter_3 The animation's set/group name
-function TaskPlayAnimFacial(ped, parameter_4, parameter_5, parameter_6, parameter_7) end
+function TaskPlayAnimFacial(ped, _p2, _p3, parameter_4, parameter_5, parameter_6, parameter_7) end
 
 ---
 ---No description (
@@ -20540,8 +20890,9 @@ function TaskLeaveCarInDirection(ped, car, direction) end
 ---
 ---
 ---@param seq number (integer)
+---@param _p2 nil Always nil (Pointer to return `progress - number (integer)`)
 ---@return number (integer) progress
-function GetSequenceProgress(seq) end
+function GetSequenceProgress(seq, _p2) end
 
 ---
 ---No description (
@@ -20788,6 +21139,8 @@ function SetSequenceToRepeat(seq, repeat_count) end
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
+---@param _p2 nil Always nil (Pointer to return `parameter_2 - any (char pointer)`)
+---@param _p3 nil Always nil (Pointer to return `parameter_3 - any (char pointer)`)
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
@@ -20796,7 +21149,7 @@ function SetSequenceToRepeat(seq, repeat_count) end
 ---@param parameter_9 number (integer) unknown
 ---@return any (char pointer) parameter_2 The animation's name
 ---@return any (char pointer) parameter_3 The animation's set/group name
-function TaskPlayAnimSecondaryUpperBody(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
+function TaskPlayAnimSecondaryUpperBody(ped, _p2, _p3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
 
 ---
 ---No description (
@@ -20839,6 +21192,8 @@ function FlushCoverBlockingAreas() end
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
+---@param _p2 nil Always nil (Pointer to return `parameter_2 - any (char pointer)`)
+---@param _p3 nil Always nil (Pointer to return `parameter_3 - any (char pointer)`)
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
@@ -20847,7 +21202,7 @@ function FlushCoverBlockingAreas() end
 ---@param parameter_9 number (integer) unknown
 ---@return any (char pointer) parameter_2 The animation's name
 ---@return any (char pointer) parameter_3 The animation's set/group name
-function TaskPlayAnimUpperBody(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
+function TaskPlayAnimUpperBody(ped, _p2, _p3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9) end
 
 ---
 ---No description (
@@ -21225,8 +21580,9 @@ function TaskSitDownOnObject(ped, parameter_2, parameter_3, parameter_4, paramet
 ---@param parameter_5 number (float) Unknown
 ---@param parameter_6 boolean Unknown
 ---@param parameter_7 boolean Unknown
+---@param _p8 nil Always nil (Pointer to return `parameter_8 - any (pointer)`)
 ---@return any (pointer) parameter_8 Cover Id
-function AddCoverPoint(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7) end
+function AddCoverPoint(parameter_1, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, _p8) end
 
 ---
 ---No description (
@@ -21575,9 +21931,10 @@ function PedQueueRejectPedsWithFlagTrue(flagid) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return boolean
 ---@return number (integer)
-function GetMobilePhoneTaskSubTask(ped) end
+function GetMobilePhoneTaskSubTask(ped, _p2) end
 
 ---
 ---This native actually need only for setting up move state when actor enters in vehicle (as usually in original .sco). You must use it BEFORE TASK\_ENTER\_CAR\_AS\_PASSENGER.
@@ -21855,6 +22212,8 @@ function AddCoverBlockingArea(parameter_1, parameter_2, parameter_3, parameter_4
 ---
 ---
 ---@param ped number (Ped) The handle of the ped
+---@param _p2 nil Always nil (Pointer to return `parameter_2 - any (char pointer)`)
+---@param _p3 nil Always nil (Pointer to return `parameter_3 - any (char pointer)`)
 ---@param parameter_4 number (float) Playback speed?
 ---@param parameter_5 boolean flag 1
 ---@param parameter_6 boolean flag 2
@@ -21866,7 +22225,7 @@ function AddCoverBlockingArea(parameter_1, parameter_2, parameter_3, parameter_4
 ---@param parameter_12 number (integer) Duration of playback in milliseconds
 ---@return any (char pointer) parameter_2 The animation's name
 ---@return any (char pointer) parameter_3 The animation's set/group name
-function TaskPlayAnimWithAdvancedFlags(ped, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12) end
+function TaskPlayAnimWithAdvancedFlags(ped, _p2, _p3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, parameter_9, parameter_10, parameter_11, parameter_12) end
 
 ---
 ---This section is incomplete. You can help by fixing and expanding it.
@@ -21940,8 +22299,9 @@ function TaskPlayAnimWithFlagsAndStartPhase(ped, parameter_2, parameter_3, param
 ---
 ---@param player number (integer)
 ---@param model number (positive integer)
+---@param _p3 nil Always nil (Pointer to return `num - number (integer)`)
 ---@return number (integer) num
-function GetNumOfModelsKilledByPlayer(player, model) end
+function GetNumOfModelsKilledByPlayer(player, model, _p3) end
 
 ---
 ---No description (
@@ -22019,8 +22379,9 @@ function MakePlayerFireProof(player, proof) end
 ---
 ---
 ---@param player number (integer)
+---@param _p2 nil Always nil (Pointer to return `maxhealth - number (integer)`)
 ---@return number (integer) maxhealth
-function GetPlayerMaxHealth(player) end
+function GetPlayerMaxHealth(player, _p2) end
 
 ---
 ---No description (
@@ -22212,8 +22573,9 @@ function IsPlayerInRemoteMode(player) end
 ---
 ---
 ---@param player number (integer)
+---@param _p2 nil Always nil (Pointer to return `veh - number (Vehicle)`)
 ---@return number (Vehicle) veh
-function GetVehiclePlayerWouldEnter(player) end
+function GetVehiclePlayerWouldEnter(player, _p2) end
 
 ---
 ---No description (
@@ -22415,8 +22777,9 @@ function ForceAirDragMultForPlayersCar(player, multiplier) end
 ---
 ---
 ---@param player number (integer)
+---@param _p2 nil Always nil (Pointer to return `train - number (integer)`)
 ---@return number (integer) train
-function GetTrainPlayerWouldEnter(player) end
+function GetTrainPlayerWouldEnter(player, _p2) end
 
 ---
 ---No description (
@@ -22531,8 +22894,9 @@ function SetPlayerMpModifier(player, parameter_2, modifier) end
 ---
 ---
 ---@param player number (integer)
+---@param _p2 nil Always nil (Pointer to return `increment - number (integer)`)
 ---@return number (integer) increment
-function GetPlayerWantedLevelIncrement(player) end
+function GetPlayerWantedLevelIncrement(player, _p2) end
 
 ---
 ---No description (
@@ -22725,8 +23089,9 @@ function SetCharWillLeaveCarInCombat(ped, set) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `event - number (integer)`)
 ---@return number (integer) event
-function GetCharHighestPriorityEvent(ped) end
+function GetCharHighestPriorityEvent(ped, _p2) end
 
 ---
 ---No description (
@@ -22858,8 +23223,9 @@ function ListenToPlayerGroupCommands(ped, set) end
 ---
 ---@param group number (integer)
 ---@param n number (integer)
+---@param _p3 nil Always nil (Pointer to return `ped - number (Ped)`)
 ---@return number (Ped) ped
-function GetNthGroupMember(group, n) end
+function GetNthGroupMember(group, n, _p3) end
 
 ---
 ---No description (
@@ -23055,8 +23421,9 @@ function SetCharSignalAfterKill(ped, set) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `followers - number (integer)`)
 ---@return number (integer) followers
-function GetNumberOfFollowers(ped) end
+function GetNumberOfFollowers(ped, _p2) end
 
 ---
 ---The results of this function are either unknown or untested.
@@ -23133,8 +23500,9 @@ function SetCharAllAnimsSpeed(ped, speed) end
 ---
 ---
 ---@param ped number (Ped) ped handle
+---@param _p2 nil Always nil (Pointer to return `multiplier - number (float)`)
 ---@return number (float) multiplier variable to store anim speed multiplier
-function GetCharMoveAnimSpeedMultiplier(ped) end
+function GetCharMoveAnimSpeedMultiplier(ped, _p2) end
 
 ---
 ---Blends out the Characters move Animations.
@@ -23179,8 +23547,9 @@ function GetCharMaxMoveBlendRatio(ped) end
 ---
 ---
 ---@param ped number (Ped) character handle
+---@param _p2 nil Always nil (Pointer to return `car - number (Car)`)
 ---@return number (Car) car pointer to car handle
-function StoreCarCharIsInNoSave(ped) end
+function StoreCarCharIsInNoSave(ped, _p2) end
 
 ---
 ---No description (
@@ -23978,8 +24347,9 @@ function SetCharPropIndexTexture(ped, parameter_2, parameter_3, parameter_4) end
 ---
 ---
 ---@param group number (integer)
+---@param _p2 nil Always nil (Pointer to return `formation - number (integer)`)
 ---@return number (integer) formation
-function GetGroupFormation(group) end
+function GetGroupFormation(group, _p2) end
 
 ---
 ---No description (
@@ -24005,9 +24375,10 @@ function LocateCharInCarCar3d(ped, car, x, y, z, flag) end
 ---
 ---
 ---@param ped number (Ped) ped handle
+---@param _p2 nil Always nil (Pointer to return `state - number (integer)`)
 ---@return boolean is swimming?
 ---@return number (integer) state variable to store swim state
-function GetCharSwimState(ped) end
+function GetCharSwimState(ped, _p2) end
 
 ---
 ---No description (
@@ -24192,8 +24563,9 @@ function SetPedHelmetTextureIndex(ped, index) end
 ---
 ---
 ---@param group number (integer)
+---@param _p2 nil Always nil (Pointer to return `spacing - number (float)`)
 ---@return number (float) spacing
-function GetGroupFormationSpacing(group) end
+function GetGroupFormationSpacing(group, _p2) end
 
 ---
 ---No description (
@@ -25196,10 +25568,13 @@ function SetPedMotionBlur(ped, set) end
 ---
 ---@param ped number (Ped)
 ---@param parameter_2 boolean
+---@param _p3 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `y - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `z - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
 ---@return number (float) z
-function GetCharExtractedVelocity(ped, parameter_2) end
+function GetCharExtractedVelocity(ped, parameter_2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -25421,8 +25796,9 @@ function GetPedSteersAroundObjects(ped) end
 ---@param ped number (Ped)
 ---@param AnimName0 string
 ---@param AnimName1 string
+---@param _p4 nil Always nil (Pointer to return `amount - number (float)`)
 ---@return number (float) amount
-function GetCharAnimBlendAmount(ped, AnimName0, AnimName1) end
+function GetCharAnimBlendAmount(ped, AnimName0, AnimName1, _p4) end
 
 ---
 ---No description (
@@ -25479,9 +25855,11 @@ function IsPcUsingJoypad() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MOUSE_INPUT) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MOUSE_INPUT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `x - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return `y - number (integer)`)
 ---@return number (integer) x
 ---@return number (integer) y
-function GetMouseInput() end
+function GetMouseInput(_p1, _p2) end
 
 ---
 ---No description (
@@ -25558,9 +25936,11 @@ function IsKeyboardKeyJustPressed(key) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MOUSE_POSITION) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MOUSE_POSITION)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `x - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return `y - number (integer)`)
 ---@return number (integer) x Handler for X coord
 ---@return number (integer) y Handler for Y coord
-function GetMousePosition() end
+function GetMousePosition(_p1, _p2) end
 
 ---
 ---No description (
@@ -25592,9 +25972,10 @@ function IsMouseButtonPressed(parameter_1) end
 ---
 ---
 ---@param key number (integer)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return boolean
 ---@return number (integer)
-function GetBufferedAscii(key) end
+function GetBufferedAscii(key, _p2) end
 
 ---
 ---The results of this function are either unknown or untested. Apparently returns true if network chat is open.
@@ -25679,9 +26060,11 @@ function GetControlValue(parameter_1, controlid) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_KEYBOARD_MOVE_INPUT) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_KEYBOARD_MOVE_INPUT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)
 ---@return number (integer)
-function GetKeyboardMoveInput() end
+function GetKeyboardMoveInput(_p1, _p2) end
 
 ---
 ---No description (
@@ -25764,8 +26147,9 @@ function IsGameKeyboardKeyJustPressed(key) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MOUSE_WHEEL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MOUSE_WHEEL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)  Handler for mouse wheel state
-function GetMouseWheel() end
+function GetMouseWheel(_p1) end
 
 ---
 ---No description (
@@ -25775,9 +26159,10 @@ function GetMouseWheel() end
 ---
 ---
 ---@param key number (integer)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return boolean
 ---@return number (integer)
-function GetAsciiPressed(key) end
+function GetAsciiPressed(key, _p2) end
 
 ---
 ---No description (
@@ -25798,8 +26183,9 @@ function IsInCarFireButtonPressed() end
 ---
 ---@param parameter_1 number (integer)
 ---@param parameter_2 number (integer)
+---@param _p3 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)
-function GetPadState(parameter_1, parameter_2) end
+function GetPadState(parameter_1, parameter_2, _p3) end
 
 ---
 ---No description (
@@ -25998,9 +26384,10 @@ function GetWidthOfLiteralString(str) end
 ---
 ---
 ---@param str string input string
+---@param _p2 nil Always nil (Pointer to return `intval - number (integer)`)
 ---@return boolean true if the conversion succeed
 ---@return number (integer) intval pointer to variable to store result
-function StringToInt(str) end
+function StringToInt(str, _p2) end
 
 ---
 ---This function sets a fake wanted level. Its effects can only be seen if the player has no wanted level. If the player does have a wanted level, its effects can only be seen after the wanted level is cleared. The radar will show the search zone and the HUD will display the wanted level but the cops will behave as if the player has no wanted level. The search zone will follow the player. To clear the fake wanted level, set the fake wanted level to 0.
@@ -26109,11 +26496,12 @@ function SuppressFadeInAfterDeathArrest(set) end
 ---[View gtamods.com](https://gtamods.com/wiki/SET_BITS_IN_RANGE) | [View gtamodding.ru](http://gtamodding.ru/wiki/SET_BITS_IN_RANGE)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
 ---@param rangebegin number (integer)
 ---@param rangeend number (integer)
 ---@param val number (integer)
 ---@return number (integer)
-function SetBitsInRange(rangebegin, rangeend, val) end
+function SetBitsInRange(_p1, rangebegin, rangeend, val) end
 
 ---
 ---No description (
@@ -26133,8 +26521,9 @@ function ActivateReplayMenu() end
 ---
 ---
 ---@param angle number (float)
+---@param _p2 nil Always nil (Pointer to return `anglelimited - number (float)`)
 ---@return number (float) anglelimited
-function LimitAngle(angle) end
+function LimitAngle(angle, _p2) end
 
 ---
 ---No description (
@@ -26195,8 +26584,9 @@ function SecuromSpotCheck2() end
 ---[View gtamods.com](https://gtamods.com/wiki/GENERATE_RANDOM_FLOAT) | [View gtamodding.ru](http://gtamodding.ru/wiki/GENERATE_RANDOM_FLOAT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (float)
-function GenerateRandomFloat() end
+function GenerateRandomFloat(_p1) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -26572,9 +26962,10 @@ function SetSleepModeActive(set) end
 ---[View gtamods.com](https://gtamods.com/wiki/SET_BIT) | [View gtamodding.ru](http://gtamodding.ru/wiki/SET_BIT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `val - number (integer)`)
 ---@param bit number (integer)
 ---@return number (integer) val
-function SetBit(bit) end
+function SetBit(_p1, bit) end
 
 ---
 ---No description (
@@ -26608,9 +26999,10 @@ function ProcessMissionDeletionList() end
 ---[View gtamods.com](https://gtamods.com/wiki/CLEAR_BIT) | [View gtamodding.ru](http://gtamodding.ru/wiki/CLEAR_BIT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `val - number (integer)`)
 ---@param bit number (integer)
 ---@return number (integer) val
-function ClearBit(bit) end
+function ClearBit(_p1, bit) end
 
 ---
 ---No description (
@@ -26659,10 +27051,13 @@ function SpotCheck8() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CURRENT_WEATHER_FULL) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CURRENT_WEATHER_FULL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `weatherparam0 - number (integer)`)
+---@param _p2 nil Always nil (Pointer to return `weatherparam1 - number (integer)`)
+---@param _p3 nil Always nil (Pointer to return `weatherparam2 - number (integer)`)
 ---@return number (integer) weatherparam0
 ---@return number (integer) weatherparam1
 ---@return number (integer) weatherparam2
-function GetCurrentWeatherFull() end
+function GetCurrentWeatherFull(_p1, _p2, _p3) end
 
 ---
 ---No description (
@@ -26747,8 +27142,9 @@ function ForcePopulationInit() end
 ---[View gtamods.com](https://gtamods.com/wiki/GENERATE_RANDOM_INT) | [View gtamodding.ru](http://gtamodding.ru/wiki/GENERATE_RANDOM_INT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)
-function GenerateRandomInt() end
+function GenerateRandomInt(_p1) end
 
 ---
 ---No description (
@@ -27403,9 +27799,11 @@ function SetHelpMessageBoxSize(parameter_1) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_HELP_MESSAGE_BOX_SIZE) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_HELP_MESSAGE_BOX_SIZE)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p2 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetHelpMessageBoxSize() end
+function GetHelpMessageBoxSize(_p1, _p2) end
 
 ---
 ---No description (
@@ -27560,8 +27958,9 @@ function DrawCurvedWindowNotext(parameter_1, parameter_2, parameter_3, parameter
 ---@param parameter_6 any
 ---@param parameter_7 any
 ---@param parameter_8 any
+---@param _p9 nil Always nil (Pointer to return `menuid - number (integer)`)
 ---@return number (integer) menuid
-function CreateMenu(gxtentry, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8) end
+function CreateMenu(gxtentry, parameter_2, parameter_3, parameter_4, parameter_5, parameter_6, parameter_7, parameter_8, _p9) end
 
 ---
 ---No description (
@@ -27642,9 +28041,11 @@ function SetSelectedMenuItem(menuid, item) end
 ---
 ---
 ---@param menuid number (integer)
+---@param _p2 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetMenuPosition(menuid) end
+function GetMenuPosition(menuid, _p2, _p3) end
 
 ---
 ---No description (
@@ -27748,8 +28149,9 @@ function GetSimpleBlipId() end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `blip - number (integer)`)
 ---@return number (integer) blip
-function AddBlipForWeapon(x, y, z) end
+function AddBlipForWeapon(x, y, z, _p4) end
 
 ---
 ---No description (
@@ -27773,8 +28175,9 @@ function SetBlipCoordinates(blip, x, y, z) end
 ---
 ---
 ---@param blip number (integer) blip handle
+---@param _p2 nil Always nil (Pointer to return `alpha - number (integer)`)
 ---@return number (integer) alpha variable to store alpha value
-function GetBlipAlpha(blip) end
+function GetBlipAlpha(blip, _p2) end
 
 ---
 ---No description (
@@ -28011,8 +28414,9 @@ function StartGpsRaceTrack(trackid) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_POINT_TO_GPS_RACE_TRACK) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_POINT_TO_GPS_RACE_TRACK)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `point - any (Vector3, vector)`)
 ---@return any (Vector3, vector) point The point to add to the GPS race track
-function AddPointToGpsRaceTrack() end
+function AddPointToGpsRaceTrack(_p1) end
 
 ---
 ---No description (
@@ -28054,9 +28458,11 @@ function TurnOffRadiohudInLobby() end
 ---
 ---
 ---@param frontendid number (integer)
+---@param _p2 nil Always nil (Pointer to return ` - number (float)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (float)`)
 ---@return number (float)
 ---@return number (float)
-function GetFrontendDesignValue(frontendid) end
+function GetFrontendDesignValue(frontendid, _p2, _p3) end
 
 ---
 ---No description (
@@ -28189,8 +28595,9 @@ function IsReplaySaving() end
 ---@param x1 number (float)
 ---@param y1 number (float)
 ---@param colour number (integer)
+---@param _p6 nil Always nil (Pointer to return `blip - number (integer)`)
 ---@return number (integer) blip
-function AddBlipForGangTerritory(x0, y0, x1, y1, colour) end
+function AddBlipForGangTerritory(x0, y0, x1, y1, colour, _p6) end
 
 ---
 ---No description (
@@ -28412,8 +28819,9 @@ function GetRouteSize() end
 ---@param y number (float)
 ---@param z number (float)
 ---@param type number (integer)
+---@param _p5 nil Always nil (Pointer to return `blip - number (integer)`)
 ---@return number (integer) blip
-function AddBlipForRadius(x, y, z, type) end
+function AddBlipForRadius(x, y, z, type, _p5) end
 
 ---
 ---No description (
@@ -28577,8 +28985,9 @@ function CamSetInterpStateSrc(cam, parameter_2) end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `clip - number (float)`)
 ---@return number (float) clip
-function GetCamFarClip(cam) end
+function GetCamFarClip(cam, _p2) end
 
 ---
 ---No description (
@@ -28886,8 +29295,9 @@ function SetCamFarDof(cam, fardof) end
 ---
 ---
 ---@param parameter_1 number (integer)
+---@param _p2 nil Always nil (Pointer to return `progress - number (integer)`)
 ---@return number (integer) progress
-function CamSequenceGetProgress(parameter_1) end
+function CamSequenceGetProgress(parameter_1, _p2) end
 
 ---
 ---No description (
@@ -29009,8 +29419,9 @@ function SetCamRoll(cam, roll) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_SCREEN_VIEWPORT_ID) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_SCREEN_VIEWPORT_ID)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `viewportid - number (integer)`)
 ---@return number (integer) viewportid
-function GetScreenViewportId() end
+function GetScreenViewportId(_p1) end
 
 ---
 ---Begins the transaction of camera commands.
@@ -29019,8 +29430,9 @@ function GetScreenViewportId() end
 ---[View gtamods.com](https://gtamods.com/wiki/BEGIN_CAM_COMMANDS) | [View gtamodding.ru](http://gtamodding.ru/wiki/BEGIN_CAM_COMMANDS)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)  Cam Command Handle
-function BeginCamCommands() end
+function BeginCamCommands(_p1) end
 
 ---
 ---No description (
@@ -29063,8 +29475,9 @@ function GetScreenFadeAlpha() end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `fardof - number (float)`)
 ---@return number (float) fardof
-function GetCamFarDof(cam) end
+function GetCamFarDof(cam, _p2) end
 
 ---
 ---No description (
@@ -29128,8 +29541,9 @@ function DestroyAllCams() end
 ---[View gtamods.com](https://gtamods.com/wiki/END_CAM_COMMANDS) | [View gtamodding.ru](http://gtamodding.ru/wiki/END_CAM_COMMANDS)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)  Cam Command Handle
-function EndCamCommands() end
+function EndCamCommands(_p1) end
 
 ---
 ---No description (
@@ -29190,8 +29604,9 @@ function SetCamFarClip(cam, clip) end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `dof - number (float)`)
 ---@return number (float) dof
-function GetCamNearDof(cam) end
+function GetCamNearDof(cam, _p2) end
 
 ---
 ---No description (
@@ -29250,8 +29665,9 @@ function SetHintTimesDefault() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_FOLLOW_VEHICLE_CAM_SUBMODE) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_FOLLOW_VEHICLE_CAM_SUBMODE)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `mode - number (integer)`)
 ---@return number (integer) mode
-function GetFollowVehicleCamSubmode() end
+function GetFollowVehicleCamSubmode(_p1) end
 
 ---
 ---No description (
@@ -29435,11 +29851,14 @@ function AttachCamToVehicle(cam, veh) end
 ---@param x number (float)
 ---@param y number (float)
 ---@param z number (float)
+---@param _p4 nil Always nil (Pointer to return `vx - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `vy - number (float)`)
+---@param _p6 nil Always nil (Pointer to return `vz - number (float)`)
 ---@return boolean
 ---@return number (float) vx
 ---@return number (float) vy
 ---@return number (float) vz
-function GetViewportPositionOfCoord(x, y, z) end
+function GetViewportPositionOfCoord(x, y, z, _p4, _p5, _p6) end
 
 ---
 ---No description (
@@ -29448,8 +29867,9 @@ function GetViewportPositionOfCoord(x, y, z) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_SCRIPT_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_SCRIPT_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `cam - number (integer)`)
 ---@return number (integer) cam
-function GetScriptCam() end
+function GetScriptCam(_p1) end
 
 ---
 ---No description (
@@ -29481,8 +29901,9 @@ function SetWidescreenBorders(set) end
 ---
 ---
 ---@param viewportid number (integer)
+---@param _p2 nil Always nil (Pointer to return `roomkey - number (integer)`)
 ---@return number (integer) roomkey
-function GetKeyForViewportInRoom(viewportid) end
+function GetKeyForViewportInRoom(viewportid, _p2) end
 
 ---
 ---No description (
@@ -29526,8 +29947,9 @@ function SetEnableNearClipScan(set) end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `camcopy - number (integer)`)
 ---@return number (integer) camcopy
-function CloneCam(cam) end
+function CloneCam(cam, _p2) end
 
 ---
 ---No description (
@@ -29703,8 +30125,9 @@ function SetCamSplineProgress(cam, progress) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_DEBUG_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_DEBUG_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `cam - number (integer)`)
 ---@return number (integer) cam
-function GetDebugCam() end
+function GetDebugCam(_p1) end
 
 ---
 ---No description (
@@ -29726,11 +30149,15 @@ function SetCameraState(cam, state) end
 ---
 ---
 ---@param viewportid number (integer) Viewport Id
+---@param _p2 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p3 nil Always nil (Pointer to return `y - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `xsize - number (float)`)
+---@param _p5 nil Always nil (Pointer to return `ysize - number (float)`)
 ---@return number (float) x Position X
 ---@return number (float) y Position Y
 ---@return number (float) xsize Size X
 ---@return number (float) ysize Size Y
-function GetViewportPosAndSize(viewportid) end
+function GetViewportPosAndSize(viewportid, _p2, _p3, _p4, _p5) end
 
 ---
 ---No description (
@@ -29740,8 +30167,9 @@ function GetViewportPosAndSize(viewportid) end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `clip - number (float)`)
 ---@return number (float) clip
-function GetCamNearClip(cam) end
+function GetCamNearClip(cam, _p2) end
 
 ---
 ---No description (
@@ -29859,8 +30287,9 @@ function SetForceLookBehind(set) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_GAME_VIEWPORT_ID) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_GAME_VIEWPORT_ID)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `viewportid - number (integer)`)
 ---@return number (integer) viewportid
-function GetGameViewportId() end
+function GetGameViewportId(_p1) end
 
 ---
 ---No description (
@@ -29904,8 +30333,9 @@ function AddCamSplineNode(cam, camnode) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CINEMATIC_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CINEMATIC_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `cam - number (integer)`)
 ---@return number (integer) cam variable to store cinematic cam
-function GetCinematicCam() end
+function GetCinematicCam(_p1) end
 
 ---
 ---No description (
@@ -29914,8 +30344,9 @@ function GetCinematicCam() end
 ---[View gtamods.com](https://gtamods.com/wiki/CREATE_VIEWPORT) | [View gtamodding.ru](http://gtamodding.ru/wiki/CREATE_VIEWPORT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `viewport - number (integer)`)
 ---@return number (integer) viewport variable to store viewport
-function CreateViewport() end
+function CreateViewport(_p1) end
 
 ---
 ---No description (
@@ -29955,8 +30386,9 @@ function DestroyAllScriptViewports() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_RADAR_VIEWPORT_ID) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_RADAR_VIEWPORT_ID)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `viewport - number (integer)`)
 ---@return number (integer) viewport
-function GetRadarViewportId() end
+function GetRadarViewportId(_p1) end
 
 ---
 ---Changes follow camera offset to specifed offset (p2,p3,p4). BUT disables camera moving with mouse. For example SET\_FOLLOW\_VEHICLE\_CAM\_OFFSET(1, 0.000, 0.550,0.00) - makes nice FPS view from vehicle dash board.
@@ -30136,8 +30568,9 @@ function AttachCamToPed(cam, ped) end
 ---
 ---
 ---@param cam number (integer)
+---@param _p2 nil Always nil (Pointer to return `blur - number (integer)`)
 ---@return number (integer) blur
-function GetCamMotionBlur(cam) end
+function GetCamMotionBlur(cam, _p2) end
 
 ---
 ---No description (
@@ -30158,8 +30591,9 @@ function SetCamSplineSpeedConstant(cam, set) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_SCRIPT_DRAW_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_SCRIPT_DRAW_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `cam - number (integer)`)
 ---@return number (integer) cam
-function GetScriptDrawCam() end
+function GetScriptDrawCam(_p1) end
 
 ---
 ---No description (
@@ -30249,8 +30683,9 @@ function CountScriptCamsByTypeAndOrState(type, parameter_2, parameter_3) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_FREE_CAM) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_FREE_CAM)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `cam - number (integer)`)
 ---@return number (integer) cam
-function GetFreeCam() end
+function GetFreeCam(_p1) end
 
 ---
 ---No description (
@@ -30538,8 +30973,9 @@ function SetDanceShakeInactiveImmediately() end
 ---[View gtamods.com](https://gtamods.com/wiki/CREATE_HTML_VIEWPORT) | [View gtamodding.ru](http://gtamodding.ru/wiki/CREATE_HTML_VIEWPORT)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `htmlviewport - number (integer)`)
 ---@return number (integer) htmlviewport Pointer (out)
-function CreateHtmlViewport() end
+function CreateHtmlViewport(_p1) end
 
 ---
 ---The results of this function are either unknown or untested.
@@ -30630,9 +31066,11 @@ function GetWebPageLinkHref(htmlviewport, linkid) end
 ---
 ---@param htmlviewport number (integer)
 ---@param linkid number (integer)
+---@param _p3 nil Always nil (Pointer to return `x - number (float)`)
+---@param _p4 nil Always nil (Pointer to return `y - number (float)`)
 ---@return number (float) x
 ---@return number (float) y
-function GetWebPageLinkPosn(htmlviewport, linkid) end
+function GetWebPageLinkPosn(htmlviewport, linkid, _p3, _p4) end
 
 ---
 ---No description (
@@ -30782,11 +31220,14 @@ function CreateEmergencyServicesCarThenWalk(model, x, y, z, parameter_5, paramet
 ---@param x number (float) Position X
 ---@param y number (float) Position Y
 ---@param z number (float) Position Z
+---@param _p5 nil Always nil (Pointer to return `car - number (Car)`)
+---@param _p6 nil Always nil (Pointer to return `cardriver - number (Ped)`)
+---@param _p7 nil Always nil (Pointer to return `carpass - number (Ped)`)
 ---@return boolean
 ---@return number (Car) car Vehicle Pointer (out)
 ---@return number (Ped) cardriver Ped 1 Pointer (out)
 ---@return number (Ped) carpass Ped 2 Pointer (out)
-function CreateEmergencyServicesCarReturnDriver(model, x, y, z) end
+function CreateEmergencyServicesCarReturnDriver(model, x, y, z, _p5, _p6, _p7) end
 
 ---
 ---No description (
@@ -31230,11 +31671,12 @@ function ShiftRight(val) end
 ---
 ---
 ---@param scriptname string
+---@param _p2 nil Always nil (Pointer to return `params - nil`)
 ---@param paramcount number (integer)
 ---@param stacksize number (integer)
 ---@return number (integer)
 ---@return nil params
-function StartNewScriptWithArgs(scriptname, paramcount, stacksize) end
+function StartNewScriptWithArgs(scriptname, _p2, paramcount, stacksize) end
 
 ---
 ---Rounds the number to a whole integer. If the tenth place is at or above 5, the number will be rounded up to the next whole number (Ceiling). If the tenth digit is 4 (or below), the number will be rounded down to the next whole number (Floor).
@@ -31393,10 +31835,13 @@ function GetParkingNodeInArea(parameter_1) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return ` - number (integer)`)
+---@param _p3 nil Always nil (Pointer to return ` - number (integer)`)
+---@param _p4 nil Always nil (Pointer to return ` - number (integer)`)
 ---@return number (integer)
 ---@return number (integer)
 ---@return number (integer)
-function GrabEntityOnRopeForObject(obj) end
+function GrabEntityOnRopeForObject(obj, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -31406,8 +31851,9 @@ function GrabEntityOnRopeForObject(obj) end
 ---
 ---
 ---@param obj number (Object)
+---@param _p2 nil Always nil (Pointer to return `height - number (float)`)
 ---@return number (float) height
-function GetRopeHeightForObject(obj) end
+function GetRopeHeightForObject(obj, _p2) end
 
 ---
 ---No description (
@@ -31972,8 +32418,9 @@ function SetRoomForDummyCharByName(ped, roomname) end
 ---
 ---
 ---@param ped number (Ped)
+---@param _p2 nil Always nil (Pointer to return `room - number (integer)`)
 ---@return number (integer) room
-function GetKeyForDummyCharInRoom(ped) end
+function GetKeyForDummyCharInRoom(ped, _p2) end
 
 ---
 ---No description (
@@ -32069,10 +32516,11 @@ function GetCharAnimEventTime(parameter_1) end
 ---[View gtamods.com](https://gtamods.com/wiki/HAS_RELOADED_WITH_MOTION_CONTROL) | [View gtamodding.ru](http://gtamodding.ru/wiki/HAS_RELOADED_WITH_MOTION_CONTROL)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@return boolean always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function HasReloadedWithMotionControl(parameter_2) end
+function HasReloadedWithMotionControl(_p1, parameter_2) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32081,9 +32529,10 @@ function HasReloadedWithMotionControl(parameter_2) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_MOTION_SENSOR_VALUES) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_MOTION_SENSOR_VALUES)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function GetMotionSensorValues() end
+function GetMotionSensorValues(_p1) end
 
 ---
 ---No description (
@@ -32103,9 +32552,10 @@ function GetMotionControlsEnabled(parameter_1) end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_PAD_ORIENTATION) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_PAD_ORIENTATION)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function GetPadOrientation() end
+function GetPadOrientation(_p1) end
 
 ---
 ---This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
@@ -32410,9 +32860,10 @@ function InitDebugWidgets() end
 ---[View gtamods.com](https://gtamods.com/wiki/CREATE_WIDGET_GROUP) | [View gtamodding.ru](http://gtamodding.ru/wiki/CREATE_WIDGET_GROUP)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function CreateWidgetGroup() end
+function CreateWidgetGroup(_p1) end
 
 ---
 ---This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
@@ -32431,13 +32882,14 @@ function EndWidgetGroup() end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_SLIDER) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_SLIDER)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@param parameter_3 any
 ---@param parameter_4 any
 ---@param parameter_5 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetSlider(parameter_2, parameter_3, parameter_4, parameter_5) end
+function AddWidgetSlider(_p1, parameter_2, parameter_3, parameter_4, parameter_5) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32446,13 +32898,14 @@ function AddWidgetSlider(parameter_2, parameter_3, parameter_4, parameter_5) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_FLOAT_SLIDER) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_FLOAT_SLIDER)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@param parameter_3 any
 ---@param parameter_4 any
 ---@param parameter_5 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetFloatSlider(parameter_2, parameter_3, parameter_4, parameter_5) end
+function AddWidgetFloatSlider(_p1, parameter_2, parameter_3, parameter_4, parameter_5) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32461,10 +32914,11 @@ function AddWidgetFloatSlider(parameter_2, parameter_3, parameter_4, parameter_5
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_READ_ONLY) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_READ_ONLY)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetReadOnly(parameter_2) end
+function AddWidgetReadOnly(_p1, parameter_2) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32473,10 +32927,11 @@ function AddWidgetReadOnly(parameter_2) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_FLOAT_READ_ONLY) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_FLOAT_READ_ONLY)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetFloatReadOnly(parameter_2) end
+function AddWidgetFloatReadOnly(_p1, parameter_2) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32485,10 +32940,11 @@ function AddWidgetFloatReadOnly(parameter_2) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_TOGGLE) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_TOGGLE)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetToggle(parameter_2) end
+function AddWidgetToggle(_p1, parameter_2) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32497,9 +32953,10 @@ function AddWidgetToggle(parameter_2) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_WIDGET_STRING) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_WIDGET_STRING)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddWidgetString() end
+function AddWidgetString(_p1) end
 
 ---
 ---This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
@@ -32530,8 +32987,9 @@ function DeleteWidget(parameter_1) end
 ---[View gtamods.com](https://gtamods.com/wiki/DOES_WIDGET_GROUP_EXIST) | [View gtamodding.ru](http://gtamodding.ru/wiki/DOES_WIDGET_GROUP_EXIST)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function DoesWidgetGroupExist() end
+function DoesWidgetGroupExist(_p1) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32540,9 +32998,10 @@ function DoesWidgetGroupExist() end
 ---[View gtamods.com](https://gtamods.com/wiki/GET_CONSOLE_COMMAND) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_CONSOLE_COMMAND)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function GetConsoleCommand() end
+function GetConsoleCommand(_p1) end
 
 ---
 ---This native function does nothing. GTA 4 has several native functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could be more than 0.
@@ -32583,10 +33042,11 @@ function AddToWidgetCombo(parameter_1) end
 ---[View gtamods.com](https://gtamods.com/wiki/FINISH_WIDGET_COMBO) | [View gtamodding.ru](http://gtamodding.ru/wiki/FINISH_WIDGET_COMBO)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@param parameter_2 any
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function FinishWidgetCombo(parameter_2) end
+function FinishWidgetCombo(_p1, parameter_2) end
 
 ---
 ---This native function always returns 0 as its result. GTA 4 has several functions that act like this. You could find what they are by using this link. Note that for some functions number of parameters could vary (being more than 1).
@@ -32595,9 +33055,10 @@ function FinishWidgetCombo(parameter_2) end
 ---[View gtamods.com](https://gtamods.com/wiki/ADD_TEXT_WIDGET) | [View gtamodding.ru](http://gtamodding.ru/wiki/ADD_TEXT_WIDGET)
 ---
 ---
+---@param _p1 nil Always nil (Pointer to return `parameter_1 - any (pointer)`)
 ---@return any always 0
 ---@return any (pointer) parameter_1 pointer to variable to store function result
-function AddTextWidget() end
+function AddTextWidget(_p1) end
 
 ---
 ---This native function always returns "empty" as its result.
@@ -33033,10 +33494,13 @@ function GetPlayerColour(Player) end
 ---
 ---
 ---@param Player number (integer)
+---@param _p2 nil Always nil (Pointer to return `r - number (integer)`)
+---@param _p3 nil Always nil (Pointer to return `g - number (integer)`)
+---@param _p4 nil Always nil (Pointer to return `b - number (integer)`)
 ---@return number (integer) r
 ---@return number (integer) g
 ---@return number (integer) b
-function GetPlayerRgbColour(Player) end
+function GetPlayerRgbColour(Player, _p2, _p3, _p4) end
 
 ---
 ---No description (
@@ -33328,8 +33792,9 @@ function UpdateNetworkRelativeScore(parameter_1, parameter_2, parameter_3) end
 ---
 ---
 ---@param count number (integer)
+---@param _p2 nil Always nil (Pointer to return `val - number (integer)`)
 ---@return number (integer) val
-function UnobfuscateInt(count) end
+function UnobfuscateInt(count, _p2) end
 
 ---
 ---No description (
@@ -33370,8 +33835,9 @@ function NetworkGetHostMatchProgress(host) end
 ---
 ---
 ---@param id number (integer) Ped Network ID
+---@param _p2 nil Always nil (Pointer to return `ped - number (Ped)`)
 ---@return number (Ped) ped Variable To Store Ped Handle
-function GetPedFromNetworkId(id) end
+function GetPedFromNetworkId(id, _p2) end
 
 ---
 ---Get object`s network id and store it in parameter 2.
@@ -33381,8 +33847,9 @@ function GetPedFromNetworkId(id) end
 ---
 ---
 ---@param obj number (Object) object handle
+---@param _p2 nil Always nil (Pointer to return `id - number (integer)`)
 ---@return number (integer) id variable to store network object handle
-function GetNetworkIdFromObject(obj) end
+function GetNetworkIdFromObject(obj, _p2) end
 
 ---
 ---No description (

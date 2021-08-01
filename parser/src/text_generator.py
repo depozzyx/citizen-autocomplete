@@ -132,6 +132,9 @@ class TextGenerator:
                     return_args_comments.append(
                         f"@return {arg_type} {splt[1]} {arg_description}"
                     )
+                    param_name = f"_p{i + 1}"
+                    self._comment(f"@param {param_name} nil Always nil (Pointer to return `{splt[1]} - {arg_type}`)")
+                    true_args.append(param_name)
                 else:
                     self._comment(f"@param {splt[1]} {arg_type} {arg_description}")
                     true_args.append(splt[1])
