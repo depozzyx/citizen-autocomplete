@@ -36792,6 +36792,7 @@ function GetPlayerPed(...) end
 
 function AddEventHandler(...) end
 function TriggerEvent(...) end
+function GetPlayers(...) end
 
 ------ Here goes https://citizeniv.net/docs/functions.html#client ------
 
@@ -36802,7 +36803,6 @@ function TriggerServerEvent(...) end
 function RegisterNetEvent(...) end
 function RegisterNUICallback(...) end
 function RemoveEventHandler(...) end
-function GetPlayers(...) end
 function SendNUIMessage(...) end
 function vec(...) end
 --- Theese are fancy vector types, but (as I figured out) there is no as fancy way to declare types in lua 
@@ -36820,7 +36820,6 @@ function GetPlayerEP(...) end
 function GetPlayerLastMsg(...) end
 function GetPlayerName(...) end
 function GetPlayerPing(...) end
-function GetPlayers(...) end
 function PerformHttpRequest(...) end
 function RconLog(...) end
 function RconPrint(...) end
