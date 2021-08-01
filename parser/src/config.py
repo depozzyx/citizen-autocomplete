@@ -41,6 +41,7 @@ C_TYPES_TO_LUA_TYPES = {
     "float": "number (float)",
     "char": "string",
     "char *": "string",
+    "char*": "string",
     "boolean": "boolean",
     "bool": "boolean",
     "void": "nil",

@@ -104,6 +104,9 @@ class TextGenerator:
                     splt[1] = splt[1][1:]
                     if not splt[0].startswith("char"):
                         is_return_arg = True
+                    
+                    if not splt[1] and not is_return_arg:
+                        splt[1] = f"parameter_{i + 1}"
 
                 if website_args_len > i:
                     if arg_type == "any" or arg_type == "any ()":
