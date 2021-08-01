@@ -4,7 +4,7 @@ The project to bring autocomplete to [Citizen MP](https://citizeniv.net/)
 
 ## How to use
 
-The file you want in [`natives.lua`](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/depozzyx/citizen-autocomplete/blob/main/natives.lua). Basically you need to [download](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/depozzyx/citizen-autocomplete/blob/main/natives.lua) and store it somewhere in you project, that way your code editor can analyse function defenitions.
+The file you want in [`natives.lua`](https://raw.githubusercontent.com/depozzyx/citizen-autocomplete/main/natives.lua). Basically you need to download [(how to download?)](https://github.com/depozzyx/citizen-autocomplete/blob/main/how-to-download.md) and store it somewhere in you project, that way your code editor can analyse function defenitions.
 
 More detailed explanations available for:
 
