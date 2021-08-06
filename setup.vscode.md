@@ -10,5 +10,5 @@
 ## Notes
 
 - It will probably shout `Global variable in lowercase initial, Did you miss 'local' or misspell it` in your problems, so to get rid of it hover over the problem, __click `Quick Fix` and choose variant of disabling this feature__
-- It does not support native type hinting(is it native? this is kinda wierd in lua), so in some files everything would be red (in default server files - `irc_run.lua`). I coudn't find a good way to disable it(if you find please let me know in the issues). But you can just __remove irc package from your server__, because you even might not know it exists and nothing depends on it
+- It does not support native type hinting _(is it native? this is kinda wierd in lua)_, so in some files everything would be red (in default server files - `irc_run.lua`). I coudn't find a good way to disable it _(if you find please let me know in the issues)_. But you can just __remove irc package from your server__, because you even might not know it exists and nothing depends on it
 - Also other issues are present, like `Undefined global 'f'` in `mapmanager_client.lua`. They does not seem like global citizen variables, I am not sure what is causing it(maybe some recursion problems?), but you can just __disable diagnostics in that places__
