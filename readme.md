@@ -1,6 +1,6 @@
 ## Citizen - Autocomplete
 The project to bring autocomplete to [Citizen MP](https://citizeniv.net/)
-<img src="https://user-images.githubusercontent.com/61224790/128556684-cc558229-9dfe-410a-a85a-5d1278125e75.png" width="70%" height="70%">
+<img src="https://user-images.githubusercontent.com/61224790/128556684-cc558229-9dfe-410a-a85a-5d1278125e75.png" width="69%" height="69%">
 
 ## How to use
 
@@ -13,4 +13,4 @@ More detailed explanations available for:
 ## Authors
 
 -   depozzyx - Parser creator
--   vlados - Creator of more detailed and accurate descriptions
+-   vlados - Future creator of more detailed and accurate descriptions
