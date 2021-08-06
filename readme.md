@@ -1,8 +1,6 @@
 ## Citizen - Autocomplete
-
-![preview](https://user-images.githubusercontent.com/61224790/128556684-cc558229-9dfe-410a-a85a-5d1278125e75.png)
-
 The project to bring autocomplete to [Citizen MP](https://citizeniv.net/)
+<img src="https://user-images.githubusercontent.com/61224790/128556684-cc558229-9dfe-410a-a85a-5d1278125e75.png" width="70%" height="70%">
 
 ## How to use
 
