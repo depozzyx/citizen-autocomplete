@@ -756,17 +756,6 @@ function GetPlayerMaxArmour(playerIndex, _p2) end
 ---No description (
 ---
 ---
----[View gtamods.com](https://gtamods.com/wiki/GET_PLAYER_NAME) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_PLAYER_NAME)
----
----
----@param playerIndex number (Player) Player index
----@return string
-function GetPlayerName(playerIndex) end
-
----
----No description (
----
----
 ---[View gtamods.com](https://gtamods.com/wiki/GET_PLAYERSETTINGS_MODEL_CHOICE) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_PLAYERSETTINGS_MODEL_CHOICE)
 ---
 ---
@@ -33535,17 +33524,6 @@ function SetPlayerTeam(Player, parameter_2) end
 ---@param parameter_1 any
 ---@return any
 function GetNoOfPlayersInTeam(parameter_1) end
-
----
----No description (
----
----
----[View gtamods.com](https://gtamods.com/wiki/GET_PLAYER_NAME) | [View gtamodding.ru](http://gtamodding.ru/wiki/GET_PLAYER_NAME)
----
----
----@param parameter_1 number (integer) Player index
----@return any
-function GetPlayerName(parameter_1) end
 
 ---
 ---This function sets color of specific player in multiplayer. This native affects on displayed color of name and circle above player's head. Works only on client side.
