@@ -10,12 +10,12 @@ More detailed explanations available for:
 
 -   [VSCode](https://github.com/depozzyx/citizen-autocomplete/blob/main/setup.vscode.md)
 
-_If you have set it it up in code editor not listed here, feel free to open an issue and describe how you have done it_
+_If you have set it it up in code editor not listed here, feel free to open an issue and describe how you have done that_
 
 ## Notes
--   There are probably errors, feel free to tell us about them
+-   There are errors, feel free to tell us about them
 -   Right now it's just a bunch of function defenitions which is not really optimised, so loading it can take a few seconds
--   By the way, if you've liked it, it would be great if you hit that star button on the top)
+-   By the way, if you've liked it, it would be great if you hit that star button on the top. Thanks!
 
 ## Authors
 
