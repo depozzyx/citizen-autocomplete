@@ -14,7 +14,7 @@ _If you have set it it up in code editor not listed here, feel free to open an i
 
 ## Notes
 -   There are probably errors, feel free to tell us about them
--   Right now it's just a bunch of function defenitions and is not optimised, so loading it can take a few seconds
+-   Right now it's just a bunch of function defenitions which is not really optimised, so loading it can take a few seconds
 -   By the way, if you've liked it, it would be great if you hit that star button on the top)
 
 ## Authors
