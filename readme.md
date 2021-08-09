@@ -4,11 +4,8 @@ The project to bring autocomplete to [Citizen MP](https://citizeniv.net/)
 
 ## How to use
 
-The file you want in [`natives.lua`](https://raw.githubusercontent.com/depozzyx/citizen-autocomplete/main/natives.lua). Basically you need to download [(how to download?)](https://github.com/depozzyx/citizen-autocomplete/blob/main/how-to-download.md) and store it somewhere in you project, that way your code editor can analyse function defenitions and get code completion running.
-
-More detailed explanations available for:
-
 -   [VSCode](https://github.com/depozzyx/citizen-autocomplete/blob/main/setup.vscode.md)
+-   [Not yet included code editors](https://github.com/depozzyx/citizen-autocomplete/blob/main/setup.not_included.md)
 
 _If you have set it it up in code editor not listed here, feel free to open an issue and describe how you have done that_
 
