@@ -6,5 +6,5 @@
 
 ## Known issues
 1. It might not work, because `natives.lua` is large, ensure that:
-- You have waited enough, so your code editor have time to analyse 30k+ lines file
-- That there is no limit on file size to analyse, or that it is set to more than 2mb
+    - You have waited enough, so your code editor have time to analyse 30k+ lines file
+    - That there is no limit on file size to analyse, or that it is set to more than 2mb
