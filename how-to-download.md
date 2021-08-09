@@ -1,4 +1,4 @@
 ## How to download natives.lua?
 
-1. Go to this [link](https://raw.githubusercontent.com/depozzyx/citizen-autocomplete/main/natives.lua)
-2. Click `Save as` and save as lua file or copy everything and paste into existing lua file
+1. Go to the [main project page](https://github.com/depozzyx/citizen-autocomplete) and click on `Natves.lua` under `Releases` on the right side of a page
+2. Click `natives.lua` under `Assets`
