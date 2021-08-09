@@ -1,5 +1,5 @@
 ## Generic setup
-1. Ensure, that your code editor supports Lua language. Usually you need to download extra extension it, so functions, variables, etc. can be analysed. If you have dedicated Lua IDE, no need to worry, continue further
+1. Ensure, that your code editor supports Lua language. Usually you need to download and install extension/addon so functions, variables, etc. can be analysed. If you have dedicated Lua IDE, no need to worry, continue further
 2. Download `natives.lua` [(How to download?)](https://github.com/depozzyx/citizen-autocomplete/blob/main/how-to-download.md)
 3. Move it into your server project
 4. Your code editor should analyse the file and start giving you suggestions. If not, see known issues below
